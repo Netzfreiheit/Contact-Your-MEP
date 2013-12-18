@@ -4,6 +4,11 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/flags.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/pimail.css">
 
+  <style>
+    .hidden {
+      display: none;
+      }
+  </style>    
 </head>
 <title>Mail your MEP</title>
 </head>
@@ -11,6 +16,8 @@
 
 <div><section>{{name}}</section></div>
 
+<div id="sent-message" class="hidden">Your email is in your mail client -
+if this doesn't work: the email address is {{email}}</div>
 <label for="subject">Subject:</label>
 <input id="subject" name="subject" value="Please save the Internet" />
 <textarea id="body" name="body">
@@ -41,7 +48,9 @@ function makeform() {
   var body=document.getElementById("body").value.replace(/\n/g,"%0A")
   var subject=document.getElementById("subject").value
   email=email+subject+"&body="+body
-  window.open(email)
+  a=window.open(email)
+  a.close()
+  document.getElementById("sent-message").className="";
   }
 </script>
 
