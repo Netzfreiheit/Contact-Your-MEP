@@ -1,3 +1,89 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
+	margin:0;
+	color: #333;
+}
+
+h1 {
+	font-size: 14px;
+}
+
+#global {
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, .15);
+	width: 600px;
+	padding: 5px;
+}
+#mep_pic {
+	float:left;
+	margin-right:10px;
+}
+
+#mep_name {
+	font-weight:bold;
+}
+
+#sent-message {
+	position:absolute;
+	background: #eeffee;
+	border: 1px solid #aaeeaa;
+}
+
+#mep_group {
+	color: #666;
+	text-transform: uppercase;
+	font-size:11px;
+	max-width:24em;
+	*width:24em;
+}
+
+#mep_infos {
+	float:left;
+	max-width:300px;
+}
+
+#actionbox {
+	overflow:hidden;
+}
+
+.emailtext,
+.emailsubject {
+	margin: 2px;
+	padding: 5px;
+	border: 2px inset #eee;
+	width: 312px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.emailtext {
+	height: 145px;
+}
+
+
+
+.button .blue, a.button  {
+	cursor: pointer;
+	display: inline-block;
+	padding: 8px 16px 12px;
+	vertical-align: top;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	display:inline-block;
+}
+
+.green {
+	background: #84c63c;
+	background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJo…iIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+');
+	background: -moz-linear-gradient(#84c63c , #489615) repeat scroll 0 0 #489615;
+	background: -webkit-linear-gradient(#84c63c , #489615) repeat scroll 0 0 #489615;
+	background: -o-linear-gradient(#84c63c , #489615) repeat scroll 0 0 #489615;
+	background: -ms-linear-gradient(#84c63c , #489615) repeat scroll 0 0 #489615;
+	background: linear-gradient(#84c63c , #489615) repeat scroll 0 0 #489615;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c63c', endColorstr='#489615',GradientType=0 );
+	box-shadow: 0 3px rgba(0, 0, 0, 0.1), 0 -4px rgba(0, 0, 0, 0.1) inset;
 }

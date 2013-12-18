@@ -13,14 +13,26 @@
 <title>Mail your MEP</title>
 </head>
 <body>
+<div id=global>
 
-<div><section>{{name}}</section></div>
+	<h1>Write MEPs! Demand the enforcement of a true and unconditional Net neutrality!<h1>
+	<div id="sent-message" class="hidden">Your email is in your mail client -
+	if this doesn't work: the email address is {{email}}</div>
 
-<div id="sent-message" class="hidden">Your email is in your mail client -
-if this doesn't work: the email address is {{email}}</div>
-<label for="subject">Subject:</label>
-<input id="subject" name="subject" value="Please save the Internet" />
-<textarea id="body" name="body">
+<div id=mep_infos>
+
+	<section id=mep_pic><img src="{{image}}" style="height:120px;"></section>
+	<section id=mep_name>{{name}} <img src="/static/groups/group_icon_{{group_short}}.png"> </section>
+	<section id=mep_group>{{group}}</section>
+	<section id=mep_country><img src="blank.gif" class="flag flag-{{country_short}}" alt="{{country}}"> {{country}}</section>
+	<section id=mep_role>{{role}}</section>
+	<section id=mep_details><a href="{{url}}" target="_blank">Details</a></section>
+</div>
+
+<div id=actionbox>
+
+<input id="subject" class=emailsubject placeholder="Subject" name="subject" value="Please save the Internet" />
+<textarea id="body" name="body" class=emailtext>
 Dear {{name}},
 
 I really like my internet to be neutral!
@@ -29,19 +41,11 @@ I really like my internet to be neutral!
 
 
 Sincerely,
-  A concerned Citizen
+  A concerned Citizen</textarea>
+<section><a onclick="makeform()" class="button green" href="#">Send E-Mail</a></section>
+</div>
 
-</textarea>
-<section>{{country_short}}</section>
-<section>{{group}}</section>
-<section>{{name}}</section>
-<section><a href="{{url}}" target="_blank">show Details</a></section>
-<section><img src="blank.gif" class="flag flag-{{country_short}}" alt="{{country}}" /> {{country}}</section>
-<section><img src="{{image}}" /></section>
-<section>{{role}}</section>
-<section><img src="/static/groups/group_icon_{{group_short}}.png"> {{party}}</section>
-<section><a onclick="makeform()" href="#">Send E-Mail</a></section>
-
+</div>
 <script>
 function makeform() {
   var email="mailto:{{email}}?subject="
