@@ -9,6 +9,21 @@
 
 <div><section>{{name}}</section></div>
 
+<form>
+<label for="subject">Subject:</label>
+<input id="subject" name="subject" value="Please save the Internet" />
+<textarea id="body" name="body">
+Dear {{name}},
+
+I really like my internet to be neutral!
+
+-- YOUR RANT HERE --
+
+
+Sincerely,
+  A concerned Citizen
+
+</textarea>
 <section>{{country_short}}</section>
 <section>{{group}}</section>
 <section>{{name}}</section>
@@ -18,8 +33,17 @@
 <section>{{group_short}}</section>
 <section>{{role}}</section>
 <section>{{party}}</section>
-<section><a href="mailto:{{email}}">Send E-Mail</a></section>
+<section><a onclick="makeform()" href="#">Send E-Mail</a></section>
 
+<script>
+function makeform() {
+  var email="mailto:{{email}}?subject="
+  var body=document.getElementById("body").value.replace("\n","%0D%0A")
+  var subject=document.getElementById("subject").value
+  email=email+subject+"&body="+body
+  window.open(email)
+  }
+</script>
 
 </body>
 </html>
