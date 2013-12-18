@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Foo</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/flags.css">
+</head>
+<title>Mail your MEP</title>
 </head>
 <body>
+
 <div><section>{{name}}</section></div>
-<div>
 
 <section>{{country_short}}</section>
 <section>{{group}}</section>
 <section>{{name}}</section>
 <section>{{url}}</section>
-<section>{{country}}</section>
+<section><img src="blank.gif" class="flag flag-{{country_short}}" alt="{{country}}" /> {{country}}</section>
 <section><img src="{{image}}" /></section>
 <section>{{group_short}}</section>
 <section>{{role}}</section>
 <section>{{party}}</section>
 <section><a href="mailto:{{email}}">Send E-Mail</a></section>
-</div>
+
 
 </body>
 </html>
-
