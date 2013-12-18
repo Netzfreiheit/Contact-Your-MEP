@@ -44,7 +44,8 @@ Sincerely,
 function makeform() {
   var email="mailto:{{email}}?subject="
   var body=document.getElementById("body").value.replace(/\n/g,"%0A")
-  var subject=document.getElementById("subject").value
+    .replace(/ /g,"%20")
+  var subject=document.getElementById("subject").value.replace(/ /g,"%20")
   email=email+subject+"&body="+body
   a=window.open(email)
   a.close()
