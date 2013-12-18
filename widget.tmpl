@@ -9,7 +9,6 @@
 
 <div><section>{{name}}</section></div>
 
-<form>
 <label for="subject">Subject:</label>
 <input id="subject" name="subject" value="Please save the Internet" />
 <textarea id="body" name="body">
@@ -37,7 +36,7 @@ Sincerely,
 <script>
 function makeform() {
   var email="mailto:{{email}}?subject="
-  var body=document.getElementById("body").value.replace("\n","%0D%0A")
+  var body=document.getElementById("body").value.replace(/\n/g,"%0A")
   var subject=document.getElementById("subject").value
   email=email+subject+"&body="+body
   window.open(email)
