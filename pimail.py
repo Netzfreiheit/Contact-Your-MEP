@@ -16,6 +16,8 @@ with open("data.json") as f:
 class main:
   def GET(self,foo):
     web.header("Content-Type", "text/html;charset=utf-8")
+    with open("widget.tmpl") as f:
+      template = Template(f.read())
     m=random.choice(meps)
     return template.render(m)
 
