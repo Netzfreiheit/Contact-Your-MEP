@@ -26,6 +26,10 @@ h1 {
 	position:absolute;
 	background: #eeffee;
 	border: 1px solid #aaeeaa;
+	margin: 75px;
+	box-shadow: #000 0 0 30px;
+	padding: 19px;
+	border-radius: 8px;
 }
 
 #mep_group {
