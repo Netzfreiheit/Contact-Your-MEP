@@ -4,7 +4,7 @@ from jinja2 import Template
 import random
 
 urls= (
-  '/(.*)' , 'main' )
+  '/' , 'main' )
 
 with open("widget.tmpl") as f:
   template = Template(f.read().decode("utf-8"))
