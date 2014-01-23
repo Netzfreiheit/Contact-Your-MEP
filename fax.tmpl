@@ -30,8 +30,8 @@
 </div>
 
 <div id=actionbox>
-
-<input id="subject" class=emailsubject placeholder="Subject" name="subject" value="Please save the Internet" />
+<form method="POST">
+<input type="hidden" name="id" value="{{id}}" />
 <textarea id="body" name="body" class=emailtext>
 Dear {{name}},
 
@@ -50,22 +50,11 @@ I hope that my input will be helpful and remain at your disposal.
 Yours sincerely,
 a concerned citizen
   </textarea>
-<section><a onclick="makeform()" class="button green" href="#">E-Mail Now!</a></section>
+<section><input type="submit" class="button green" value="Fax now!"></section>
+</form>
 </div>
 
 </div>
-<script>
-function makeform() {
-  var email="mailto:{{email}}?subject="
-  var body=document.getElementById("body").value.replace(/\n/g,"%0A")
-    .replace(/ /g,"%20")
-  var subject=document.getElementById("subject").value.replace(/ /g,"%20")
-  email=email+subject+"&body="+body
-  a=window.open(email)
-  a.close()
-  document.getElementById("sent-message").className="";
-  }
-</script>
 
 </body>
 </html>

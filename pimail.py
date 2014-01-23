@@ -2,6 +2,7 @@ import web
 import json
 import random
 from jinja2 import Template
+import urllib
 
 " Load Data "
 with open("data.json") as f:
@@ -19,6 +20,22 @@ def weighted_choice(a):
     return False
 
 
+class Fax:
+    """ Handle the Fax Widget """
+    
+    def GET(self):
+        """ display the fax widget """
+        web.header("Content-Type", "text/html;charset=utf-8")
+        with open("fax.tmpl") as f:
+            template = Template(f.read().decode("utf-8"))
+        m = weighted_choice(meps)
+        return template.render(m)
+    def POST(self):
+        "send out the fax"
+        print web.data()
+        return self.GET()
+
+
 class mail:
     """ Handle Requests for Mail """
     def GET(self):
@@ -29,7 +46,8 @@ class mail:
         m = weighted_choice(meps)
         return template.render(m)
 
-urls = ('/', 'mail' )
+urls = ('/', 'mail',
+        '/fax/', 'Fax')
 
 app = web.application(urls,globals())
 
