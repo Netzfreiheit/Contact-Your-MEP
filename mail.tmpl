@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/static/css/flags.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/pimail.css">
+
+  <style>
+    .hidden {
+      display: none;
+      }
+  </style>    
+</head>
+<title>Mail your MEP</title>
+</head>
+<body>
+<div id=global>
+
+	<h1>Write MEPs! Demand the enforcement of a true and unconditional Net neutrality!</h1>
+	<div id="sent-message" class="hidden">Your email is in your mail client -
+	if this doesn't work: the email address is <a href="mailto:{{email}}">{{email}}</a></div>
+
+<div id=mep_infos>
+
+	<section id=mep_name>To:<br>{{name}} <img src="/static/groups/group_icon_{{group_short}}.png" style="vertical-align:middle;"> </section>
+	<section id=mep_pic><img src="{{image}}" style="height:120px;"></section>
+	<section id=mep_group>{{group}}</section>
+	<section id=mep_country><img src="/static/blank.gif" class="flag flag-{{country_short}}" alt="{{country}}"> {{country}}</section>
+	<section id=mep_role>{{role}}</section>
+	<section id=mep_details><a href="{{url}}" target="_blank">Details</a></section>
+</div>
+
+<div id=actionbox>
+
+<input id="subject" class=emailsubject placeholder="Subject" name="subject" value="Please save the Internet" />
+<textarea id="body" name="body" class=emailtext>
+Dear {{name}},
+
+The ITRE Committee will soon be voting on the Commission proposal for the completion of the digital single market.
+
+As a citizen of the EU, I am very concerned that some of the draft provisions will not achieve the meaningful protections for net neutrality that the Commission was aiming for. On the contrary, the current draft would lead to limited possibilities of accessing Internet content and services. Therefore, please take into account that:
+
+Article 23 of the draft text leaves the door open for a two-tiered Internet by allowing ISPs to offer speeds at different rates through weakly defined “specialised services”. In order to introduce legal clarity, please support an amendment of this definition to ensure that it only covers services which are not run over the public Internet.
+
+Furthermore, the current draft would allow discriminatory agreements between access and content providers as long as they do not “impair in a recurring or continuous manner the general quality of internet access services". This provision lacks clarity, I therefore ask you to support the deletion of the word "general".
+
+Finally, in order to remain consistent with the EU Charter on Fundamental Rights, it is essential to remove references to arbitrary interferences with traffic for public policy reasons.
+
+I hope that my input will be helpful and remain at your disposal.
+
+Yours sincerely,
+a concerned citizen
+  </textarea>
+<section><a onclick="makeform()" class="button green" href="#">E-Mail Now!</a></section>
+</div>
+
+</div>
+<script>
+function makeform() {
+  var email="mailto:{{email}}?subject="
+  var body=document.getElementById("body").value.replace(/\n/g,"%0A")
+    .replace(/ /g,"%20")
+  var subject=document.getElementById("subject").value.replace(/ /g,"%20")
+  email=email+subject+"&body="+body
+  a=window.open(email)
+  a.close()
+  document.getElementById("sent-message").className="";
+  }
+</script>
+
+</body>
+</html>

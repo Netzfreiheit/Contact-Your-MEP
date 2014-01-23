@@ -24,7 +24,7 @@ class mail:
     def GET(self):
         """ Handle GET Requests """
         web.header("Content-Type", "text/html;charset=utf-8")
-        with open("widget.tmpl") as f:
+        with open("mail.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
         m = weighted_choice(meps)
         return template.render(m)

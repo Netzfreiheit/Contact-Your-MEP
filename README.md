@@ -12,7 +12,7 @@ pimail depends on:
 
 install with ```pip install -r requirements.txt```
 
-Edit the widget.tmpl and files in static/ to your liking
+Edit the mail.tmpl and files in static/ to your liking
 
 Fill data.json with an array of data about the MEPs (or MPs or whatever)
 
