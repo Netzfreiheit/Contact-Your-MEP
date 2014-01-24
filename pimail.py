@@ -29,7 +29,7 @@ class mail:
         m = weighted_choice(meps)
         return template.render(m)
 
-urls = ('/', 'mail' )
+urls = ('/widget/', 'mail' )
 
 app = web.application(urls,globals())
 
