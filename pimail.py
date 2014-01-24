@@ -46,8 +46,8 @@ class mail:
         m = weighted_choice(meps)
         return template.render(m)
 
-urls = ('/', 'mail',
-        '/fax/', 'Fax')
+urls = ('/widget/', 'mail',
+        '/widget/fax/', 'Fax')
 
 app = web.application(urls,globals())
 
