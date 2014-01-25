@@ -5,6 +5,7 @@ from jinja2 import Template
 import urllib
 import subprocess
 import shlex
+import textwrap
 import settings
 
 " Load Data "
@@ -54,7 +55,7 @@ class Fax:
             fax = m[settings.FAX_FIELD].replace(" ","").replace("+","00")
         with open("fax-out.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
-        data = {"body": args['body'],
+        data = {"body": textwrap.wrap(args['body']),
                 "from": settings.FROM,
                 "to": "%s@%s" % (fax, settings.FAX_GATEWAY),
                 }
