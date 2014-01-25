@@ -55,7 +55,7 @@ class Fax:
             fax = m[settings.FAX_FIELD].replace(" ","").replace("+","00")
         with open("fax-out.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
-        data = {"body": textwrap.wrap(args['body']),
+        data = {"body": u"\n".join(textwrap.wrap(args['body'])),
                 "from": settings.FROM,
                 "to": "%s@%s" % (fax, settings.FAX_GATEWAY),
                 }
