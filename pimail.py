@@ -57,12 +57,16 @@ class Fax:
                 }
         a = shlex.split(settings.SENDMAIL)
         " add the recipient as args "
+        if settings.TEST:
+            fax = '100'
         a.append("%s@%s" % (fax,settings.FAX_GATEWAY))
         p = subprocess.Popen(a,
                              stdin=subprocess.PIPE)
         p.communicate(template.render(data).encode("utf-8"))
-
-        return self.GET()
+        
+        with open("fax-sent.tmpl") as f:
+            template = Template(f.read().decode("utf-8"))
+        return template.render(m)
 
 
 class mail:
