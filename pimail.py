@@ -3,6 +3,9 @@ import json
 import random
 from jinja2 import Template
 import urllib
+import subprocess
+import shlex
+import settings
 
 " Load Data "
 with open("data.json") as f:
@@ -19,6 +22,17 @@ def weighted_choice(a):
             return c
     return False
 
+def unquote(a):
+    return (a[0],unicode(urllib.unquote_plus(a[1]).decode("utf-8")))
+
+def decode_args(a):
+    return dict((unquote(i.split("=")) for i in a.split("&")))
+
+def get_mep_by_id(id):
+    for m in meps:
+        if m['id']==int(id):
+            return m
+    return None
 
 class Fax:
     """ Handle the Fax Widget """
@@ -32,7 +46,22 @@ class Fax:
         return template.render(m)
     def POST(self):
         "send out the fax"
-        print web.data()
+        args=decode_args(web.data())
+        m = get_mep_by_id(args['id'])
+        fax = m[settings.FAX_FIELD].replace(" ","").replace("+","00")
+        with open("fax-sent.tmpl") as f:
+            template = Template(f.read().decode("utf-8"))
+        data = {"body": args['body'],
+                "from": settings.FROM,
+                "to": "%s@%s" % (fax, settings.FAX_GATEWAY),
+                }
+        a = shlex.split(settings.SENDMAIL)
+        " add the recipient as args "
+        a.append("100@%s" % settings.FAX_GATEWAY)
+        p = subprocess.Popen(a,
+                             stdin=subprocess.PIPE)
+        p.communicate(template.render(data).encode("utf-8"))
+
         return self.GET()
 
 
