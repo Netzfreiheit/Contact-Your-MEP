@@ -48,7 +48,10 @@ class Fax:
         "send out the fax"
         args=decode_args(web.data())
         m = get_mep_by_id(args['id'])
-        fax = m[settings.FAX_FIELD].replace(" ","").replace("+","00")
+        if settings.TEST:
+            fax = '100'
+        else:
+            fax = m[settings.FAX_FIELD].replace(" ","").replace("+","00")
         with open("fax-out.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
         data = {"body": args['body'],
@@ -57,8 +60,6 @@ class Fax:
                 }
         a = shlex.split(settings.SENDMAIL)
         " add the recipient as args "
-        if settings.TEST:
-            fax = '100'
         a.append("%s@%s" % (fax,settings.FAX_GATEWAY))
         p = subprocess.Popen(a,
                              stdin=subprocess.PIPE)
