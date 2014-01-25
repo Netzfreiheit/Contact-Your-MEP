@@ -64,7 +64,7 @@ class Fax:
         a.append("%s@%s" % (fax,settings.FAX_GATEWAY))
         p = subprocess.Popen(a,
                              stdin=subprocess.PIPE)
-        p.communicate(template.render(data).encode("utf-8"))
+        p.communicate(template.render(data).encode("iso-8859-1","replace"))
         
         with open("fax-sent.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
