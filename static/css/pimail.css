@@ -64,7 +64,7 @@ h1 {
 
 
 
-.button .blue, a.button  {
+.button .blue, a.button, input.button  {
 	cursor: pointer;
 	display: inline-block;
 	padding: 8px 16px 12px;
