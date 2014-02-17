@@ -17,9 +17,41 @@
 
 var data = require('./data.json');
 
-var nlen = 0;
 for (var i = 0; i < data.length; i++) {
-	console.log(i, data[i].name, data[i].name.length);
-	nlen = Math.max(data[i].name.length, nlen);
+	try {
+		if (data[i].role.indexOf('shadow') !== -1 || data[i].role.indexOf('rapporteur') !== -1 ) {
+			data[i].score = 0.9;
+		}
+		else if (data[i].group_short.indexOf('epp') !== -1) {
+			if (data[i].role.indexOf('member') !== -1) {
+				data[i].score = 0.8;
+			} else if (data[i].role.indexOf('shadow') !== -1 ) {
+				data[i].score = 0.5;
+			}
+		}
+		else if (data[i].group_short.indexOf('greensefa') !== -1) {
+			data[i].score = 0.25;
+		}
+		else {
+			if (data[i].role.indexOf('member') !== -1) {
+				data[i].score = 0.7;
+			} else if (data[i].role.indexOf('shadow') !== -1 ) {
+				data[i].score = 0.4;
+			}
+		}
+	} catch (e) {
+		console.error('couldn\'t update score of MEP # ' + i + ' because of ', e);
+	}
 }
-console.log(nlen);
+
+//console.log(data); 
+
+var fs = require('fs');
+fs.writeFile("data.json", JSON.stringify(data), function(err) {
+    if(err) {
+        console.log(err);
+    } else {
+        console.log("Scores updated. The file was saved!");
+    }
+});
+
