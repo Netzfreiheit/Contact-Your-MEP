@@ -31,11 +31,11 @@
 
 <div id=actionbox>
 
-<input id="subject" class=emailsubject placeholder="Subject" name="subject" value="Telecom Single Market: Vote for CA 4 B" />
+<input id="subject" class=emailsubject placeholder="Subject" name="subject" value="" />
 <textarea id="body" name="body" class=emailtext>
 Dear {{name}},
 
-This monday, you are going to vote in the ITRE committee on the proposal on a "Telecom Single Market" regulation.
+This Monday, you are going to vote in the ITRE committee on the proposal on a "Telecom Single Market" regulation.
 Vote for the alternative CA 4 B by Catherine Trautmann to save the internet and reject the CA 4 A by Rapporteur Pilar del Castillo! 
 
 The report proposed by the Rapporteur Pilar del Castillo still contains many loopholes and is dangerous for net neutrality.
@@ -56,15 +56,22 @@ PS: detailed analysis of the two compromise amendments http://is.gd/IHUJvu
 
 </div>
 <script>
-function makeform() {
-  var email="mailto:{{email}}?subject="
-  var body=document.getElementById("body").value.replace(/\n/g,"%0A")
-    .replace(/ /g,"%20")
-  var subject=document.getElementById("subject").value.replace(/ /g,"%20")
-  email=email+subject+"&body="+body
-  a=window.open(email)
-  a.close()
-  document.getElementById("sent-message").className="";
+  var txt_changed = false;
+  document.getElementById('body').onkeyup = function () {
+    txt_changed = true;
+  }
+
+  function makeform() {
+    if (txt_changed || confirm('Personalized messages are much more effective to convince politicans. \n\nPlease take the time to write a text :)\n\nSend it anyway?')) {
+      var email="mailto:{{email}}?subject="
+      var body=document.getElementById("body").value.replace(/\n/g,"%0A")
+        .replace(/ /g,"%20")
+      var subject=document.getElementById("subject").value.replace(/ /g,"%20")
+      email=email+subject+"&body="+body
+      a=window.open(email)
+      a.close()
+      document.getElementById("sent-message").className="";
+    }
   }
 </script>
 

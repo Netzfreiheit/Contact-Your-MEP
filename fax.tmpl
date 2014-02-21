@@ -30,12 +30,12 @@
 </div>
 
 <div id=actionbox>
-<form method="POST">
+<form method="POST" id="faxform">
 <input type="hidden" name="id" value="{{id}}" />
 <textarea id="body" name="body" class=emailtext>
 Dear {{name}},
  
-This monday, you are going to vote in the ITRE committee on the proposal on a "Telecom Single Market" regulation.
+This Monday, you are going to vote in the ITRE committee on the proposal on a "Telecom Single Market" regulation.
 Vote for the alternative CA 4 B by Catherine Trautmann to save the internet and reject the CA 4 A by Rapporteur Pilar del Castillo! 
 
 The decisions that you and your colleagues will make this week will have a lasting impact on the open internet in Europe. It’s critical to get this right and not accept bad compromises.
@@ -56,11 +56,24 @@ a concerned citizen
 PS: detailed analysis of the two Compromise Amendments http://is.gd/IHUJvu
 
   </textarea>
-<section><input type="submit" class="button green" value="Fax now!"></section>
+<section><a onclick="makeform()" class="button green" href="#">Fax Now!</a></section>
 </form>
 </div>
 
 </div>
+
+<script>
+	var txt_changed = false;
+  document.getElementById('body').onkeyup = function () {
+    txt_changed = true;
+  }
+
+  function makeform() {
+    if (txt_changed || confirm('Personalized messages are much more effective to convince politicans. \n\nPlease take the time to write a text :)\n\nSend it anyway?')) {
+			document.getElementById("faxform").submit();
+		}
+	}
+</script>
 
 </body>
 </html>
