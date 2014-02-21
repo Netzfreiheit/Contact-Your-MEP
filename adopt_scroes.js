@@ -19,23 +19,28 @@ var data = require('./data.json');
 
 for (var i = 0; i < data.length; i++) {
 	try {
-		if (data[i].role.indexOf('shadow') !== -1 || data[i].role.indexOf('rapporteur') !== -1 ) {
+		if (data[i].name.indexOf('Trautmann') !== -1 || data[i].name.indexOf('Andersdotter') !== -1 ) {
+			data[i].score = 0.1;
+		} else if (data[i].role.indexOf('shadow') !== -1 || data[i].role.indexOf('rapporteur') !== -1 ) {
 			data[i].score = 0.9;
 		}
-		else if (data[i].group_short.indexOf('epp') !== -1) {
+		else if (data[i].group_short.indexOf('epp') !== -1 || data[i].group_short.indexOf('aldeadle') !== -1) {
 			if (data[i].role.indexOf('member') !== -1) {
 				data[i].score = 0.8;
-			} else if (data[i].role.indexOf('shadow') !== -1 ) {
+			} else {
 				data[i].score = 0.5;
 			}
 		}
 		else if (data[i].group_short.indexOf('greensefa') !== -1) {
 			data[i].score = 0.25;
 		}
+		else if (data[i].group_short.indexOf('sd') !== -1) {
+			data[i].score = 0.50;
+		}
 		else {
 			if (data[i].role.indexOf('member') !== -1) {
 				data[i].score = 0.7;
-			} else if (data[i].role.indexOf('shadow') !== -1 ) {
+			} else {
 				data[i].score = 0.4;
 			}
 		}
