@@ -19,7 +19,7 @@ def weighted_choice(a):
     n = 0
     for c in a:
         n = n + c['score']
-        if n>r:
+        if n>r and c['fax']:
             return c
     return False
 
@@ -83,7 +83,7 @@ class mail:
         return template.render(m)
 
 urls = ('/widget/', 'mail',
-        '/widget/fax/', 'mail')
+        '/widget/fax/', 'Fax')
 
 app = web.application(urls,globals())
 
