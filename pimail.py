@@ -9,7 +9,7 @@ import textwrap
 import settings
 
 " Load Data "
-with open("data.json") as f:
+with open("./data/data.json") as f:
     meps = json.load(f)
     total_score = sum((i['score'] for i in meps))
 
