@@ -27,3 +27,13 @@ Contributions are always welcome! What you can do
 * Test it and give us Feedback (use the github issues)
 * Refine the Design - look at the static/ directory and the templates
 * Fiddle with the code. Look at the issues and implement missing features.
+
+## embed
+
+you can easily use our widget on your own website. Just copy&paste this html  embed code. 
+
+<b>Mail: </b>
+`<object data="http://pimail.tentacleriot.eu/" width="630" height="390" ></object>`
+
+<b>Fax: </b>
+`<object data="http://pimail.tentacleriot.eu/fax/" width="630" height="390" ></object>`

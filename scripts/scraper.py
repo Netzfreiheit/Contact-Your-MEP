@@ -7,9 +7,9 @@ cj=CookieJar()
 opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
 
 base="http://www.europarl.europa.eu"
-list="http://www.europarl.europa.eu/committees/en/itre/members.html?action=%s&webCountry=&webTermId=&name=&politicalGroup=&bodyType=&bodyValue=&type=&filter=#menuzone"
+list="http://www.europarl.europa.eu/meps/en/full-list.html?filter=all&leg="
 
-pages=[list%i for i in range(0,12)]
+pages=[list]
 
 def root_from_url(u):
   u=opener.open(u)
@@ -17,10 +17,9 @@ def root_from_url(u):
 
 def extract_urls_from_page(u):  
   r=root_from_url(u)
-  
-  urls=["%s%s"%(base,i) for i in r.xpath('//a[@class="ep_title"]/@href')]
-  roles=[i.text for i in r.xpath('//div[@class="ep_elementsubheading"]/span[1]/span')]
-  return [{"url":u, "role":r} for (u,r) in zip(urls,roles)]
+
+  urls=["%s%s"%(base,i) for i in r.xpath('//li[@class="mep_name"]/a/@href')]
+  return [{'url': x} for x in urls]
 
 def expand_mep_info(m):
   print m['url']
@@ -46,4 +45,5 @@ def do():
   with open("data.json","wb") as f:
     json.dump(meps,f)
 
-
+if __name__=='__main__':
+    do()
