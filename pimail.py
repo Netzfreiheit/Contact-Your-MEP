@@ -83,7 +83,7 @@ class mail:
         return template.render(m)
 
 urls = ('/widget/', 'mail',
-        '/widget/fax/', 'Fax')
+        '/widget/fax/', 'mail')
 
 app = web.application(urls,globals())
 
