@@ -28,10 +28,10 @@ for (var i = 0; i < data.length; i++) {
 			data[i].score = 0.2;
 		}
 		else if (data[i].group_short.indexOf('sd') !== -1) {
-			data[i].score = 0.3;
+			data[i].score = 0.1;
 		}
 		else if (data[i].group_short.indexOf('guengl') !== -1) {
-			data[i].score = 0.4;
+			data[i].score = 0.3;
 		}
 		else if (data[i].group_short.indexOf('efd') !== -1) {
 			data[i].score = 0.4;
