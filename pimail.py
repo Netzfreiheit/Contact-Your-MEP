@@ -19,7 +19,7 @@ def weighted_choice(a):
     n = 0
     for c in a:
         n = n + c['score']
-        if n>r and c['fax']:
+        if n>r and c.get('fax',None):
             return c
     return False
 
