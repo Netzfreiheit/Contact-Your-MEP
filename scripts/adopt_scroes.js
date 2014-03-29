@@ -15,29 +15,29 @@
 */
 
 
-var data = require('./data.json');
+var data = require('../data/data.json');
 
 for (var i = 0; i < data.length; i++) {
 	try {
 		if (data[i].group_short.indexOf('epp') !== -1) {
 			data[i].score = 0.8;
 		} else if (data[i].group_short.indexOf('aldeadle') !== -1) {
-			data[i].score = 0.8;
-		}
-		else if (data[i].group_short.indexOf('greensefa') !== -1) {
-			data[i].score = 0.2;
-		}
-		else if (data[i].group_short.indexOf('sd') !== -1) {
-			data[i].score = 0.1;
-		}
-		else if (data[i].group_short.indexOf('guengl') !== -1) {
 			data[i].score = 0.3;
 		}
+		else if (data[i].group_short.indexOf('greensefa') !== -1) {
+			data[i].score = 0.1;
+		}
+		else if (data[i].group_short.indexOf('sd') !== -1) {
+			data[i].score = 0.3;
+		}
+		else if (data[i].group_short.indexOf('guengl') !== -1) {
+			data[i].score = 0.2;
+		}
 		else if (data[i].group_short.indexOf('efd') !== -1) {
-			data[i].score = 0.4;
+			data[i].score = 0.1;
 		}
 		else {
-			data[i].score = 0.5;
+			data[i].score = 0.1;
 		}
 	} catch (e) {
 		console.error('couldn\'t update score of MEP # ' + i + ' because of ', e);
@@ -47,7 +47,7 @@ for (var i = 0; i < data.length; i++) {
 //console.log(data); 
 
 var fs = require('fs');
-fs.writeFile("data.json", JSON.stringify(data), function(err) {
+fs.writeFile("./data/data.json", JSON.stringify(data), function(err) {
     if(err) {
         console.log(err);
     } else {
