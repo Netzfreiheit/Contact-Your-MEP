@@ -139,9 +139,9 @@ class mail:
         web.header("Content-Type", "text/html;charset=utf-8")
         with open("mail.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
+        m = weighted_choice(get_filter(web.input()))
         if not m:
             return create_error(web.input())
-        m = weighted_choice(get_filter(web.input()))
         return template.render(m)
 
 urls = ('/widget/', 'mail',
