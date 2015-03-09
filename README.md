@@ -33,7 +33,7 @@ Contributions are always welcome! What you can do
 you can easily use our widget on your own website. Just copy&paste this html  embed code. 
 
 <b>Mail: </b>
-`<object data="http://pimail.tentacleriot.eu/" width="630" height="390" ></object>`
+`<object data="https://faxjh.savetheinternet.eu/" width="630" height="390" ></object>`
 
 <b>Fax: </b>
-`<object data="http://pimail.tentacleriot.eu/fax/" width="630" height="390" ></object>`
+`<object data="https://faxjs.savetheinternet.eu/fax/" width="630" height="390" ></object>`
