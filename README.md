@@ -37,3 +37,5 @@ you can easily use our widget on your own website. Just copy&paste this html  em
 
 <b>Fax: </b>
 `<object data="https://faxjs.savetheinternet.eu/fax/" width="630" height="390" ></object>`
+<b>Tweet: </b>
+`<object data="https://faxjs.savetheinternet.eu/tweet/" width="630" height="390" ></object>`
