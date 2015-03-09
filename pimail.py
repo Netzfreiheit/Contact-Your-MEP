@@ -33,19 +33,66 @@ def decode_args(a):
 
 def get_mep_by_id(id):
     for m in meps:
-        if m['id']==int(id):
+        if m['id']==id:
             return m
     return None
 
+def get_filter(wi):
+        if hasattr(wi,'country'):
+            country = wi.country
+        else:
+            country = None
+        if hasattr(wi,'group'):
+            group = wi.group
+        else:
+            group = None
+        if hasattr(wi, 'id'):
+            id = wi.id
+        else:
+            id = None
+        if id:
+            ff = lambda x: x.get('id',None) == id
+        elif country and group:
+            ff = lambda x: x.get('country_short',None) == country and x.get('group_short',None) == group
+        elif country:
+            ff = lambda x: x.get('country_short',None) == country
+        elif group:
+            ff = lambda x: x.get('group_short',None) == group
+        else:
+            ff = lambda x: x
+        return ff
+
+def create_error(wi):
+        if hasattr(wi,'country'):
+            country = wi.country
+        else:
+            country = None
+        if hasattr(wi,'group'):
+            group = wi.group
+        else:
+            group = None
+        if hasattr(wi, 'id'):
+            id = wi.id
+        else:
+            id = None
+        if id:
+            return "No MEP with this id"
+        elif country and group:
+            return "No MEP of group %s in country %s"%(group,country)
+        else:
+            return "No MEP found :/"
+    
+
 class Fax:
     """ Handle the Fax Widget """
-    
     def GET(self):
         """ display the fax widget """
         web.header("Content-Type", "text/html;charset=utf-8")
         with open("fax.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
-        m = weighted_choice()
+        m = weighted_choice(get_filter(web.input()))
+        if not m:
+            return create_error(web.input())
         return template.render(m)
     def POST(self):
         "send out the fax"
@@ -76,10 +123,13 @@ class Fax:
 class Tweet:
     def GET(self):
         """display the tweet widget"""
+        ff = get_filter(web.input())
         web.header("Content-Type","text/html;charset=utf-8")
         with open("tweet.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
-        m = weighted_choice(lambda x: x.get('twitter',False))
+        if not m:
+            return create_error(web.input())
+        m = weighted_choice(lambda x: x.get('twitter',None) and ff(x))
         return template.render(m)
 
 class mail:
@@ -89,7 +139,9 @@ class mail:
         web.header("Content-Type", "text/html;charset=utf-8")
         with open("mail.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
-        m = weighted_choice()
+        if not m:
+            return create_error(web.input())
+        m = weighted_choice(get_filter(web.input()))
         return template.render(m)
 
 urls = ('/widget/', 'mail',
