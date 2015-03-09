@@ -3,6 +3,7 @@ import json
 import urllib2
 from cookielib import CookieJar
 import re
+import os
 
 cj=CookieJar()
 opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
@@ -28,6 +29,10 @@ def expand_mep_info(m):
   r=root_from_url(m['url'].replace(" ","%20"))
   m['id']=re.match(r'.*\/meps\/en\/(\d+)\/', m['url']).group(1)
   m['image']="%s%s"%(base,r.xpath('//img[@class="photo_mep"]/@src')[0])
+  if not os.path.isfile("images/%s.jpg"%m['id']):
+    u = urllib2.urlopen(m['image'])
+    with open("images/%s.jpg"%m['id'],"wb") as f:
+        f.write(u.read())
   m['name']=" ".join(r.xpath('//li[@class="mep_name"]')[0].itertext()).strip()
   info=r.xpath('//div[@class="zone_info_mep_transparent_mep_details"]')[0]
   m['group']=info.xpath('./ul/li[2]')[0].text.strip()
@@ -50,7 +55,7 @@ def expand_mep_info(m):
     m['fax_stg']=None
 
   try:
-    m['twitter']=re.sub(r".*twitter.com\/", "", r.xpath('//a[@class="link_twitt"]/@href')[0])
+    m['twitter']=re.sub(r".*twitter.com\/", "", r.xpath('//a[@class="link_twitt"]/@href')[0]).replace("@","").replace("/","")
   except IndexError:
     m['twitter']=None
 
