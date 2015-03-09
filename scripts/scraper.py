@@ -30,9 +30,12 @@ def expand_mep_info(m):
   m['id']=re.match(r'.*\/meps\/en\/(\d+)\/', m['url']).group(1)
   m['image']="%s%s"%(base,r.xpath('//img[@class="photo_mep"]/@src')[0])
   if not os.path.isfile("images/%s.jpg"%m['id']):
-    u = urllib2.urlopen(m['image'])
-    with open("images/%s.jpg"%m['id'],"wb") as f:
-        f.write(u.read())
+    try:
+        u = urllib2.urlopen(m['image'])
+        with open("images/%s.jpg"%m['id'],"wb") as f:
+            f.write(u.read())
+    except:
+        pass
   m['name']=" ".join(r.xpath('//li[@class="mep_name"]')[0].itertext()).strip()
   info=r.xpath('//div[@class="zone_info_mep_transparent_mep_details"]')[0]
   m['group']=info.xpath('./ul/li[2]')[0].text.strip()

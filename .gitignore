@@ -2,3 +2,4 @@
 venv
 settings.py
 .pid
+scripts/images/*.jpg
