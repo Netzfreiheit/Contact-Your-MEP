@@ -127,9 +127,9 @@ class Tweet:
         web.header("Content-Type","text/html;charset=utf-8")
         with open("tweet.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
+        m = weighted_choice(lambda x: x.get('twitter',None) and ff(x))
         if not m:
             return create_error(web.input())
-        m = weighted_choice(lambda x: x.get('twitter',None) and ff(x))
         return template.render(m)
 
 class mail:
