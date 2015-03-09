@@ -12,14 +12,15 @@ import settings
 with open("./data/data.json") as f:
     meps = json.load(f)
     total_score = sum((i['score'] for i in meps))
+    total_tweet_score = sum((i['score'] for i in meps if i.get('twitter',False)))
 
-def weighted_choice(a):
+def weighted_choice(a,ts=total_score):
     """ Pick a MEP based on the score weight """
-    r = random.uniform(0,total_score)
+    r = random.uniform(0,ts)
     n = 0
     for c in a:
         n = n + c['score']
-        if n>r and c.get('fax',None):
+        if n>r and c.get('fax_bxl',None):
             return c
     return False
 
@@ -74,10 +75,12 @@ class Fax:
 class Tweet:
     def GET(self):
         """display the tweet widget"""
-        web.header("Content-Type","text/hmtl;charset=utf-8")
+        web.header("Content-Type","text/html;charset=utf-8")
         with open("tweet.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
-        m = weighted_choice(meps)
+        print [i for i in meps if i.get('twitter',False)]
+        m = weighted_choice([i for i in meps if i.get('twitter',False)],
+                            total_tweet_score)
         return template.render(m)
 
 class mail:
@@ -91,7 +94,8 @@ class mail:
         return template.render(m)
 
 urls = ('/widget/', 'mail',
-        '/widget/fax/', 'Fax')
+        '/widget/fax/', 'Fax',
+        '/widget/tweet/','Tweet',)
 
 app = web.application(urls,globals())
 
