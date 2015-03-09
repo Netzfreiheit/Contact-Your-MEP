@@ -71,6 +71,14 @@ class Fax:
         web.header("Content-Type", "text/html;charset=utf-8")
         return template.render(m)
 
+class Tweet:
+    def GET(self):
+        """display the tweet widget"""
+        web.header("Content-Type","text/hmtl;charset=utf-8")
+        with open("tweet.tmpl") as f:
+            template = Template(f.read().decode("utf-8"))
+        m = weighted_choice(meps)
+        return template.render(m)
 
 class mail:
     """ Handle Requests for Mail """
