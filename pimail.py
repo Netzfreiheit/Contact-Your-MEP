@@ -12,14 +12,14 @@ import settings
 " Load Data "
 with open("./data/data.json") as f:
     meps = json.load(f)
-    total_score = sum((i['score'] for i in meps))
-    total_tweet_score = sum((i['score'] for i in meps if i.get('twitter',False)))
 
-def weighted_choice(a,ts=total_score):
+def weighted_choice(ff=lambda x: x):
     """ Pick a MEP based on the score weight """
+    lm = filter(ff,meps)
+    ts = sum((i['score'] for i in lm))
     r = random.uniform(0,ts)
     n = 0
-    for c in a:
+    for c in lm:
         n = n + c['score']
         if n>r and c.get('fax_bxl',None):
             return c
@@ -45,7 +45,7 @@ class Fax:
         web.header("Content-Type", "text/html;charset=utf-8")
         with open("fax.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
-        m = weighted_choice(meps)
+        m = weighted_choice()
         return template.render(m)
     def POST(self):
         "send out the fax"
@@ -79,9 +79,7 @@ class Tweet:
         web.header("Content-Type","text/html;charset=utf-8")
         with open("tweet.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
-        print [i for i in meps if i.get('twitter',False)]
-        m = weighted_choice([i for i in meps if i.get('twitter',False)],
-                            total_tweet_score)
+        m = weighted_choice(lambda x: x.get('twitter',False))
         return template.render(m)
 
 class mail:
@@ -91,7 +89,7 @@ class mail:
         web.header("Content-Type", "text/html;charset=utf-8")
         with open("mail.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
-        m = weighted_choice(meps)
+        m = weighted_choice()
         return template.render(m)
 
 urls = ('/widget/', 'mail',
@@ -101,7 +99,10 @@ urls = ('/widget/', 'mail',
 app = web.application(urls,globals())
 
 if __name__ == "__main__":
-    pid = os.fork()
+    if not settings.TEST:
+        pid = os.fork()
+    else:
+        pid = None
     if not pid:
         app.run()
     else:
