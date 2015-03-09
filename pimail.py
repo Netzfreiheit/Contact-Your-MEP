@@ -1,5 +1,6 @@
 import web
 import json
+import os
 import random
 from jinja2 import Template
 import urllib
@@ -100,4 +101,10 @@ urls = ('/widget/', 'mail',
 app = web.application(urls,globals())
 
 if __name__ == "__main__":
-    app.run()
+    pid = os.fork()
+    if not pid:
+        app.run()
+    else:
+        with open(".pid","wb") as f:
+            f.write(str(pid))
+
