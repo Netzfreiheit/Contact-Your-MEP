@@ -33,7 +33,16 @@ Contributions are always welcome! What you can do
 you can easily use our widget on your own website. Just copy&paste this html  embed code. 
 
 <b>Mail: </b>
-`<object data="http://pimail.tentacleriot.eu/" width="630" height="390" ></object>`
+`<object data="https://faxjh.savetheinternet.eu/" width="630" height="390" ></object>`
 
 <b>Fax: </b>
-`<object data="http://pimail.tentacleriot.eu/fax/" width="630" height="390" ></object>`
+`<object data="https://faxjh.savetheinternet.eu/fax/" width="630" height="390" ></object>`
+
+<b>Fax: (only polish S&D MEPs) </b>
+`<object data="https://faxjh.savetheinternet.eu/fax/?group=sd&country=pl" width="630" height="390" ></object>`
+
+<b>Fax: (only specific MEP) </b>
+`<object data="https://faxjh.savetheinternet.eu/fax/?id=124990" width="630" height="390" ></object>`
+
+<b>Twitter: </b>
+`<object data="https://faxjh.savetheinternet.eu/tweet/" width="630" height="390" ></object>`
