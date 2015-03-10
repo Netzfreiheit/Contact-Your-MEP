@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/static/css/flags.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/pimail.css">
+
+  <style>
+    .hidden {
+      display: none;
+      }
+  </style>    
+</head>
+<title>Tweet your MEP</title>
+</head>
+<body>
+<div id=global>
+
+	<h1>Write MEPs! Demand the enforcement of a true and unconditional Net neutrality!</h1>
+	<div id="sent-message" class="hidden">Your email is in your mail client -
+	if this doesn't work: the email address is <a href="mailto:{{email}}">{{email}}</a></div>
+
+<div id=mep_infos>
+
+	<section id=mep_name>{{name}} <img src="/static/groups/group_icon_{{group_short}}.png" style="vertical-align:middle;"> </section>
+	<section id=mep_pic><img src="{{image}}" style="height:120px;"></section>
+	<section id=mep_group>{{group}}</section>
+	<section id=mep_country><img src="/static/blank.gif" class="flag flag-{{country_short}}" alt="{{country}}"> {{country}}</section>
+	<section id=mep_details><a href="{{url}}" target="_blank">Details</a></section>
+</div>
+
+<div id=actionbox>
+
+<textarea id="tweet" name="body" class=tweettext>
+.@{{twitter}}: Urge your rapporteur on the single telecoms market to stay true to the parliaments decision</textarea>
+<section><a onclick="makeform()" class="button green" href="#">Tweet!</a></section>
+</div>
+
+</div>
+<script>
+  var txt_changed = false;
+  document.getElementById('body').onkeyup = function () {
+    txt_changed = true;
+  }
+
+  function makeform() {
+    if (txt_changed || confirm('Personalized messages are much more effective to convince politicans. \n\nPlease take the time to write a text :)\n\nSend it anyway?')) {
+      var email="https://twitter.com/intent/tweet?text="
+      var body=document.getElementById("tweet").value.replace(/\n/g,"%0A")
+        .replace(/ /g,"%20")
+      email=email+body
+      a=window.open(email)
+    }
+  }
+</script>
+
+</body>
+</html>

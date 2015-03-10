@@ -30,7 +30,7 @@ Contributions are always welcome! What you can do
 
 ## embed
 
-you can easily use our widget on your own website. Just copy&paste this html  embed code. 
+you can easily use our widget on your own website. Just copy&paste this html  embed code.
 
 <b>Mail: </b>
 `<object data="https://faxjh.savetheinternet.eu/" width="630" height="390" ></object>`

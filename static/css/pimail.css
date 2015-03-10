@@ -48,7 +48,8 @@ h1 {
 }
 
 .emailtext,
-.emailsubject {
+.emailsubject,
+.tweettext {
 	display: block;
 	margin: 2px;
 	padding: 5px;
@@ -58,9 +59,14 @@ h1 {
 	font-size: 13px;
 }
 
+
+
 .emailtext {
 	height: 250px;
 }
+.tweettext {    
+    height: 50px;
+    }
 
 
 
