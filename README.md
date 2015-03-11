@@ -30,14 +30,19 @@ Contributions are always welcome! What you can do
 
 ## embed
 
-you can easily use our widget on your own website. Just copy&paste this html  embed code. 
+you can easily use our widget on your own website. Just copy&paste this html  embed code.
 
 <b>Mail: </b>
 `<object data="https://faxjh.savetheinternet.eu/" width="630" height="390" ></object>`
 
 <b>Fax: </b>
 `<object data="https://faxjh.savetheinternet.eu/fax/" width="630" height="390" ></object>`
-<b>Tweet: </b>
+
+<b>Fax: (only polish S&D MEPs) </b>
+`<object data="https://faxjh.savetheinternet.eu/fax/?group=sd&country=pl" width="630" height="390" ></object>`
+
+<b>Fax: (only specific MEP) </b>
+`<object data="https://faxjh.savetheinternet.eu/fax/?id=124990" width="630" height="390" ></object>`
+
+<b>Twitter: </b>
 `<object data="https://faxjh.savetheinternet.eu/tweet/" width="630" height="390" ></object>`
-
-
