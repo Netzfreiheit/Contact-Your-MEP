@@ -33,7 +33,7 @@
 <textarea id="tweet" name="body" class=tweettext>
 Dear @{{twitter}} please stand by the decision of the European Parliament from April 2014 for a strong #netneutrality. #SaveTheInternet
 </textarea>
-<section><a onclick="makeform()" class="button green" href="#">Tweet!</a></section>
+<section><a onclick="makeform()" class="button green" id="tweetlink" href="#">Tweet!</a></section>
 </div>
 
 </div>
@@ -52,6 +52,20 @@ Dear @{{twitter}} please stand by the decision of the European Parliament from A
       a=window.open(email)
     }
   }
+
+  function log_activity (action, value) {
+    var url = "https://faxjh.savetheinternet.eu/log/?action=" + action; 
+    if (value) {
+      url += '&value=' + value;
+    }
+    jQuery.ajax(url);
+  }
+
+  $(function () {
+    $('#tweetlink').on('click', function () {
+      log_activity('tweet');
+    })
+  });
 </script>
 
 </body>
