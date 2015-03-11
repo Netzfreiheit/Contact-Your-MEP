@@ -86,7 +86,7 @@ def create_error(wi,ms=""):
             return "No MEP of group %s in country %s %s"%(group,country,ms)
         else:
             return "No MEP %s found :/"%(ms)
-    
+
 
 class Fax:
     """ Handle the Fax Widget """
@@ -109,9 +109,9 @@ class Fax:
             fax = m[settings.FAX_FIELD].replace(" ","").replace("+","00")
         with open("fax-out.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
-        db.query(u"""INSERT INTO faxes (message, faxnr, create_date) 
+        db.query(u"""INSERT INTO faxes (message, faxnr, create_date)
             VALUES ($m,$f,$d)""",
-                vars = { 
+                vars = {
                 "m" : textwrap.fill(args['body'],replace_whitespace=False),
                 "f" : fax,
                 "d" : datetime.datetime.now()})
@@ -141,15 +141,15 @@ class Log:
         if hasattr(wi,'action'):
             action = wi.action;
         else:
-            return """{status: 'error', 
+            return """{status: 'error',
                      message: 'no action'}"""
         if hasattr(wi,'value'):
             value = wi.value
         else:
             value = ""
         logger.log(db,action,value)
-        return """{status: 'success', 
-                   message: 'logged action %s with value %s' 
+        return """{status: 'success',
+                   message: 'logged action %s with value %s'
                    }"""%(action,value)
 class mail:
     """ Handle Requests for Mail """
@@ -163,10 +163,10 @@ class mail:
             return create_error(web.input())
         return template.render(m)
 
-urls = ('/widget/mail/', 'mail',
-        '/widget/fax/', 'Fax',
-        '/widget/tweet/','Tweet',
-        '/widget/log/',Log,)
+urls = ('/mail/', 'mail',
+        '/fax/', 'Fax',
+        '/tweet/','Tweet',
+        '/log/',Log,)
 
 app = web.application(urls,globals())
 
