@@ -8,7 +8,8 @@
     .hidden {
       display: none;
       }
-  </style>    
+  </style>
+  <script type="text/javascript" src="/static/js/jquery-latest.js"></script>
 </head>
 <title>Mail your MEP</title>
 </head>
@@ -48,7 +49,7 @@ Sincerely,
 A concerned citizen
 
   </textarea>
-<section><a onclick="makeform()" class="button green" href="#">Mail Now!</a></section>
+<section><a onclick="makeform()" class="button green" id="mailtolink" href="#">Mail Now!</a></section>
 </div>
 
 </div>
@@ -70,6 +71,21 @@ A concerned citizen
       document.getElementById("sent-message").className="";
     }
   }
+
+  function log_activity (action, value) {
+    var url = "https://faxjh.savetheinternet.eu/log/?action=" + action; 
+    if (value) {
+      url += '&value=' + value;
+    }
+    jQuery.ajax(url);
+  }
+
+  $(function () {
+    $('#mailtolink').on('click', function () {
+      log_activity('mail');
+    })
+  });
+
 </script>
 
 </body>
