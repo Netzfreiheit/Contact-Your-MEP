@@ -15,7 +15,7 @@ def connect(url):
 def convert(query):
     import settings
     r = urlparse.urlparse(settings.DATABASE_URL)
-    if r.scheme = 'sqlite':
+    if r.scheme == 'sqlite':
         return query
-    if r.scheme = 'mysql':
+    if r.scheme == 'mysql':
         return query.replace("?","%s")
