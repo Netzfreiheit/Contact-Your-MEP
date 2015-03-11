@@ -10,6 +10,7 @@ import textwrap
 import settings
 import datetime
 import databaseconnect
+import logger
 
 " Load Data "
 with open("./data/data.json") as f:
@@ -108,23 +109,17 @@ class Fax:
         cur = sql.cursor()
         with open("fax-out.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
-        data = {"body": textwrap.fill(args['body'],replace_whitespace=False),
-                "faxnr": fax,
-                "create_date": datetime.datetime.now().isoformat()
-                }
         cur.execute(u"""INSERT INTO faxes (message, faxnr, create_date) 
-            VALUES ('{body}','{faxnr}','{create_date}')""".format(**data))
+            VALUES (?,?,?)""",
+                (
+                textwrap.fill(args['body'],replace_whitespace=False),
+                fax,
+                datetime.datetime.now().isoformat()))
         sql.commit()
-        #a = shlex.split(settings.SENDMAIL)
-        #" add the recipient as args "
-        #a.append("%s@%s" % (fax,settings.FAX_GATEWAY))
-        #p = subprocess.Popen(a,
-        #                     stdin=subprocess.PIPE)
-        #p.communicate(template.render(data).encode("iso-8859-1","replace"))
-        #
         with open("fax-sent.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
         web.header("Content-Type", "text/html;charset=utf-8")
+        logger.log("fax-stored")
         return template.render(m)
 
 class Tweet:
@@ -139,6 +134,24 @@ class Tweet:
             return create_error(web.input(),"using Twitter")
         return template.render(m)
 
+class Log:
+    def GET(self):
+        """log an action"""
+        web.header("Content-Type","application/javascript;charset=utf-8")
+        wi = web.input()
+        if hasattr(wi,'action'):
+            action = wi.action;
+        else:
+            return """{status: 'error', 
+                     message: 'no action'}"""
+        if hasattr(wi,'value'):
+            value = wi.value
+        else:
+            value = ""
+        logger.log(action,value)
+        return """{status: 'success', 
+                   message: 'logged action %s with value %s' 
+                   }"""%(action,value)
 class mail:
     """ Handle Requests for Mail """
     def GET(self):
@@ -153,7 +166,8 @@ class mail:
 
 urls = ('/widget/', 'mail',
         '/widget/fax/', 'Fax',
-        '/widget/tweet/','Tweet',)
+        '/widget/tweet/','Tweet',
+        '/widget/log/',Log,)
 
 app = web.application(urls,globals())
 
