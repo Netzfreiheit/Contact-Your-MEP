@@ -8,6 +8,8 @@ import subprocess
 import shlex
 import textwrap
 import settings
+import datetime
+import databaseconnect
 
 " Load Data "
 with open("./data/data.json") as f:
@@ -102,19 +104,24 @@ class Fax:
             fax = '100'
         else:
             fax = m[settings.FAX_FIELD].replace(" ","").replace("+","00")
+        sql = databaseconnect.connect(settings.DATABASE_URL)
+        cur = sql.cursor()
         with open("fax-out.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
         data = {"body": textwrap.fill(args['body'],replace_whitespace=False),
-                "from": settings.FROM,
-                "to": "%s@%s" % (fax, settings.FAX_GATEWAY),
+                "faxnr": fax,
+                "create_date": datetime.datetime.now().isoformat()
                 }
-        a = shlex.split(settings.SENDMAIL)
-        " add the recipient as args "
-        a.append("%s@%s" % (fax,settings.FAX_GATEWAY))
-        p = subprocess.Popen(a,
-                             stdin=subprocess.PIPE)
-        p.communicate(template.render(data).encode("iso-8859-1","replace"))
-        
+        cur.execute(u"""INSERT INTO faxes (message, faxnr, create_date) 
+            VALUES ('{body}','{faxnr}','{create_date}')""".format(**data))
+        sql.commit()
+        #a = shlex.split(settings.SENDMAIL)
+        #" add the recipient as args "
+        #a.append("%s@%s" % (fax,settings.FAX_GATEWAY))
+        #p = subprocess.Popen(a,
+        #                     stdin=subprocess.PIPE)
+        #p.communicate(template.render(data).encode("iso-8859-1","replace"))
+        #
         with open("fax-sent.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
         web.header("Content-Type", "text/html;charset=utf-8")
