@@ -16,6 +16,8 @@ import logger
 with open("./data/data.json") as f:
     meps = json.load(f)
 
+db = databaseconnect.connect(settings.DATABASE_URL)
+
 def weighted_choice(ff=lambda x: x):
     """ Pick a MEP based on the score weight """
     lm = filter(ff,meps)
@@ -105,21 +107,18 @@ class Fax:
             fax = '100'
         else:
             fax = m[settings.FAX_FIELD].replace(" ","").replace("+","00")
-        sql = databaseconnect.connect(settings.DATABASE_URL)
-        cur = sql.cursor()
         with open("fax-out.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
-        cur.execute(databaseconnect.convert(u"""INSERT INTO faxes (message, faxnr, create_date) 
-            VALUES (?,?,?)"""),
-                (
-                textwrap.fill(args['body'],replace_whitespace=False),
-                fax,
-                datetime.datetime.now().isoformat()))
-        sql.commit()
+        db.query(u"""INSERT INTO faxes (message, faxnr, create_date) 
+            VALUES ($m,$f,$d)""",
+                vars = { 
+                "m" : textwrap.fill(args['body'],replace_whitespace=False),
+                "f" : fax,
+                "d" : datetime.datetime.now()})
         with open("fax-sent.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
         web.header("Content-Type", "text/html;charset=utf-8")
-        logger.log("fax-stored")
+        logger.log(db,"fax-stored")
         return template.render(m)
 
 class Tweet:
@@ -148,7 +147,7 @@ class Log:
             value = wi.value
         else:
             value = ""
-        logger.log(action,value)
+        logger.log(db,action,value)
         return """{status: 'success', 
                    message: 'logged action %s with value %s' 
                    }"""%(action,value)
