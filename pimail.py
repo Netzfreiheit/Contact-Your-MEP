@@ -8,6 +8,8 @@ import subprocess
 import shlex
 import textwrap
 import settings
+import datetime
+import databaseconnect
 
 " Load Data "
 with open("./data/data.json") as f:
@@ -62,7 +64,7 @@ def get_filter(wi):
             ff = lambda x: x
         return ff
 
-def create_error(wi):
+def create_error(wi,ms=""):
         if hasattr(wi,'country'):
             country = wi.country
         else:
@@ -76,11 +78,11 @@ def create_error(wi):
         else:
             id = None
         if id:
-            return "No MEP with this id"
+            return "This MEP is not %s"%(ms if ms else "in our database")
         elif country and group:
-            return "No MEP of group %s in country %s"%(group,country)
+            return "No MEP of group %s in country %s %s"%(group,country,ms)
         else:
-            return "No MEP found :/"
+            return "No MEP %s found :/"%(ms)
     
 
 class Fax:
@@ -102,19 +104,24 @@ class Fax:
             fax = '100'
         else:
             fax = m[settings.FAX_FIELD].replace(" ","").replace("+","00")
+        sql = databaseconnect.connect(settings.DATABASE_URL)
+        cur = sql.cursor()
         with open("fax-out.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
         data = {"body": textwrap.fill(args['body'],replace_whitespace=False),
-                "from": settings.FROM,
-                "to": "%s@%s" % (fax, settings.FAX_GATEWAY),
+                "faxnr": fax,
+                "create_date": datetime.datetime.now().isoformat()
                 }
-        a = shlex.split(settings.SENDMAIL)
-        " add the recipient as args "
-        a.append("%s@%s" % (fax,settings.FAX_GATEWAY))
-        p = subprocess.Popen(a,
-                             stdin=subprocess.PIPE)
-        p.communicate(template.render(data).encode("iso-8859-1","replace"))
-        
+        cur.execute(u"""INSERT INTO faxes (message, faxnr, create_date) 
+            VALUES ('{body}','{faxnr}','{create_date}')""".format(**data))
+        sql.commit()
+        #a = shlex.split(settings.SENDMAIL)
+        #" add the recipient as args "
+        #a.append("%s@%s" % (fax,settings.FAX_GATEWAY))
+        #p = subprocess.Popen(a,
+        #                     stdin=subprocess.PIPE)
+        #p.communicate(template.render(data).encode("iso-8859-1","replace"))
+        #
         with open("fax-sent.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
         web.header("Content-Type", "text/html;charset=utf-8")
@@ -129,7 +136,7 @@ class Tweet:
             template = Template(f.read().decode("utf-8"))
         m = weighted_choice(lambda x: x.get('twitter',None) and ff(x))
         if not m:
-            return create_error(web.input())
+            return create_error(web.input(),"using Twitter")
         return template.render(m)
 
 class mail:
