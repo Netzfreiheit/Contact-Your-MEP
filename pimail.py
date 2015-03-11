@@ -171,13 +171,16 @@ urls = ('/widget/', 'mail',
 app = web.application(urls,globals())
 
 if __name__ == "__main__":
-    if not settings.TEST:
-        pid = os.fork()
-    else:
-        pid = None
-    if not pid:
-        app.run()
-    else:
-        with open(".pid","wb") as f:
-            f.write(str(pid))
+#    if not settings.TEST:
+#        pid = os.fork()
+#    else:
+#        pid = None
+#    if not pid:
+#        app.run()
+#    else:
+#        with open(".pid","wb") as f:
+#            f.write(str(pid))
+    if not settings.DEVELOPMENT:
+        web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
+    app.run()
 
