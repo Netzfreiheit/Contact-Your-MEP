@@ -164,10 +164,10 @@ class mail:
             return create_error(web.input())
         return template.render(m)
 
-urls = ('/widget/', 'mail',
-        '/widget/fax/', 'Fax',
-        '/widget/tweet/','Tweet',
-        '/widget/log/',Log,)
+urls = ('/', 'mail',
+        '/fax/', 'Fax',
+        '/tweet/','Tweet',
+        '/log/',Log,)
 
 app = web.application(urls,globals())
 
