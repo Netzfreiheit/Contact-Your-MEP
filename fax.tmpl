@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +26,12 @@
 	<section id=mep_pic><img src="/static/images/{{id}}.jpg" style="height:120px;"></section>
 	<section id=mep_group>{{group}}</section>
 	<section id=mep_country><img src="/static/blank.gif" class="flag flag-{{country_short}}" alt="{{country}}"> {{country}}</section>
-	<section id=mep_details><a href="{{url}}" target="_blank">Details</a></section>
+	{% if facebook %}
+  <a href="{{facebook}}"><img src="/static/images/fb.jpg"></img></a>
+  {% endif %}
+  {% if twitter %}
+  <a href="{{twitter}}"><img src="/static/images/tw.jpg"></img></a>
+  {% endif %}
 </div>
 
 <div id=actionbox>
