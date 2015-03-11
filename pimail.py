@@ -109,8 +109,8 @@ class Fax:
         cur = sql.cursor()
         with open("fax-out.tmpl") as f:
             template = Template(f.read().decode("utf-8"))
-        cur.execute(u"""INSERT INTO faxes (message, faxnr, create_date) 
-            VALUES (?,?,?)""",
+        cur.execute(databaseconnect.convert(u"""INSERT INTO faxes (message, faxnr, create_date) 
+            VALUES (?,?,?)"""),
                 (
                 textwrap.fill(args['body'],replace_whitespace=False),
                 fax,
