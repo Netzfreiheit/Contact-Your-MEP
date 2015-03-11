@@ -62,7 +62,7 @@ def get_filter(wi):
             ff = lambda x: x
         return ff
 
-def create_error(wi):
+def create_error(wi,ms=""):
         if hasattr(wi,'country'):
             country = wi.country
         else:
@@ -76,11 +76,11 @@ def create_error(wi):
         else:
             id = None
         if id:
-            return "No MEP with this id"
+            return "This MEP is not %s"%(ms if ms else "in our database")
         elif country and group:
-            return "No MEP of group %s in country %s"%(group,country)
+            return "No MEP of group %s in country %s %s"%(group,country,ms)
         else:
-            return "No MEP found :/"
+            return "No MEP %s found :/"%(ms)
     
 
 class Fax:
@@ -129,7 +129,7 @@ class Tweet:
             template = Template(f.read().decode("utf-8"))
         m = weighted_choice(lambda x: x.get('twitter',None) and ff(x))
         if not m:
-            return create_error(web.input())
+            return create_error(web.input(),"using Twitter")
         return template.render(m)
 
 class mail:
