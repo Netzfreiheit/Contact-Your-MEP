@@ -7,7 +7,7 @@ def connect(url):
         return sqlite3.connect(r.netloc)
     if r.scheme == 'mysql':
         import MySQLdb
-        return MySQLdb.connect(host = r.host,
+        return MySQLdb.connect(host = r.hostname,
                 user = r.username,
                 passwd = r.password,
                 db = r.path[1:])
