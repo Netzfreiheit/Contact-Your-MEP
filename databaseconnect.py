@@ -11,3 +11,11 @@ def connect(url):
                 user = r.username,
                 passwd = r.password,
                 db = r.path[1:])
+
+def convert(query):
+    import settings
+    r = urlparse.urlparse(settings.DATABASE_URL)
+    if r.scheme == 'sqlite':
+        return query
+    if r.scheme == 'mysql':
+        return query.replace("?","%s")
