@@ -163,7 +163,7 @@ class mail:
             return create_error(web.input())
         return template.render(m)
 
-urls = ('/widget/', 'mail',
+urls = ('/widget/mail/', 'mail',
         '/widget/fax/', 'Fax',
         '/widget/tweet/','Tweet',
         '/widget/log/',Log,)
