@@ -73,9 +73,9 @@ A concerned citizen
       var email="mailto:{{email}}?subject="
       var body=encodeURIComponent(document.getElementById("body").value)
       var subject=encodeURIComponent(document.getElementById("subject").value)
-      email=+subject+"&body="+body
+      email+=subject+"&body="+body
       a=window.open(email)
-      a.close()
+      //a.close()
       document.getElementById("sent-message").className="";
     }
   }
