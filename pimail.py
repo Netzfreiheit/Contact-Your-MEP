@@ -165,6 +165,7 @@ urls = ('/mail/', 'mail',
         '/tweet/','Tweet',
         '/log/',Log,)
 
+web.config.debug = settings.DEVELOPMENT
 app = web.application(urls,globals())
 
 if __name__ == "__main__":
