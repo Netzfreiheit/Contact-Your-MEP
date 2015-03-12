@@ -16,8 +16,6 @@
 <div id=global>
 
 	<h1>Write MEPs! Demand the enforcement of a true and unconditional Net neutrality!</h1>
-	<div id="sent-message" class="hidden">Your email is in your mail client -
-	if this doesn't work: the email address is <a href="mailto:{{email}}">{{email}}</a></div>
 
 <div id=mep_infos>
 
@@ -25,12 +23,23 @@
 	<section id=mep_pic><img src="{{image}}" style="height:120px;"></section>
 	<section id=mep_group>{{group}}</section>
 	<section id=mep_country><img src="/static/blank.gif" class="flag flag-{{country_short}}" alt="{{country}}"> {{country}}</section>
-	<section id=mep_details><a href="{{url}}" target="_blank">Details</a></section>
+	{% if facebook %}
+  <a href="{{facebook}}"><img src="/static/images/fb.jpg"></img></a>
+  {% endif %}
+  {% if twitter %}
+  <a href="https://twitter.com/{{twitter}}"><img src="/static/images/tw.jpg"></img></a>
+  {% endif %}
 </div>
 
 <div id=actionbox>
 Your fax is on it's way!
 <section><a href="." class="button green">Send another Fax!</a></section>
+  {% if twitter %}
+  <section><a href="https://twitter.com/intent/tweet?text=I%20just%20send%20a%20Fax%20to%20%40%{{twitter}}20via%20https%3A%2F%2Fwww.savetheinternet.eu.%20Tell%20your%20parliamentarian%20to%20defend%20the%20open%20Internet!%20%23netneutrality" class="button green">Tweet about your Fax!</a></section>
+  {% elseif %}
+  <section><a href="https://twitter.com/intent/tweet?text=Protect%20the%20open%20Internet%20from%20big%20cable%20companies.%20Join%20the%20fight%20for%20net%20neutrality%20in%20Europe%20on%20https%3A%2F%2Fwww.savetheinternet.eu%2F" class="button green">Tweet about your Fax!</a></section>
+  {% endif %}
+
 </form>
 </div>
 
