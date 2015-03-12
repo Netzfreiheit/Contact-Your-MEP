@@ -17,8 +17,12 @@
 <div id=global>
 
 	<h1>Write MEPs! Demand the enforcement of a true and unconditional Net neutrality!</h1>
-	<div id="sent-message" class="hidden">Your email is in your mail client -
-	if this doesn't work: the email address is <a href="mailto:{{email}}">{{email}}</a></div>
+	<div id="sent-message" class="hidden">Your email is in your mail client -<br/>
+	if this doesn't work: the email address is <a href="mailto:{{email}}">{{email}}</a><br/>
+  {% if facebook %}
+  <p>You can also send your message to the MEP on his/her <a href="{{facebook}}" target="_blank">Facebook Page</a>.</p>
+  {% endif %}
+  </div>
 
 <div id=mep_infos>
 
@@ -27,10 +31,10 @@
 	<section id=mep_group>{{group}}</section>
 	<section id=mep_country><img src="/static/blank.gif" class="flag flag-{{country_short}}" alt="{{country}}"> {{country}}</section>
   {% if facebook %}
-  <a href="{{facebook}}"><img src="/static/images/fb.jpg"></img></a>
+  <a href="{{facebook}}" target="_blank"><img src="/static/images/fb.jpg"></img></a>
   {% endif %}
   {% if twitter %}
-  <a href="{{twitter}}"><img src="/static/images/tw.jpg"></img></a>
+  <a href="https://twitter.com/{{twitter}}" target="_blank"><img src="/static/images/tw.jpg"></img></a>
   {% endif %}
 </div>
 
@@ -67,12 +71,11 @@ A concerned citizen
   function makeform() {
     if (txt_changed || confirm('Personalized messages are much more effective to convince politicans. \n\nPlease take the time to write a text :)\n\nSend it anyway?')) {
       var email="mailto:{{email}}?subject="
-      var body=document.getElementById("body").value.replace(/\n/g,"%0A")
-        .replace(/ /g,"%20")
-      var subject=document.getElementById("subject").value.replace(/ /g,"%20")
-      email=email+subject+"&body="+body
+      var body=encodeURIComponent(document.getElementById("body").value)
+      var subject=encodeURIComponent(document.getElementById("subject").value)
+      email+=subject+"&body="+body
       a=window.open(email)
-      a.close()
+      //a.close()
       document.getElementById("sent-message").className="";
     }
   }
@@ -83,6 +86,7 @@ A concerned citizen
       url += '&value=' + value;
     }
     jQuery.ajax(url);
+    jQuery.ajax('https://piwik.netzfreiheit.org/piwik.php?idsite=11&rec=1&url=https%3A%2F%2Fsavetheinternet.eu&idgoal=1&e_c=contact&e_n=mail&e_v=' + (txt_changed ? 1 : 0));
   }
 
   $(function () {

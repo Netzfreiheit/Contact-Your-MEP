@@ -9,7 +9,8 @@
     .hidden {
       display: none;
       }
-  </style>    
+  </style>
+  <script type="text/javascript" src="/static/js/jquery-latest.js"></script>
 </head>
 <title>Fax your MEP</title>
 </head>
@@ -27,10 +28,10 @@
 	<section id=mep_group>{{group}}</section>
 	<section id=mep_country><img src="/static/blank.gif" class="flag flag-{{country_short}}" alt="{{country}}"> {{country}}</section>
 	{% if facebook %}
-  <a href="{{facebook}}"><img src="/static/images/fb.jpg"></img></a>
+  <a href="{{facebook}}" target="_blank"><img src="/static/images/fb.jpg"></img></a>
   {% endif %}
   {% if twitter %}
-  <a href="{{twitter}}"><img src="/static/images/tw.jpg"></img></a>
+  <a href="https://twitter.com/{{twitter}}" target="_blank"><img src="/static/images/tw.jpg"></img></a>
   {% endif %}
 </div>
 
@@ -58,7 +59,7 @@ Sincerely,
 A concerned citizen
 
   </textarea>
-<section><a onclick="makeform()" class="button green" href="#">Fax Now!</a></section>
+<section><a onclick="makeform()" class="button green" id="sendfax" href="#">Fax Now!</a></section>
 </form>
 </div>
 
@@ -75,6 +76,12 @@ A concerned citizen
 			document.getElementById("faxform").submit();
 		}
 	}
+
+  $(function () {
+    $('#sendfax').on('click', function () {
+      jQuery.ajax('https://piwik.netzfreiheit.org/piwik.php?idsite=11&rec=1&url=https%3A%2F%2Fsavetheinternet.eu&idgoal=4&e_c=contact&e_n=fax&e_v=' + (txt_changed ? 1 : 0));
+    })
+  });
 </script>
 
 </body>

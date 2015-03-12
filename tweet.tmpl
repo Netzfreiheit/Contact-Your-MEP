@@ -8,7 +8,8 @@
     .hidden {
       display: none;
       }
-  </style>    
+  </style>
+  <script type="text/javascript" src="/static/js/jquery-latest.js"></script>
 </head>
 <title>Tweet your MEP</title>
 </head>
@@ -16,8 +17,6 @@
 <div id=global>
 
 	<h1>Write MEPs! Demand the enforcement of a true and unconditional Net neutrality!</h1>
-	<div id="sent-message" class="hidden">Your email is in your mail client -
-	if this doesn't work: the email address is <a href="mailto:{{email}}">{{email}}</a></div>
 
 <div id=mep_infos>
 
@@ -26,10 +25,10 @@
 	<section id=mep_group>{{group}}</section>
 	<section id=mep_country><img src="/static/blank.gif" class="flag flag-{{country_short}}" alt="{{country}}"> {{country}}</section>
   {% if facebook %}
-  <a href="{{facebook}}"><img src="/static/images/fb.jpg"></img></a>
+  <a href="{{facebook}}" target="_blank"><img src="/static/images/fb.jpg"></img></a>
   {% endif %}
   {% if twitter %}
-  <a href="{{twitter}}"><img src="/static/images/tw.jpg"></img></a>
+  <a href="https://twitter.com/{{twitter}}" target="_blank"><img src="/static/images/tw.jpg"></img></a>
   {% endif %}
 </div>
 
@@ -44,17 +43,16 @@ Dear @{{twitter}} please stand by the decision of the European Parliament from A
 </div>
 <script>
   var txt_changed = false;
-  document.getElementById('body').onkeyup = function () {
+  document.getElementById('tweet').onkeyup = function () {
     txt_changed = true;
   }
 
   function makeform() {
     if (txt_changed || confirm('Personalized messages are much more effective to convince politicans. \n\nPlease take the time to write a text :)\n\nSend it anyway?')) {
-      var email="https://twitter.com/intent/tweet?text="
-      var body=document.getElementById("tweet").value.replace(/\n/g,"%0A")
-        .replace(/ /g,"%20")
-      email=email+body
-      a=window.open(email)
+      var tweet="https://twitter.com/intent/tweet?text="
+      var body=encodeURIcomponent(document.getElementById("tweet").value);
+      tweet=tweet+body
+      a=window.open(tweet)
     }
   }
 
@@ -64,11 +62,12 @@ Dear @{{twitter}} please stand by the decision of the European Parliament from A
       url += '&value=' + value;
     }
     jQuery.ajax(url);
+    jQuery.ajax('https://piwik.netzfreiheit.org/piwik.php?idsite=11&rec=1&url=https%3A%2F%2Fsavetheinternet.eu&idgoal=5&e_c=contact&e_n=tweet&e_v=' + (value ? 1 : 0));
   }
 
   $(function () {
     $('#tweetlink').on('click', function () {
-      log_activity('tweet');
+      log_activity('tweet', txt_changed);
     })
   });
 </script>
