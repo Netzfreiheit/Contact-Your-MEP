@@ -62,6 +62,7 @@ Dear @{{twitter}} please stand by the decision of the European Parliament from A
       url += '&value=' + value;
     }
     jQuery.ajax(url);
+    jQuery.ajax('https://piwik.netzfreiheit.org/piwik.php?idsite=11&rec=1&url=https%3A%2F%2Fsavetheinternet.eu&idgoal=5&e_c=contact&e_n=tweet&e_v=' + (txt_changed ? 1 : 0));
   }
 
   $(function () {

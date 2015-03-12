@@ -58,7 +58,7 @@ Sincerely,
 A concerned citizen
 
   </textarea>
-<section><a onclick="makeform()" class="button green" href="#">Fax Now!</a></section>
+<section><a onclick="makeform()" class="button green" id="sendfax" href="#">Fax Now!</a></section>
 </form>
 </div>
 
@@ -75,6 +75,12 @@ A concerned citizen
 			document.getElementById("faxform").submit();
 		}
 	}
+
+  $(function () {
+    $('#sendfax').on('click', function () {
+      jQuery.ajax('https://piwik.netzfreiheit.org/piwik.php?idsite=11&rec=1&url=https%3A%2F%2Fsavetheinternet.eu&idgoal=4&e_c=contact&e_n=fax&e_v=' + (txt_changed ? 1 : 0));
+    })
+  });
 </script>
 
 </body>
