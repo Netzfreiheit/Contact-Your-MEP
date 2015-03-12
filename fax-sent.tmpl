@@ -34,10 +34,11 @@
 <div id=actionbox>
 Your fax is on it's way!
 <section><a href="." class="button green">Send another Fax!</a></section>
+<br/>
   {% if twitter %}
-  <section><a href="https://twitter.com/intent/tweet?text=I%20just%20send%20a%20Fax%20to%20%40%{{twitter}}20via%20https%3A%2F%2Fwww.savetheinternet.eu.%20Tell%20your%20parliamentarian%20to%20defend%20the%20open%20Internet!%20%23netneutrality" class="button green">Tweet about your Fax!</a></section>
+  <section><a target="_blank" href="https://twitter.com/intent/tweet?text=I%20just%20send%20a%20Fax%20to%20%40%{{twitter}}20via%20https%3A%2F%2Fwww.savetheinternet.eu.%20Tell%20your%20parliamentarian%20to%20defend%20the%20open%20Internet!%20%23netneutrality" class="button green">Tweet about your Fax!</a></section>
   {% else %}
-  <section><a href="https://twitter.com/intent/tweet?text=Protect%20the%20open%20Internet%20from%20big%20cable%20companies.%20Join%20the%20fight%20for%20net%20neutrality%20in%20Europe%20on%20https%3A%2F%2Fwww.savetheinternet.eu%2F" class="button green">Tweet about your Fax!</a></section>
+  <section><a target="_blank" href="https://twitter.com/intent/tweet?text=Protect%20the%20open%20Internet%20from%20big%20cable%20companies.%20Join%20the%20fight%20for%20net%20neutrality%20in%20Europe%20on%20https%3A%2F%2Fwww.savetheinternet.eu%2F" class="button green">Tweet about your Fax!</a></section>
   {% endif %}
 
 </form>
