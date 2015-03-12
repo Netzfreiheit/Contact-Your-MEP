@@ -48,7 +48,7 @@ Dear @{{twitter}} please stand by the decision of the European Parliament from A
 
   function makeform() {
     if (txt_changed || confirm('Personalized messages are much more effective to convince politicans. \n\nPlease take the time to write a text :)\n\nSend it anyway?')) {
-      var tweetq="https://twitter.com/intent/tweet?text="
+      var tweet="https://twitter.com/intent/tweet?text="
       var body=document.getElementById("tweet").value.replace(/\n/g,"%0A")
         .replace(/ /g,"%20")
       tweet=tweet+body
