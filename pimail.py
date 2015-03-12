@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import web
 import json
 import os
