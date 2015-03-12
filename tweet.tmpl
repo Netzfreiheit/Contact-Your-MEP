@@ -48,11 +48,12 @@ Dear @{{twitter}} please stand by the decision of the European Parliament from A
 
   function makeform() {
     if (txt_changed || confirm('Personalized messages are much more effective to convince politicans. \n\nPlease take the time to write a text :)\n\nSend it anyway?')) {
-      var email="https://twitter.com/intent/tweet?text="
+      log_activity('tweet');
+      var tweet="https://twitter.com/intent/tweet?text="
       var body=document.getElementById("tweet").value.replace(/\n/g,"%0A")
         .replace(/ /g,"%20")
-      email=email+body
-      a=window.open(email)
+      tweet=tweet+body
+      a=window.open(tweet)
     }
   }
 
@@ -64,12 +65,6 @@ Dear @{{twitter}} please stand by the decision of the European Parliament from A
     jQuery.ajax(url);
     jQuery.ajax('https://piwik.netzfreiheit.org/piwik.php?idsite=11&rec=1&url=https%3A%2F%2Fsavetheinternet.eu&idgoal=5&e_c=contact&e_n=tweet&e_v=' + (txt_changed ? 1 : 0));
   }
-
-  $(function () {
-    $('#tweetlink').on('click', function () {
-      log_activity('tweet');
-    })
-  });
 </script>
 
 </body>
