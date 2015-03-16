@@ -137,6 +137,7 @@ class Log:
     def GET(self):
         """log an action"""
         web.header("Content-Type","application/javascript;charset=utf-8")
+        web.header("Access-Control-Allow-Origin", "*.savetheinternet.eu")
         wi = web.input()
         if hasattr(wi,'action'):
             action = wi.action;
