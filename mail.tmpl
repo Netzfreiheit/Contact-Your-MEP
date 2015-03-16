@@ -81,11 +81,6 @@ A concerned citizen
   }
 
   function log_activity (action, value) {
-    var url = "https://faxjh.savetheinternet.eu/log/?action=" + action; 
-    if (value) {
-      url += '&value=' + value;
-    }
-    jQuery.ajax(url);
     jQuery.ajax('https://piwik.netzfreiheit.org/piwik.php?idsite=11&rec=1&url=https%3A%2F%2Fsavetheinternet.eu&idgoal=1&e_c=contact&e_n=mail&e_v=' + (txt_changed ? 1 : 0));
   }
 

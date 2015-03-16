@@ -11,7 +11,6 @@ import textwrap
 import settings
 import datetime
 import databaseconnect
-import logger
 
 " Load Data "
 with open("./data/data.json") as f:
@@ -117,7 +116,6 @@ class Fax:
                 "d" : datetime.datetime.now()})
         template = tc.get("fax-sent.tmpl")
         web.header("Content-Type", "text/html;charset=utf-8")
-        logger.log(db,"fax-stored")
         return template.render(m)
 
 class Tweet:
@@ -131,25 +129,6 @@ class Tweet:
             return create_error(web.input(),"using Twitter")
         return template.render(m)
 
-class Log:
-    def GET(self):
-        """log an action"""
-        web.header("Content-Type","application/javascript;charset=utf-8")
-        web.header("Access-Control-Allow-Origin", "*")
-        wi = web.input()
-        if hasattr(wi,'action'):
-            action = wi.action;
-        else:
-            return """{status: 'error',
-                     message: 'no action'}"""
-        if hasattr(wi,'value'):
-            value = wi.value
-        else:
-            value = ""
-        logger.log(db,action,value)
-        return """{status: 'success',
-                   message: 'logged action %s with value %s'
-                   }"""%(action,value)
 class mail:
     """ Handle Requests for Mail """
     def GET(self):
@@ -163,8 +142,7 @@ class mail:
 
 urls = ('/mail/', 'mail',
         '/fax/', 'Fax',
-        '/tweet/','Tweet',
-        '/log/',Log,)
+        '/tweet/','Tweet',)
 
 web.config.debug = settings.DEVELOPMENT
 app = web.application(urls,globals())
