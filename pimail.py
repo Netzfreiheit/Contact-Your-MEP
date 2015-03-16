@@ -1,8 +1,9 @@
+#!/usr/bin/env python
 import web
 import json
 import os
 import random
-from jinja2 import Template
+from templatecache import TemplateCache
 import urllib
 import subprocess
 import shlex
@@ -17,6 +18,8 @@ with open("./data/data.json") as f:
     meps = json.load(f)
 
 db = databaseconnect.connect(settings.DATABASE_URL)
+
+tc = TemplateCache()
 
 def weighted_choice(ff=lambda x: x):
     """ Pick a MEP based on the score weight """
@@ -93,8 +96,7 @@ class Fax:
     def GET(self):
         """ display the fax widget """
         web.header("Content-Type", "text/html;charset=utf-8")
-        with open("fax.tmpl") as f:
-            template = Template(f.read().decode("utf-8"))
+        template = tc.get("fax.tmpl")
         m = weighted_choice(get_filter(web.input()))
         if not m:
             return create_error(web.input())
@@ -107,16 +109,13 @@ class Fax:
             fax = '100'
         else:
             fax = m[settings.FAX_FIELD].replace(" ","").replace("+","00")
-        with open("fax-out.tmpl") as f:
-            template = Template(f.read().decode("utf-8"))
-        db.query(u"""INSERT INTO faxes (message, faxnr, create_date)
+        db.query(u"""INSERT INTO faxes (message, faxnr, create_date) 
             VALUES ($m,$f,$d)""",
                 vars = {
                 "m" : textwrap.fill(args['body'],replace_whitespace=False),
                 "f" : fax,
                 "d" : datetime.datetime.now()})
-        with open("fax-sent.tmpl") as f:
-            template = Template(f.read().decode("utf-8"))
+        template = tc.get("fax-sent.tmpl")
         web.header("Content-Type", "text/html;charset=utf-8")
         logger.log(db,"fax-stored")
         return template.render(m)
@@ -126,8 +125,7 @@ class Tweet:
         """display the tweet widget"""
         ff = get_filter(web.input())
         web.header("Content-Type","text/html;charset=utf-8")
-        with open("tweet.tmpl") as f:
-            template = Template(f.read().decode("utf-8"))
+        template = tc.get("tweet.tmpl")
         m = weighted_choice(lambda x: x.get('twitter',None) and ff(x))
         if not m:
             return create_error(web.input(),"using Twitter")
@@ -157,8 +155,7 @@ class mail:
     def GET(self):
         """ Handle GET Requests """
         web.header("Content-Type", "text/html;charset=utf-8")
-        with open("mail.tmpl") as f:
-            template = Template(f.read().decode("utf-8"))
+        template = tc.get("mail.tmpl")
         m = weighted_choice(get_filter(web.input()))
         if not m:
             return create_error(web.input())
@@ -169,6 +166,7 @@ urls = ('/mail/', 'mail',
         '/tweet/','Tweet',
         '/log/',Log,)
 
+web.config.debug = settings.DEVELOPMENT
 app = web.application(urls,globals())
 
 if __name__ == "__main__":
