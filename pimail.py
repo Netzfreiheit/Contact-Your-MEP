@@ -111,7 +111,7 @@ class Fax:
         db.query(u"""INSERT INTO faxes (message, faxnr, create_date) 
             VALUES ($m,$f,$d)""",
                 vars = {
-                "m" : textwrap.fill(args['body'],replace_whitespace=False),
+                "m" : textwrap.fill(args['body'],replace_whitespace=False).replace('<','&lt;').replace('>','&gt;'),
                 "f" : fax,
                 "d" : datetime.datetime.now()})
         template = tc.get("fax-sent.tmpl")
