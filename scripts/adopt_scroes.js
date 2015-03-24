@@ -15,6 +15,7 @@
 */
 
 var data = require('../data/data.json');
+var execmd = require('child_process').exec;
 
 for (var i = 0; i < data.length; i++) {
 	try {
@@ -42,7 +43,7 @@ for (var i = 0; i < data.length; i++) {
 			data[i].score = 0.1;
 		}
 
-		if ((data[i]['Members']||[]).indexOf('ITRE') != -1) {
+		if ((data[i]['Members']||[]).indexOf('ITRE') != -1 || (data[i]['Chair']||[]).indexOf('ITRE') != -1 || (data[i]['Vice-Chair']||[]).indexOf('ITRE') != -1) {
 			data[i].score += 0.5;
 		} else if ((data[i]['Members']||[]).indexOf('IMCO') != -1) {
 			data[i].score += 0.4;
@@ -52,9 +53,16 @@ for (var i = 0; i < data.length; i++) {
 			data[i].score += 0.15;
 		}
 
+		// shadows
 		if (data[i].id == "28340") {
 			data[i].score=0.9;
 		} else if (data[i].id == "96710") {
+			data[i].score=0.9;
+		} else if (data[i].id == "96820") {
+			data[i].score=0.9;
+		} else if (data[i].id == "96949") {
+			data[i].score=0.9;
+		} else if (data[i].id == "124813") {
 			data[i].score=0.9;
 		}
 	} catch (e) {
@@ -66,10 +74,14 @@ for (var i = 0; i < data.length; i++) {
 
 var fs = require('fs');
 fs.writeFile("./data/data.json", JSON.stringify(data), function(err) {
-    if(err) {
-        console.log(err);
-    } else {
-        console.log("Scores updated. The file was saved!");
-    }
+		if(err) {
+				console.log(err);
+		} else {
+			execmd("cat ./data/data.json | python -m json.tool > ./data/data.json.new && mv ./data/data.json.new ./data/data.json", function (error, stdout, stderr) {
+				if (!error) {
+					console.log("Scores updated. The file was saved!");
+				}
+			});
+		}
 });
 
