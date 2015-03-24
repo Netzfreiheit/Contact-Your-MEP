@@ -30,7 +30,7 @@ for (var i = 0; i < data.length; i++) {
 			data[i].score = 0.3;
 		}
 		else if (data[i].group_short.indexOf('guengl') !== -1) {
-			data[i].score = 015;
+			data[i].score = 0.15;
 		}
 		else if (data[i].group_short.indexOf('efd') !== -1) {
 			data[i].score = 0.35;
