@@ -4,6 +4,7 @@ import urllib2
 from cookielib import CookieJar
 import re
 import os
+import sys
 
 cj=CookieJar()
 opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
@@ -13,6 +14,11 @@ list="http://www.europarl.europa.eu/meps/en/full-list.html?filter=all&leg="
 country_codes={'Malta':'mt','UnitedKingdom':'gb','Germany':'de','Italy':'it','France':'fr','Portugal':'pt','Sweden':'se','Spain':'es','Lithuania':'lt','Greece':'gr','Romania':'ro','Denmark':'dk','Ireland':'ie','Netherlands':'nl','Luxembourg':'lu','Hungary':'hu','Croatia':'hr','Slovakia':'sk','Austria':'at','Belgium':'be','Poland':'pl','Bulgaria':'bg','CzechRepublic':'cz','Finland':'fi','Slovenia':'si','Latvia':'lv','Cyprus':'cy','Estonia':'ee'}
 
 pages=[list]
+
+" Load Data "
+if sys.argv[1]:
+  with open(sys.argv[1]) as f:
+    boiler = json.load(f)
 
 def root_from_url(u):
   u=opener.open(u)
@@ -71,13 +77,38 @@ def expand_mep_info(m):
   except IndexError:
     m['website']=None
 
+  try:
+    i = 1;
+    for position in r.xpath('//*[@id="content_left"]/div[1]/h4'):
+      m[position.text] = []
+      for x in r.xpath('//*[@id="content_left"]/div[1]/ul['+str(i)+']/descendant::*/a/acronym'):
+        m[position.text].append(x.text)
+      i = i + 1
+  except IndexError:
+    m['member']=None
+
+  if boiler:
+    m = merge_boiler(m)
+
   return m
+
+def merge_boiler(m):
+  b = get_mep_by_id(m['id'])
+  for x in b:
+    m[x] = b[x]
+  return m
+
+def get_mep_by_id(id):
+  for m in boiler:
+    if m['id']==id:
+      return m
+  return None
 
 def do():
   meps=reduce(lambda x,y: x+y, [extract_urls_from_page(i) for i in pages],
   [])
   meps=[expand_mep_info(m) for m in meps]
-  with open("data.json","wb") as f:
+  with open("data-merged.json","wb") as f:
     json.dump(meps,f)
 
 if __name__=='__main__':
