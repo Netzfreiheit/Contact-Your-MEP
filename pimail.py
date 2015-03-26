@@ -108,12 +108,13 @@ class Fax:
             fax = '100'
         else:
             fax = m[settings.FAX_FIELD].replace(" ","").replace("+","00")
-        db.query(u"""INSERT INTO faxes (message, faxnr, create_date) 
-            VALUES ($m,$f,$d)""",
+        db.query(u"""INSERT INTO faxes (message, faxnr, create_date, campaign_id) 
+            VALUES ($m,$f,$d,$s)""",
                 vars = {
                 "m" : textwrap.fill(args['body'],replace_whitespace=False).replace('<','&lt;').replace('>','&gt;'),
                 "f" : fax,
-                "d" : datetime.datetime.now()})
+                "d" : datetime.datetime.now(),
+                's' : settings.campaign_id})
         template = tc.get("fax-sent.tmpl")
         web.header("Content-Type", "text/html;charset=utf-8")
         return template.render(m)
