@@ -141,9 +141,9 @@ class mail:
             return create_error(web.input())
         return template.render(m)
 
-urls = (settings.campaign_path + '/mail/', 'mail',
-        settings.campaign_path + '/fax/', 'Fax',
-        settings.campaign_path + '/tweet/','Tweet',)
+urls = ('/' + settings.campaign_path + '/mail/', 'mail',
+        '/' + settings.campaign_path + '/fax/', 'Fax',
+        '/' + settings.campaign_path + '/tweet/','Tweet',)
 
 web.config.debug = settings.DEVELOPMENT
 app = web.application(urls,globals())
