@@ -2,8 +2,8 @@ import settings
 import databaseconnect
 import datetime
 
-def log(db,action,value=""):
-    db.query(u"""INSERT INTO logs (action,value,date) VALUES ($action,$value,$date)""",
-        vars = {"action" : action,
-                  "value" : value,
-                  "date" : datetime.datetime.now()})
+def log(db,mail,country=""):
+    db.query(u"""INSERT INTO subscriptions (mail,country,create_date) VALUES ($mail,$country,$create_date)""",
+        vars = {"mail" : mail,
+                  "country" : country,
+                  "create_date" : datetime.datetime.now()})

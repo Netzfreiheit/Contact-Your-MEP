@@ -11,6 +11,7 @@ import textwrap
 import settings
 import datetime
 import databaseconnect
+import logger
 
 " Load Data "
 with open("./data/data.json") as f:
@@ -130,6 +131,27 @@ class Tweet:
             return create_error(web.input(),"using Twitter")
         return template.render(m)
 
+class Subscribe:
+    def GET(self):
+        """log an action"""
+        web.header("Content-Type","application/javascript;charset=utf-8")
+        web.header("Access-Control-Allow-Origin", "*")
+        wi = web.input()
+        if hasattr(wi,'mail'):
+            mail = wi.mail;
+        else:
+            return """{status: 'error',
+                     message: 'no mail'}"""
+        if hasattr(wi,'country'):
+            country = wi.country
+        else:
+            country = ""
+        logger.log(db,mail,country)
+        return """{status: 'success',
+                   message: 'logged mail %s from country %s'
+                   }"""%(action,country)
+
+
 class mail:
     """ Handle Requests for Mail """
     def GET(self):
@@ -143,6 +165,7 @@ class mail:
 
 urls = ('/' + settings.campaign_path + '/mail/', 'mail',
         '/' + settings.campaign_path + '/fax/', 'Fax',
+        '/' + settings.campaign_path + '/subscribe/', Subscribe,
         '/' + settings.campaign_path + '/tweet/','Tweet',)
 
 web.config.debug = settings.DEVELOPMENT
