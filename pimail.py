@@ -133,7 +133,7 @@ class Tweet:
 
 class Subscribe:
     def GET(self):
-        """log an action"""
+        """subscribe to newsletter"""
         web.header("Content-Type","application/javascript;charset=utf-8")
         web.header("Access-Control-Allow-Origin", "*")
         wi = web.input()
@@ -149,7 +149,7 @@ class Subscribe:
         logger.log(db,mail,country)
         return """{status: 'success',
                    message: 'logged mail %s from country %s'
-                   }"""%(action,country)
+                   }"""%(mail,country)
 
 
 class mail:
