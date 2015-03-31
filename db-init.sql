@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS faxes (
 	create_date timestamp, 
 	status int default 0, /* 0:new, 1:queed, 2:send, 3:retry, -1: error*/
 	change_date timestamp, 
-	campaign_id	INT UNSIGNED
+	campaign_id	INT
 );
 
 CREATE TABLE IF NOT EXISTS subscriptions (
