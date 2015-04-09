@@ -1,16 +1,15 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
 	margin:0;
 	color: #333;
 }
 
 h1 {
-	font-size: 14px;
+	font-size: 1em;
 }
 
 #global {
-	background: #fff;
-	padding: 5px;
 }
 #mep_pic {
 	margin-right:10px;
@@ -31,8 +30,8 @@ h1 {
 }
 
 #mep_group {
-	color: #666;
-	text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
 	font-size:11px;
 	max-width:24em;
 	*width:24em;
@@ -50,49 +49,45 @@ h1 {
 .emailtext,
 .emailsubject,
 .tweettext {
-	display: block;
-	margin: 2px;
-	padding: 5px;
-	border: 2px inset #eee;
-	width: 420px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 13px;
+  margin: 0 0 .5em;
+  display: block;
+  width: 96%;
+  padding: 1.5% 2%;
+  border: 0;
 }
+
+.emailtext,
+.tweettext {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  border-bottom: 5px solid #E3A539;
+  box-shadow: 0 5px rgba(0,0,0,.07) inset;
+}
+
 
 
 
 .emailtext {
 	height: 250px;
 }
-.tweettext {    
-    height: 50px;
-    }
-
-
-
-.button .blue, a.button, input.button  {
-	cursor: pointer;
-	display: inline-block;
-	padding: 8px 16px 12px;
-	vertical-align: top;
-	font-weight: bold;
-	text-align: center;
-	text-decoration: none;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
-	color: #fff;
-	border: none;
-	border-radius: 6px;
-	display:inline-block;
+.tweettext {
+  height: 4.1em;
 }
 
-.green {
-	background: #84c63c;
-	background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJo…iIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+');
-	background: -moz-linear-gradient(#84c63c , #489615) repeat scroll 0 0 #489615;
-	background: -webkit-linear-gradient(#84c63c , #489615) repeat scroll 0 0 #489615;
-	background: -o-linear-gradient(#84c63c , #489615) repeat scroll 0 0 #489615;
-	background: -ms-linear-gradient(#84c63c , #489615) repeat scroll 0 0 #489615;
-	background: linear-gradient(#84c63c , #489615) repeat scroll 0 0 #489615;
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c63c', endColorstr='#489615',GradientType=0 );
-	box-shadow: 0 3px rgba(0, 0, 0, 0.1), 0 -4px rgba(0, 0, 0, 0.1) inset;
+a.button, input.button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 16px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  background: #2B2B2B;
+  border-top: 3px solid #2B2B2B;
+  border-bottom: 3px #000 solid;
+  text-transform: uppercase;
 }
