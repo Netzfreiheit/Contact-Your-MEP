@@ -43,9 +43,9 @@ for (var i = 0; i < data.length; i++) {
 			data[i].score = 0.1;
 		}
 
-		if ((data[i]['Members']||[]).indexOf('ITRE') != -1 || (data[i]['Chair']||[]).indexOf('ITRE') != -1 || (data[i]['Vice-Chair']||[]).indexOf('ITRE') != -1) {
+		if ((data[i]['Member']||[]).indexOf('ITRE') != -1 || (data[i]['Chair']||[]).indexOf('ITRE') != -1 || (data[i]['Vice-Chair']||[]).indexOf('ITRE') != -1) {
 			data[i].score += 0.5;
-		} else if ((data[i]['Members']||[]).indexOf('IMCO') != -1) {
+		} else if ((data[i]['Member']||[]).indexOf('IMCO') != -1) {
 			data[i].score += 0.4;
 		} else if ((data[i]['Substitute']||[]).indexOf('ITRE') != -1) {
 			data[i].score += 0.2;
