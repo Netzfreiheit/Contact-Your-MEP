@@ -5,15 +5,15 @@
 	@Licence: CC0
 */
 
-var data = require('../data/data.json');
+var data = require('../data/data-full_list.json');
 var data_new = [];
 var execmd = require('child_process').exec;
 
 for (var i = 0; i < data.length; i++) {
 	try {
 		
-		if ((data[i]['Members']||[]).indexOf('ITRE') != -1 || 
-			(data[i]['Members']||[]).indexOf('IMCO') != -1 || 
+		if ((data[i]['Member']||[]).indexOf('ITRE') != -1 || 
+			(data[i]['Member']||[]).indexOf('IMCO') != -1 || 
 			(data[i]['Chair']||[]).indexOf('ITRE') != -1 || 
 			(data[i]['Vice-Chair']||[]).indexOf('ITRE') != -1 || 
 			(data[i]['Chair']||[]).indexOf('IMCO') != -1 || 

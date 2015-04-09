@@ -111,6 +111,89 @@
     },
     {
         "Member": [
+            "CONT",
+            "ITRE",
+            "D-CN"
+        ],
+        "Substitute": [
+            "AFET"
+        ],
+        "Vice-Chair": [
+            "DEPA"
+        ],
+        "country": "Lithuania",
+        "country_short": "lt",
+        "email": "zigmantas.balcytis@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/home.php#!/zigmantas.balcytis",
+        "fax_bxl": "+3222849427",
+        "fax_stg": "+33388179427",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "96680",
+        "image": "http://www.europarl.europa.eu/mepphoto/96680.jpg",
+        "name": "Zigmantas BAL\u010cYTIS",
+        "party": "Lietuvos socialdemokrat\u0173 partija",
+        "score": 0.8,
+        "twitter": "balcytis",
+        "url": "http://www.europarl.europa.eu/meps/en/96680/ZIGMANTAS_BALCYTIS_home.html",
+        "website": "http://www.balcytis.lt"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-IR"
+        ],
+        "Substitute": [
+            "ENVI",
+            "DSCA",
+            "DEPA"
+        ],
+        "country": "Bulgaria",
+        "country_short": "bg",
+        "email": "nikolay.barekov@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849317",
+        "fax_stg": "+33388179317",
+        "group": "European Conservatives and Reformists Group",
+        "group_short": "ecr",
+        "id": "124871",
+        "image": "http://www.europarl.europa.eu/mepphoto/124871.jpg",
+        "name": "Nikolay BAREKOV",
+        "party": "Bulgaria without Censorship",
+        "score": 0.6,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/124871/NIKOLAY_BAREKOV_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "ITRE",
+            "DACP",
+            "DMED"
+        ],
+        "Substitute": [
+            "AFET",
+            "D-IL"
+        ],
+        "country": "France",
+        "country_short": "fr",
+        "email": "nicolas.bay@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849848",
+        "fax_stg": "+33388179848",
+        "group": "Non-attached Members",
+        "group_short": "ni",
+        "id": "124760",
+        "image": "http://www.europarl.europa.eu/mepphoto/124760.jpg",
+        "name": "Nicolas BAY",
+        "party": "Front national",
+        "score": 0.8,
+        "twitter": "nicolasbayfn",
+        "url": "http://www.europarl.europa.eu/meps/en/124760/NICOLAS_BAY_home.html",
+        "website": null
+    },
+    {
+        "Member": [
             "INTA",
             "EMPL",
             "D-IN",
@@ -140,6 +223,32 @@
         "score": 0.5,
         "twitter": "beghin_t",
         "url": "http://www.europarl.europa.eu/meps/en/124777/TIZIANA_BEGHIN_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-CN"
+        ],
+        "Substitute": [
+            "INTA",
+            "D-US"
+        ],
+        "country": "Denmark",
+        "country_short": "dk",
+        "email": "bendt.bendtsen@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/bendtbendtsen",
+        "fax_bxl": "+3222849125",
+        "fax_stg": "+33388179125",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "96705",
+        "image": "http://www.europarl.europa.eu/mepphoto/96705.jpg",
+        "name": "Bendt BENDTSEN",
+        "party": "Det Konservative Folkeparti",
+        "score": 0.9,
+        "twitter": "BendtEU",
+        "url": "http://www.europarl.europa.eu/meps/en/96705/BENDT_BENDTSEN_home.html",
         "website": null
     },
     {
@@ -284,6 +393,36 @@
     },
     {
         "Member": [
+            "INTA",
+            "ITRE",
+            "DMAS",
+            "D-ZA",
+            "DMED"
+        ],
+        "Substitute": [
+            "D-TR",
+            "DMER",
+            "DLAT"
+        ],
+        "country": "Italy",
+        "country_short": "it",
+        "email": "david.borrelli@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849194",
+        "fax_stg": "+33388179194",
+        "group": "Europe of Freedom and Direct Democracy Group",
+        "group_short": "efd",
+        "id": "124796",
+        "image": "http://www.europarl.europa.eu/mepphoto/124796.jpg",
+        "name": "David BORRELLI",
+        "party": "Movimento 5 Stelle",
+        "score": 0.85,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/124796/DAVID_BORRELLI_home.html",
+        "website": "http://www.davidborrelli.net/"
+    },
+    {
+        "Member": [
             "ENVI",
             "D-MK"
         ],
@@ -308,6 +447,32 @@
         "twitter": "BiljanaBorzan",
         "url": "http://www.europarl.europa.eu/meps/en/112748/BILJANA_BORZAN_home.html",
         "website": "http://www.biljanaborzan.eu/hr/"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "DACP"
+        ],
+        "Substitute": [
+            "AGRI",
+            "D-RU"
+        ],
+        "country": "Italy",
+        "country_short": "it",
+        "email": "gianluca.buonanno@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849847",
+        "fax_stg": "+33388179847",
+        "group": "Non-attached Members",
+        "group_short": "ni",
+        "id": "124869",
+        "image": "http://www.europarl.europa.eu/mepphoto/124869.jpg",
+        "name": "Gianluca BUONANNO",
+        "party": "Lega Nord",
+        "score": 0.8,
+        "twitter": "BuonannoG",
+        "url": "http://www.europarl.europa.eu/meps/en/124869/GIANLUCA_BUONANNO_home.html",
+        "website": null
     },
     {
         "Member": [
@@ -336,6 +501,36 @@
         "twitter": "CristiBusoi",
         "url": "http://www.europarl.europa.eu/meps/en/38420/CRISTIAN-SILVIU_BUSOI_home.html",
         "website": "http://www.cristianbusoi.eu/"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-US"
+        ],
+        "Substitute": [
+            "AFET",
+            "DROI",
+            "SEDE"
+        ],
+        "Vice-Chair": [
+            "D-CN"
+        ],
+        "country": "Germany",
+        "country_short": "de",
+        "email": "reinhard.buetikofer@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849816",
+        "fax_stg": "+33388179816",
+        "group": "Group of the Greens/European Free Alliance",
+        "group_short": "greensefa",
+        "id": "96739",
+        "image": "http://www.europarl.europa.eu/mepphoto/96739.jpg",
+        "name": "Reinhard B\u00dcTIKOFER",
+        "party": "B\u00fcndnis 90/Die Gr\u00fcnen",
+        "score": 0.65,
+        "twitter": "bueti",
+        "url": "http://www.europarl.europa.eu/meps/en/96739/REINHARD_BUTIKOFER_home.html",
+        "website": "http://www.reinhardbuetikofer.eu"
     },
     {
         "Chair": [
@@ -369,6 +564,62 @@
     },
     {
         "Member": [
+            "ITRE",
+            "PETI",
+            "D-CL"
+        ],
+        "Substitute": [
+            "ENVI",
+            "D-BR",
+            "D-CN"
+        ],
+        "country": "Spain",
+        "country_short": "es",
+        "email": "soledad.cabezonruiz@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849596",
+        "fax_stg": "+33388179596",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "125041",
+        "image": "http://www.europarl.europa.eu/mepphoto/125041.jpg",
+        "name": "Soledad CABEZ\u00d3N RUIZ",
+        "party": "Partido Socialista Obrero Espa\u00f1ol",
+        "score": 0.8,
+        "twitter": "SoledadCabezon",
+        "url": "http://www.europarl.europa.eu/meps/en/125041/SOLEDAD_CABEZON+RUIZ_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-BR",
+            "DMER",
+            "DLAT"
+        ],
+        "Substitute": [
+            "ECON",
+            "D-IN"
+        ],
+        "country": "Spain",
+        "country_short": "es",
+        "email": "pilar.delcastillo@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/PilardelCastilloOficial",
+        "fax_bxl": "+3222849982",
+        "fax_stg": "+33388179982",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "28390",
+        "image": "http://www.europarl.europa.eu/mepphoto/28390.jpg",
+        "name": "Pilar del CASTILLO VERA",
+        "party": "Partido Popular",
+        "score": 0.9,
+        "twitter": "delcastillop/",
+        "url": "http://www.europarl.europa.eu/meps/en/28390/PILAR_DEL+CASTILLO+VERA_home.html",
+        "website": "http://www.pilardelcastillo.com"
+    },
+    {
+        "Member": [
             "AFET",
             "DSCA",
             "DEPA"
@@ -395,6 +646,34 @@
         "twitter": "L_Cesa",
         "url": "http://www.europarl.europa.eu/meps/en/28451/LORENZO_CESA_home.html",
         "website": null
+    },
+    {
+        "Member": [
+            "IMCO",
+            "DCAR",
+            "DMER",
+            "DLAT"
+        ],
+        "Substitute": [
+            "INTA",
+            "DSCA"
+        ],
+        "country": "Czech Republic",
+        "country_short": "cz",
+        "email": "dita.charanzova@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849506",
+        "fax_stg": "+33388179506",
+        "group": "Group of the Alliance of Liberals and Democrats for Europe",
+        "group_short": "aldeadle",
+        "id": "124708",
+        "image": "http://www.europarl.europa.eu/mepphoto/124708.jpg",
+        "name": "Dita CHARANZOV\u00c1",
+        "party": "ANO 2011",
+        "score": 0.7,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/124708/DITA_CHARANZOVA_home.html",
+        "website": "http://www.charanzova.cz/"
     },
     {
         "Member": [
@@ -446,6 +725,32 @@
         "twitter": "DavidCoburnUKip",
         "url": "http://www.europarl.europa.eu/meps/en/124967/DAVID_COBURN_home.html",
         "website": null
+    },
+    {
+        "Member": [
+            "IMCO",
+            "DEEA"
+        ],
+        "Substitute": [
+            "LIBE",
+            "D-JP"
+        ],
+        "country": "Portugal",
+        "country_short": "pt",
+        "email": "carlos.coelho@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/carloscoelhooficial",
+        "fax_bxl": "+3222849551",
+        "fax_stg": "+33388179551",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "1892",
+        "image": "http://www.europarl.europa.eu/mepphoto/1892.jpg",
+        "name": "Carlos COELHO",
+        "party": "Partido Social Democrata",
+        "score": 0.8,
+        "twitter": "CarlosCoelhoPE",
+        "url": "http://www.europarl.europa.eu/meps/en/1892/CARLOS_COELHO_home.html",
+        "website": "http://www.carloscoelho.eu"
     },
     {
         "Member": [
@@ -501,6 +806,31 @@
         "twitter": null,
         "url": "http://www.europarl.europa.eu/meps/en/112788/BIRGIT_COLLIN-LANGEN_home.html",
         "website": "http://www.collin-langen.eu"
+    },
+    {
+        "Member": [
+            "IMCO",
+            "D-US"
+        ],
+        "Substitute": [
+            "ECON"
+        ],
+        "country": "Italy",
+        "country_short": "it",
+        "email": "lara.comi@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/pages/Lara-Comi/155619044465389",
+        "fax_bxl": "+3222849135",
+        "fax_stg": "+33388179135",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "96775",
+        "image": "http://www.europarl.europa.eu/mepphoto/96775.jpg",
+        "name": "Lara COMI",
+        "party": "Forza Italia",
+        "score": 0.8,
+        "twitter": "comilara",
+        "url": "http://www.europarl.europa.eu/meps/en/96775/LARA_COMI_home.html",
+        "website": null
     },
     {
         "Member": [
@@ -618,6 +948,88 @@
     },
     {
         "Member": [
+            "IMCO",
+            "D-RU"
+        ],
+        "Substitute": [
+            "TRAN",
+            "LIBE",
+            "DEEA",
+            "D-CA"
+        ],
+        "country": "United Kingdom",
+        "country_short": "gb",
+        "email": "daniel.dalton@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849897",
+        "fax_stg": "+33388179897",
+        "group": "European Conservatives and Reformists Group",
+        "group_short": "ecr",
+        "id": "35135",
+        "image": "http://www.europarl.europa.eu/mepphoto/35135.jpg",
+        "name": "Daniel DALTON",
+        "party": "Conservative Party",
+        "score": 0.5,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/35135/DANIEL_DALTON_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "IMCO",
+            "D-BR",
+            "DMER",
+            "DLAT"
+        ],
+        "Substitute": [
+            "INTA"
+        ],
+        "country": "Italy",
+        "country_short": "it",
+        "email": "nicola.danti@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/nicola.danti?fref=nf",
+        "fax_bxl": "+3222849143",
+        "fax_stg": "+33388179143",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "124821",
+        "image": "http://www.europarl.europa.eu/mepphoto/124821.jpg",
+        "name": "Nicola DANTI",
+        "party": "Partito Democratico",
+        "score": 0.7,
+        "twitter": "DantiNicola/",
+        "url": "http://www.europarl.europa.eu/meps/en/124821/NICOLA_DANTI_home.html",
+        "website": "http://www.nicoladanti.it/"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-CN"
+        ],
+        "Substitute": [
+            "ECON",
+            "TAXE",
+            "DASE"
+        ],
+        "country": "Belgium",
+        "country_short": "be",
+        "email": "philippe.debacker@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/pages/Philippe-De-Backer/62130106444",
+        "fax_bxl": "+3222849111",
+        "fax_stg": "+33388179111",
+        "group": "Group of the Alliance of Liberals and Democrats for Europe",
+        "group_short": "aldeadle",
+        "id": "109337",
+        "image": "http://www.europarl.europa.eu/mepphoto/109337.jpg",
+        "name": "Philippe DE BACKER",
+        "party": "Open Vlaamse Liberalen en Democraten",
+        "score": 0.8,
+        "twitter": "debackerphil",
+        "url": "http://www.europarl.europa.eu/meps/en/109337/PHILIPPE_DE+BACKER_home.html",
+        "website": "http://www.philippedebacker.be/"
+    },
+    {
+        "Member": [
             "JURI"
         ],
         "Substitute": [
@@ -675,6 +1087,90 @@
     },
     {
         "Member": [
+            "IMCO",
+            "AFCO",
+            "D-BR"
+        ],
+        "Substitute": [
+            "JURI",
+            "DMER",
+            "D-JP"
+        ],
+        "country": "France",
+        "country_short": "fr",
+        "email": "pascal.durand@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849161",
+        "fax_stg": "+33388179161",
+        "group": "Group of the Greens/European Free Alliance",
+        "group_short": "greensefa",
+        "id": "124693",
+        "image": "http://www.europarl.europa.eu/mepphoto/124693.jpg",
+        "name": "Pascal DURAND",
+        "party": "Europe \u00c9cologie",
+        "score": 0.55,
+        "twitter": "DurandEELV",
+        "url": "http://www.europarl.europa.eu/meps/en/124693/PASCAL_DURAND_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-US"
+        ],
+        "Substitute": [
+            "AFET",
+            "DKOR"
+        ],
+        "Vice-Chair": [
+            "SEDE"
+        ],
+        "country": "Germany",
+        "country_short": "de",
+        "email": "christian.ehler@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/ehler",
+        "fax_bxl": "+3222849325",
+        "fax_stg": "+33388179325",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "28226",
+        "image": "http://www.europarl.europa.eu/mepphoto/28226.jpg",
+        "name": "Christian EHLER",
+        "party": "Christlich Demokratische Union Deutschlands",
+        "score": 0.9,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/28226/CHRISTIAN_EHLER_home.html",
+        "website": "http://www.christian-ehler.de"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-RU",
+            "D-MD",
+            "DEPA"
+        ],
+        "Substitute": [
+            "AGRI"
+        ],
+        "country": "Sweden",
+        "country_short": "se",
+        "email": "peter.eriksson@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849752",
+        "fax_stg": "+33388179752",
+        "group": "Group of the Greens/European Free Alliance",
+        "group_short": "greensefa",
+        "id": "124937",
+        "image": "http://www.europarl.europa.eu/mepphoto/124937.jpg",
+        "name": "Peter ERIKSSON",
+        "party": "Milj\u00f6partiet de gr\u00f6na",
+        "score": 0.65,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/124937/PETER_ERIKSSON_home.html",
+        "website": null
+    },
+    {
+        "Member": [
             "LIBE",
             "DSEE"
         ],
@@ -700,6 +1196,33 @@
         "twitter": null,
         "url": "http://www.europarl.europa.eu/meps/en/96852/CORNELIA_ERNST_home.html",
         "website": "http://www.cornelia-ernst.de/"
+    },
+    {
+        "Member": [
+            "ITRE"
+        ],
+        "Substitute": [
+            "AGRI"
+        ],
+        "Vice-Chair": [
+            "DPAP"
+        ],
+        "country": "Sweden",
+        "country_short": "se",
+        "email": "fredrick.federley@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849867",
+        "fax_stg": "+33388179867",
+        "group": "Group of the Alliance of Liberals and Democrats for Europe",
+        "group_short": "aldeadle",
+        "id": "124989",
+        "image": "http://www.europarl.europa.eu/mepphoto/124989.jpg",
+        "name": "Fredrick FEDERLEY",
+        "party": "Centerpartiet",
+        "score": 0.8,
+        "twitter": "federley",
+        "url": "http://www.europarl.europa.eu/meps/en/124989/FREDRICK_FEDERLEY_home.html",
+        "website": null
     },
     {
         "Member": [
@@ -809,6 +1332,35 @@
     },
     {
         "Member": [
+            "ITRE",
+            "TAXE",
+            "D-BR",
+            "DMER",
+            "DLAT"
+        ],
+        "Substitute": [
+            "ECON",
+            "DARP"
+        ],
+        "country": "United Kingdom",
+        "country_short": "gb",
+        "email": "ashley.fox@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849677",
+        "fax_stg": "+33388179677",
+        "group": "European Conservatives and Reformists Group",
+        "group_short": "ecr",
+        "id": "96957",
+        "image": "http://www.europarl.europa.eu/mepphoto/96957.jpg",
+        "name": "Ashley FOX",
+        "party": "Conservative Party",
+        "score": 0.6,
+        "twitter": "Ashleyfoxmep",
+        "url": "http://www.europarl.europa.eu/meps/en/96957/ASHLEY_FOX_home.html",
+        "website": "http://www.ashleyfoxmep.com/"
+    },
+    {
+        "Member": [
             "AFET",
             "SEDE",
             "D-US"
@@ -833,6 +1385,35 @@
         "twitter": "EugenAFreund",
         "url": "http://www.europarl.europa.eu/meps/en/125018/EUGEN_FREUND_home.html",
         "website": null
+    },
+    {
+        "Member": [
+            "IMCO",
+            "TAXE",
+            "DASE"
+        ],
+        "Substitute": [
+            "ECON",
+            "FEMM",
+            "D-ZA"
+        ],
+        "Vice-President": [],
+        "country": "Hungary",
+        "country_short": "hu",
+        "email": "ildiko.gall-pelcz@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/ildiko.pelcz.gall",
+        "fax_bxl": "+3222849544",
+        "fax_stg": "+33388179544",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "102886",
+        "image": "http://www.europarl.europa.eu/mepphoto/102886.jpg",
+        "name": "Ildik\u00f3 G\u00c1LL-PELCZ",
+        "party": "Fidesz-Magyar Polg\u00e1ri Sz\u00f6vets\u00e9g-Kereszt\u00e9ny Demokrata N\u00e9pp\u00e1rt",
+        "score": 0.8,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/102886/ILDIKO_GALL-PELCZ_home.html",
+        "website": "http://www.pgi.hu/"
     },
     {
         "Member": [
@@ -892,6 +1473,33 @@
     },
     {
         "Member": [
+            "IMCO",
+            "DACP",
+            "DLAT"
+        ],
+        "Substitute": [
+            "JURI",
+            "DMER"
+        ],
+        "country": "Germany",
+        "country_short": "de",
+        "email": "evelyne.gebhardt@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849466",
+        "fax_stg": "+33388179466",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "1913",
+        "image": "http://www.europarl.europa.eu/mepphoto/1913.jpg",
+        "name": "Evelyne GEBHARDT",
+        "party": "Sozialdemokratische Partei Deutschlands",
+        "score": 0.7,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/1913/EVELYNE_GEBHARDT_home.html",
+        "website": "http://www.evelyne-gebhardt-fuer-europa.de"
+    },
+    {
+        "Member": [
             "CONT",
             "D-US"
         ],
@@ -945,6 +1553,58 @@
         "twitter": "Gerbrandy",
         "url": "http://www.europarl.europa.eu/meps/en/96940/GERBEN-JAN_GERBRANDY_home.html",
         "website": "http://www.gerbenjangerbrandy.nl"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "DCAS"
+        ],
+        "Substitute": [
+            "ENVI",
+            "D-CA"
+        ],
+        "country": "Poland",
+        "country_short": "pl",
+        "email": "adam.gierek@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849781",
+        "fax_stg": "+33388179781",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "28379",
+        "image": "http://www.europarl.europa.eu/mepphoto/28379.jpg",
+        "name": "Adam GIEREK",
+        "party": "Unia Pracy",
+        "score": 0.8,
+        "twitter": "AdamGierek",
+        "url": "http://www.europarl.europa.eu/meps/en/28379/ADAM_GIEREK_home.html",
+        "website": "http://www.adam.gierek.eu/"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "DACP"
+        ],
+        "Substitute": [
+            "CULT",
+            "DSAS"
+        ],
+        "country": "Spain",
+        "country_short": "es",
+        "email": "juancarlos.girautavidal@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849784",
+        "fax_stg": "+33388179784",
+        "group": "Group of the Alliance of Liberals and Democrats for Europe",
+        "group_short": "aldeadle",
+        "id": "125052",
+        "image": "http://www.europarl.europa.eu/mepphoto/125052.jpg",
+        "name": "Juan Carlos GIRAUTA VIDAL",
+        "party": "Ciudadanos \u2013 Partido de la Ciudadan\u00eda",
+        "score": 0.8,
+        "twitter": "GirautaOficial",
+        "url": "http://www.europarl.europa.eu/meps/en/125052/JUAN+CARLOS_GIRAUTA+VIDAL_home.html",
+        "website": null
     },
     {
         "Member": [
@@ -1002,6 +1662,86 @@
     },
     {
         "Member": [
+            "IMCO",
+            "DKOR"
+        ],
+        "Substitute": [
+            "TRAN",
+            "D-MD",
+            "DEPA"
+        ],
+        "country": "Romania",
+        "country_short": "ro",
+        "email": "maria.grapini@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849526",
+        "fax_stg": "+33388179526",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "124785",
+        "image": "http://www.europarl.europa.eu/mepphoto/124785.jpg",
+        "name": "Maria GRAPINI",
+        "party": "Partidul Conservator",
+        "score": 0.7,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/124785/MARIA_GRAPINI_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-RU"
+        ],
+        "Substitute": [
+            "TRAN",
+            "D-CN"
+        ],
+        "country": "United Kingdom",
+        "country_short": "gb",
+        "email": "theresa.griffin@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/TheresaGriffinMEP",
+        "fax_bxl": "+3222849271",
+        "fax_stg": "+33388179271",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "124961",
+        "image": "http://www.europarl.europa.eu/mepphoto/124961.jpg",
+        "name": "Theresa GRIFFIN",
+        "party": "Labour Party",
+        "score": 0.8,
+        "twitter": "TheresaMEP",
+        "url": "http://www.europarl.europa.eu/meps/en/124961/THERESA_GRIFFIN_home.html",
+        "website": "http://theresagriffin.eu/"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-CN"
+        ],
+        "Substitute": [
+            "PECH",
+            "DCAM",
+            "DLAT"
+        ],
+        "country": "Poland",
+        "country_short": "pl",
+        "email": "marekjozef.grobarczyk@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/pages/Marek-Gr%C3%B3barczyk/132693910101846",
+        "fax_bxl": "+3222849864",
+        "fax_stg": "+33388179864",
+        "group": "European Conservatives and Reformists Group",
+        "group_short": "ecr",
+        "id": "96790",
+        "image": "http://www.europarl.europa.eu/mepphoto/96790.jpg",
+        "name": "Marek J\u00f3zef GR\u00d3BARCZYK",
+        "party": "Prawo i Sprawiedliwo\u015b\u0107",
+        "score": 0.6,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/96790/MAREK+JOZEF_GROBARCZYK_home.html",
+        "website": "http://www.marekgrobarczyk.pl"
+    },
+    {
+        "Member": [
             "ENVI",
             "D-RU"
         ],
@@ -1025,6 +1765,90 @@
         "twitter": "GrosseteteF",
         "url": "http://www.europarl.europa.eu/meps/en/2025/FRANCOISE_GROSSETETE_home.html",
         "website": "http://www.francoise-grossetete.eu/"
+    },
+    {
+        "Member": [
+            "IMCO",
+            "DEPA"
+        ],
+        "Substitute": [
+            "EMPL",
+            "DEEA"
+        ],
+        "Vice-Chair": [
+            "DSCA"
+        ],
+        "country": "Lithuania",
+        "country_short": "lt",
+        "email": "antanas.guoga@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849522",
+        "fax_stg": "+33388179522",
+        "group": "Group of the Alliance of Liberals and Democrats for Europe",
+        "group_short": "aldeadle",
+        "id": "124763",
+        "image": "http://www.europarl.europa.eu/mepphoto/124763.jpg",
+        "name": "Antanas GUOGA",
+        "party": "Lietuvos Respublikos liberal\u0173 s\u0105j\u016bdis",
+        "score": 0.7,
+        "twitter": "TonyGuoga",
+        "url": "http://www.europarl.europa.eu/meps/en/124763/ANTANAS_GUOGA_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "IMCO",
+            "DPLC"
+        ],
+        "Substitute": [
+            "EMPL",
+            "LIBE",
+            "DCAR",
+            "DLAT"
+        ],
+        "country": "Spain",
+        "country_short": "es",
+        "email": "sergio.gutierrezprieto@europarl.europa.eu",
+        "facebook": "http://www.facebook.com/profile.php?id=739387569",
+        "fax_bxl": "+3222849331",
+        "fax_stg": "+33388179331",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "103488",
+        "image": "http://www.europarl.europa.eu/mepphoto/103488.jpg",
+        "name": "Sergio GUTI\u00c9RREZ PRIETO",
+        "party": "Partido Socialista Obrero Espa\u00f1ol",
+        "score": 0.7,
+        "twitter": "Sergio_GP",
+        "url": "http://www.europarl.europa.eu/meps/en/103488/SERGIO_GUTIERREZ+PRIETO_home.html",
+        "website": "http://www.sergiogutierrez.es"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "DARP"
+        ],
+        "Substitute": [
+            "AFET",
+            "DSCA",
+            "DEPA"
+        ],
+        "country": "Hungary",
+        "country_short": "hu",
+        "email": "andras.gyurk@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/pages/Andr%C3%A1s-Gy%C3%BCrk/132821326756328",
+        "fax_bxl": "+3222849727",
+        "fax_stg": "+33388179727",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "23816",
+        "image": "http://www.europarl.europa.eu/mepphoto/23816.jpg",
+        "name": "Andr\u00e1s GY\u00dcRK",
+        "party": "Fidesz-Magyar Polg\u00e1ri Sz\u00f6vets\u00e9g-Kereszt\u00e9ny Demokrata N\u00e9pp\u00e1rt",
+        "score": 0.9,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/23816/ANDRAS_GYURK_home.html",
+        "website": "http://gyurkandras.hu/"
     },
     {
         "Member": [
@@ -1106,6 +1930,31 @@
         "twitter": "RebHarms",
         "url": "http://www.europarl.europa.eu/meps/en/28233/REBECCA_HARMS_home.html",
         "website": "http://www.rebecca-harms.de"
+    },
+    {
+        "Member": [
+            "ITRE"
+        ],
+        "Substitute": [
+            "DASE",
+            "DKOR"
+        ],
+        "country": "United Kingdom",
+        "country_short": "gb",
+        "email": "roger.helmer@europarl.europa.eu",
+        "facebook": "http://www.facebook.com/roger.helmer.1",
+        "fax_bxl": "+3222849764",
+        "fax_stg": "+33388179764",
+        "group": "Europe of Freedom and Direct Democracy Group",
+        "group_short": "efd",
+        "id": "4516",
+        "image": "http://www.europarl.europa.eu/mepphoto/4516.jpg",
+        "name": "Roger HELMER",
+        "party": "United Kingdom Independence Party",
+        "score": 0.85,
+        "twitter": "RogerHelmerMEP",
+        "url": "http://www.europarl.europa.eu/meps/en/4516/ROGER_HELMER_home.html",
+        "website": "http://www.rogerhelmer.com"
     },
     {
         "Member": [
@@ -1192,6 +2041,62 @@
     },
     {
         "Member": [
+            "IMCO",
+            "DSCA",
+            "DEPA"
+        ],
+        "Substitute": [
+            "ENVI",
+            "DAND",
+            "DLAT"
+        ],
+        "country": "Poland",
+        "country_short": "pl",
+        "email": "robertjaroslaw.iwaszkiewicz@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849577",
+        "fax_stg": "+33388179577",
+        "group": "Europe of Freedom and Direct Democracy Group",
+        "group_short": "efd",
+        "id": "124886",
+        "image": "http://www.europarl.europa.eu/mepphoto/124886.jpg",
+        "name": "Robert Jaros\u0142aw IWASZKIEWICZ",
+        "party": "Kongres Nowej Prawicy",
+        "score": 0.75,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/124886/ROBERT+JAROSLAW_IWASZKIEWICZ_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "IMCO"
+        ],
+        "Substitute": [
+            "AFET",
+            "DPAP"
+        ],
+        "Vice-Chair": [
+            "D-RU"
+        ],
+        "country": "Finland",
+        "country_short": "fi",
+        "email": "liisa.jaakonsaari@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/pages/Liisa-Jaakonsaari-SDPn-presidenttiehdokkaaksi/209062879133908",
+        "fax_bxl": "+3222849540",
+        "fax_stg": "+33388179540",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "96684",
+        "image": "http://www.europarl.europa.eu/mepphoto/96684.jpg",
+        "name": "Liisa JAAKONSAARI",
+        "party": "Suomen Sosialidemokraattinen Puolue/Finlands Socialdemokratiska Parti",
+        "score": 0.7,
+        "twitter": "Jaakonsaari",
+        "url": "http://www.europarl.europa.eu/meps/en/96684/LIISA_JAAKONSAARI_home.html",
+        "website": "http://www.liisajaakonsaari.fi/"
+    },
+    {
+        "Member": [
             "ITRE",
             "DEPA"
         ],
@@ -1215,7 +2120,7 @@
         "image": "http://www.europarl.europa.eu/mepphoto/124882.jpg",
         "name": "Dawid Bohdan JACKIEWICZ",
         "party": "Prawo i Sprawiedliwo\u015b\u0107",
-        "score": 0.25,
+        "score": 0.6,
         "twitter": "DawidJackiewicz",
         "url": "http://www.europarl.europa.eu/meps/en/124882/DAWID+BOHDAN_JACKIEWICZ_home.html",
         "website": null
@@ -1279,6 +2184,89 @@
     },
     {
         "Member": [
+            "CONT",
+            "IMCO",
+            "DARP"
+        ],
+        "Substitute": [
+            "LIBE"
+        ],
+        "country": "Netherlands",
+        "country_short": "nl",
+        "email": "dennis.dejong@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849664",
+        "fax_stg": "+33388179664",
+        "group": "Confederal Group of the European United Left - Nordic Green Left",
+        "group_short": "guengl",
+        "id": "96748",
+        "image": "http://www.europarl.europa.eu/mepphoto/96748.jpg",
+        "name": "Dennis de JONG",
+        "party": "Socialistische Partij",
+        "score": 0.55,
+        "twitter": "DdJong",
+        "url": "http://www.europarl.europa.eu/meps/en/96748/DENNIS_DE+JONG_home.html",
+        "website": "http://www.sp.nl/europa"
+    },
+    {
+        "Member": [
+            "IMCO"
+        ],
+        "Substitute": [
+            "AFET",
+            "D-IR"
+        ],
+        "country": "France",
+        "country_short": "fr",
+        "email": "philippe.juvin@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/philippe.juvin",
+        "fax_bxl": "+3222849199",
+        "fax_stg": "+33388179199",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "96884",
+        "image": "http://www.europarl.europa.eu/mepphoto/96884.jpg",
+        "name": "Philippe JUVIN",
+        "party": "Union pour un Mouvement Populaire",
+        "score": 0.8,
+        "twitter": "philippejuvin",
+        "url": "http://www.europarl.europa.eu/meps/en/96884/PHILIPPE_JUVIN_home.html",
+        "website": "http://www.philippejuvin.fr/"
+    },
+    {
+        "Chair": [
+            "DNAT"
+        ],
+        "Member": [
+            "ITRE",
+            "TAXE"
+        ],
+        "Substitute": [
+            "ECON",
+            "EMPL",
+            "SEDE",
+            "D-RU",
+            "D-US"
+        ],
+        "country": "Greece",
+        "country_short": "gr",
+        "email": "eva.kaili@europarl.europa.eu",
+        "facebook": "https://en-gb.facebook.com/Kaili.Eva",
+        "fax_bxl": "+3222849613",
+        "fax_stg": "+33388179613",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "125109",
+        "image": "http://www.europarl.europa.eu/mepphoto/125109.jpg",
+        "name": "Eva KAILI",
+        "party": "Panhellenic Socialist Movement - Olive Tree",
+        "score": 0.8,
+        "twitter": "EvaKaili",
+        "url": "http://www.europarl.europa.eu/meps/en/125109/EVA_KAILI_home.html",
+        "website": null
+    },
+    {
+        "Member": [
             "ITRE",
             "DEPA"
         ],
@@ -1301,9 +2289,36 @@
         "image": "http://www.europarl.europa.eu/mepphoto/124697.jpg",
         "name": "Kaja KALLAS",
         "party": "Eesti Reformierakond",
-        "score": 0.44999999999999996,
+        "score": 0.8,
         "twitter": "kajakallas",
         "url": "http://www.europarl.europa.eu/meps/en/124697/KAJA_KALLAS_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-US"
+        ],
+        "Substitute": [
+            "ECON",
+            "TAXE",
+            "DSAS"
+        ],
+        "country": "Austria",
+        "country_short": "at",
+        "email": "barbara.kappel@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849576",
+        "fax_stg": "+33388179576",
+        "group": "Non-attached Members",
+        "group_short": "ni",
+        "id": "125024",
+        "image": "http://www.europarl.europa.eu/mepphoto/125024.jpg",
+        "name": "Barbara KAPPEL",
+        "party": "Freiheitliche Partei \u00d6sterreichs",
+        "score": 0.8,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/125024/BARBARA_KAPPEL_home.html",
         "website": null
     },
     {
@@ -1339,6 +2354,60 @@
     },
     {
         "Member": [
+            "ITRE",
+            "D-US"
+        ],
+        "Substitute": [
+            "ECON",
+            "TAXE",
+            "DSCA",
+            "DEPA"
+        ],
+        "country": "Latvia",
+        "country_short": "lv",
+        "email": "krisjanis.karins@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/karinskrisjanis",
+        "fax_bxl": "+3222849205",
+        "fax_stg": "+33388179205",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "96901",
+        "image": "http://www.europarl.europa.eu/mepphoto/96901.jpg",
+        "name": "Kri\u0161j\u0101nis KARI\u0145\u0160",
+        "party": "Partija \"VIENOT\u012aBA\"",
+        "score": 0.9,
+        "twitter": "krisjaniskarins",
+        "url": "http://www.europarl.europa.eu/meps/en/96901/KRISJANIS_KARINS_home.html",
+        "website": "http://www.karins.lv/"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-IR"
+        ],
+        "Substitute": [
+            "INTA",
+            "DASE"
+        ],
+        "country": "Ireland",
+        "country_short": "ie",
+        "email": "sean.kelly@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/sean.kellymep",
+        "fax_bxl": "+3222849206",
+        "fax_stg": "+33388179206",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "96668",
+        "image": "http://www.europarl.europa.eu/mepphoto/96668.jpg",
+        "name": "Se\u00e1n KELLY",
+        "party": "Fine Gael Party",
+        "score": 0.9,
+        "twitter": "SeanKellyMEP",
+        "url": "http://www.europarl.europa.eu/meps/en/96668/SEAN_KELLY_home.html",
+        "website": "http://www.seankelly.eu/"
+    },
+    {
+        "Member": [
             "INTA",
             "PETI",
             "DAND",
@@ -1367,6 +2436,35 @@
     },
     {
         "Member": [
+            "ITRE",
+            "TAXE"
+        ],
+        "Substitute": [
+            "ECON",
+            "DNAT"
+        ],
+        "Vice-Chair": [
+            "D-US"
+        ],
+        "country": "Denmark",
+        "country_short": "dk",
+        "email": "jeppe.kofod@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849463",
+        "fax_stg": "+33388179463",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "124870",
+        "image": "http://www.europarl.europa.eu/mepphoto/124870.jpg",
+        "name": "Jeppe KOFOD",
+        "party": "Socialdemokratiet",
+        "score": 0.8,
+        "twitter": "JeppeKofod",
+        "url": "http://www.europarl.europa.eu/meps/en/124870/JEPPE_KOFOD_home.html",
+        "website": "http://www.socialdemokraterne.dk/default.aspx?site=jeppekofod"
+    },
+    {
+        "Member": [
             "AFET",
             "D-CN"
         ],
@@ -1389,6 +2487,33 @@
         "twitter": "korwinmikke",
         "url": "http://www.europarl.europa.eu/meps/en/124879/JANUSZ_KORWIN-MIKKE_home.html",
         "website": "http://korwin-mikke.pl/"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-JP",
+            "DEPA"
+        ],
+        "Substitute": [
+            "AFET",
+            "DSCA"
+        ],
+        "country": "Hungary",
+        "country_short": "hu",
+        "email": "bela.kovacs@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849789",
+        "fax_stg": "+33388179789",
+        "group": "Non-attached Members",
+        "group_short": "ni",
+        "id": "102887",
+        "image": "http://www.europarl.europa.eu/mepphoto/102887.jpg",
+        "name": "B\u00e9la KOV\u00c1CS",
+        "party": "Jobbik Magyarorsz\u00e1g\u00e9rt Mozgalom",
+        "score": 0.8,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/102887/BELA_KOVACS_home.html",
+        "website": "http://www.kovacsbela.eu"
     },
     {
         "Chair": [
@@ -1446,6 +2571,32 @@
         "twitter": "BarbaraKudrycka",
         "url": "http://www.europarl.europa.eu/meps/en/28284/BARBARA_KUDRYCKA_home.html",
         "website": "http://www.kudrycka.pl/"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-MD",
+            "DEPA"
+        ],
+        "Substitute": [
+            "EMPL"
+        ],
+        "country": "Finland",
+        "country_short": "fi",
+        "email": "miapetra.kumpula-natri@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849294",
+        "fax_stg": "+33388179294",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "124735",
+        "image": "http://www.europarl.europa.eu/mepphoto/124735.jpg",
+        "name": "Miapetra KUMPULA-NATRI",
+        "party": "Suomen Sosialidemokraattinen Puolue/Finlands Socialdemokratiska Parti",
+        "score": 0.8,
+        "twitter": "miapetrakumpula",
+        "url": "http://www.europarl.europa.eu/meps/en/124735/MIAPETRA_KUMPULA-NATRI_home.html",
+        "website": null
     },
     {
         "Chair": [
@@ -1530,6 +2681,91 @@
         "twitter": "langen_werner",
         "url": "http://www.europarl.europa.eu/meps/en/1928/WERNER_LANGEN_home.html",
         "website": "http://www.euinfo.de/"
+    },
+    {
+        "Chair": [
+            "D-IR"
+        ],
+        "Member": [
+            "ITRE"
+        ],
+        "Substitute": [
+            "BUDG",
+            "D-CN"
+        ],
+        "country": "Poland",
+        "country_short": "pl",
+        "email": "janusz.lewandowski@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/Lewandowski.Janusz",
+        "fax_bxl": "+3222849242",
+        "fax_stg": "+33388179242",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "23781",
+        "image": "http://www.europarl.europa.eu/mepphoto/23781.jpg",
+        "name": "Janusz LEWANDOWSKI",
+        "party": "Platforma Obywatelska",
+        "score": 0.9,
+        "twitter": "J_Lewandowski",
+        "url": "http://www.europarl.europa.eu/meps/en/23781/JANUSZ_LEWANDOWSKI_home.html",
+        "website": "http://www.januszlewandowski.pl"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "DMAS"
+        ],
+        "Substitute": [
+            "ECON",
+            "EMPL",
+            "TAXE",
+            "DPAP",
+            "DMED"
+        ],
+        "country": "Spain",
+        "country_short": "es",
+        "email": "paloma.lopez@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849495",
+        "fax_stg": "+33388179495",
+        "group": "Confederal Group of the European United Left - Nordic Green Left",
+        "group_short": "guengl",
+        "id": "125047",
+        "image": "http://www.europarl.europa.eu/mepphoto/125047.jpg",
+        "name": "Paloma L\u00d3PEZ BERMEJO",
+        "party": "Izquierda Unida",
+        "score": 0.65,
+        "twitter": "palomalopezB",
+        "url": "http://www.europarl.europa.eu/meps/en/125047/PALOMA_LOPEZ+BERMEJO_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "IMCO"
+        ],
+        "Substitute": [
+            "AFET",
+            "SEDE",
+            "D-IL",
+            "D-US",
+            "DMED"
+        ],
+        "country": "Spain",
+        "country_short": "es",
+        "email": "antonio.lopezisturiz@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/tonoepp",
+        "fax_bxl": "+3222849713",
+        "fax_stg": "+33388179713",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "28399",
+        "image": "http://www.europarl.europa.eu/mepphoto/28399.jpg",
+        "name": "Antonio L\u00d3PEZ-IST\u00daRIZ WHITE",
+        "party": "Partido Popular",
+        "score": 0.8,
+        "twitter": "TonoEPP",
+        "url": "http://www.europarl.europa.eu/meps/en/28399/ANTONIO_LOPEZ-ISTURIZ+WHITE_home.html",
+        "website": "http://www.antoniolopezisturiz.eu/pages/home/home.php"
     },
     {
         "Member": [
@@ -1666,6 +2902,34 @@
     },
     {
         "Member": [
+            "BUDG",
+            "ITRE",
+            "D-TR"
+        ],
+        "Substitute": [
+            "CULT",
+            "TAXE",
+            "DMED"
+        ],
+        "country": "Spain",
+        "country_short": "es",
+        "email": "ernest.maragall@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849606",
+        "fax_stg": "+33388179606",
+        "group": "Group of the Greens/European Free Alliance",
+        "group_short": "greensefa",
+        "id": "124933",
+        "image": "http://www.europarl.europa.eu/mepphoto/124933.jpg",
+        "name": "Ernest MARAGALL",
+        "party": "Nova Esquerra Catalana",
+        "score": 0.65,
+        "twitter": "ernestmaragall",
+        "url": "http://www.europarl.europa.eu/meps/en/124933/ERNEST_MARAGALL_home.html",
+        "website": null
+    },
+    {
+        "Member": [
             "ECON",
             "PETI",
             "DMAS",
@@ -1749,6 +3013,34 @@
         "website": "http://www.dominique-martin.info/"
     },
     {
+        "Member": [
+            "ITRE",
+            "PETI",
+            "DPLC",
+            "DMED"
+        ],
+        "Substitute": [
+            "EMPL",
+            "DMAS"
+        ],
+        "country": "France",
+        "country_short": "fr",
+        "email": "edouard.martin@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849472",
+        "fax_stg": "+33388179472",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "124947",
+        "image": "http://www.europarl.europa.eu/mepphoto/124947.jpg",
+        "name": "Edouard MARTIN",
+        "party": "Parti socialiste",
+        "score": 0.8,
+        "twitter": "edouardmartinEU",
+        "url": "http://www.europarl.europa.eu/meps/en/124947/EDOUARD_MARTIN_home.html",
+        "website": null
+    },
+    {
         "Chair": [
             "D-IL"
         ],
@@ -1777,6 +3069,37 @@
         "score": 0.6000000000000001,
         "twitter": "fulviomartuscie",
         "url": "http://www.europarl.europa.eu/meps/en/124828/FULVIO_MARTUSCIELLO_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "IMCO",
+            "JURI",
+            "D-ME",
+            "DEPA"
+        ],
+        "Substitute": [
+            "D-MD",
+            "DNAT"
+        ],
+        "Vice-Chair": [
+            "D-RU"
+        ],
+        "country": "Czech Republic",
+        "country_short": "cz",
+        "email": "jiri.mastalka@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849905",
+        "fax_stg": "+33388179905",
+        "group": "Confederal Group of the European United Left - Nordic Green Left",
+        "group_short": "guengl",
+        "id": "23704",
+        "image": "http://www.europarl.europa.eu/mepphoto/23704.jpg",
+        "name": "Ji\u0159\u00ed MA\u0160T\u00c1LKA",
+        "party": "Komunistick\u00e1 strana \u010cech a Moravy",
+        "score": 0.55,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/23704/JIRI_MASTALKA_home.html",
         "website": null
     },
     {
@@ -1867,6 +3190,63 @@
     },
     {
         "Member": [
+            "IMCO",
+            "DACP"
+        ],
+        "Substitute": [
+            "CULT",
+            "D-CN"
+        ],
+        "Vice-Chair": [
+            "PETI"
+        ],
+        "country": "Malta",
+        "country_short": "mt",
+        "email": "marlene.mizzi@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849235",
+        "fax_stg": "+33388179235",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "118858",
+        "image": "http://www.europarl.europa.eu/mepphoto/118858.jpg",
+        "name": "Marlene MIZZI",
+        "party": "Partit Laburista",
+        "score": 0.7,
+        "twitter": "MarleneMizzi",
+        "url": "http://www.europarl.europa.eu/meps/en/118858/MARLENE_MIZZI_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "ITRE",
+            "FEMM",
+            "DMAS",
+            "D-CN"
+        ],
+        "Substitute": [
+            "LIBE",
+            "DEEA"
+        ],
+        "country": "Austria",
+        "country_short": "at",
+        "email": "angelika.mlinar@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849851",
+        "fax_stg": "+33388179851",
+        "group": "Group of the Alliance of Liberals and Democrats for Europe",
+        "group_short": "aldeadle",
+        "id": "125026",
+        "image": "http://www.europarl.europa.eu/mepphoto/125026.jpg",
+        "name": "Angelika MLINAR",
+        "party": "NEOS \u2013 Das Neue \u00d6sterreich",
+        "score": 0.8,
+        "twitter": "AngelikaMlinar",
+        "url": "http://www.europarl.europa.eu/meps/en/125026/ANGELIKA_MLINAR_home.html",
+        "website": null
+    },
+    {
+        "Member": [
             "AGRI",
             "D-US",
             "D-IN"
@@ -1924,6 +3304,32 @@
     },
     {
         "Member": [
+            "ITRE",
+            "DASE"
+        ],
+        "Substitute": [
+            "REGI",
+            "D-US"
+        ],
+        "country": "Hungary",
+        "country_short": "hu",
+        "email": "csaba.molnar@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849571",
+        "fax_stg": "+33388179571",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "124722",
+        "image": "http://www.europarl.europa.eu/mepphoto/124722.jpg",
+        "name": "Csaba MOLN\u00c1R",
+        "party": "Demokratikus Koal\u00edci\u00f3",
+        "score": 0.8,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/124722/CSABA_MOLNAR_home.html",
+        "website": null
+    },
+    {
+        "Member": [
             "BUDG",
             "DSCA",
             "DEPA"
@@ -1949,6 +3355,89 @@
         "twitter": "ClareMMoody",
         "url": "http://www.europarl.europa.eu/meps/en/124944/CLARE_MOODY_home.html",
         "website": null
+    },
+    {
+        "Member": [
+            "ITRE",
+            "DPAP"
+        ],
+        "Substitute": [
+            "LIBE",
+            "D-CN",
+            "DACP"
+        ],
+        "country": "France",
+        "country_short": "fr",
+        "email": "nadine.morano@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/Nadine.Morano",
+        "fax_bxl": "+3222849446",
+        "fax_stg": "+33388179446",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "72779",
+        "image": "http://www.europarl.europa.eu/mepphoto/72779.jpg",
+        "name": "Nadine MORANO",
+        "party": "Union pour un Mouvement Populaire",
+        "score": 0.9,
+        "twitter": "nadine__morano",
+        "url": "http://www.europarl.europa.eu/meps/en/72779/NADINE_MORANO_home.html",
+        "website": "http://www.nadinemorano.fr/"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-US"
+        ],
+        "Substitute": [
+            "REGI",
+            "D-IL"
+        ],
+        "Vice-Chair": [
+            "CONT"
+        ],
+        "country": "Romania",
+        "country_short": "ro",
+        "email": "dan.nica@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849448",
+        "fax_stg": "+33388179448",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "124784",
+        "image": "http://www.europarl.europa.eu/mepphoto/124784.jpg",
+        "name": "Dan NICA",
+        "party": "Partidul Social Democrat",
+        "score": 0.8,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/124784/DAN_NICA_home.html",
+        "website": "http://www.dannica.ro/"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "FEMM",
+            "DARP"
+        ],
+        "Substitute": [
+            "JURI",
+            "D-TR"
+        ],
+        "country": "Germany",
+        "country_short": "de",
+        "email": "angelika.niebler@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/aniebler",
+        "fax_bxl": "+3222849390",
+        "fax_stg": "+33388179390",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "4289",
+        "image": "http://www.europarl.europa.eu/mepphoto/4289.jpg",
+        "name": "Angelika NIEBLER",
+        "party": "Christlich-Soziale Union in Bayern e.V.",
+        "score": 0.9,
+        "twitter": "ANiebler",
+        "url": "http://www.europarl.europa.eu/meps/en/4289/ANGELIKA_NIEBLER_home.html",
+        "website": "http://www.angelika-niebler.de/"
     },
     {
         "Member": [
@@ -2088,6 +3577,112 @@
     },
     {
         "Member": [
+            "ITRE",
+            "TAXE",
+            "DEEA",
+            "DSCA"
+        ],
+        "Substitute": [
+            "TRAN",
+            "PECH"
+        ],
+        "Vice-Chair": [
+            "DEPA"
+        ],
+        "country": "Lithuania",
+        "country_short": "lt",
+        "email": "rolandas.paksas@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849671",
+        "fax_stg": "+33388179671",
+        "group": "Europe of Freedom and Direct Democracy Group",
+        "group_short": "efd",
+        "id": "96694",
+        "image": "http://www.europarl.europa.eu/mepphoto/96694.jpg",
+        "name": "Rolandas PAKSAS",
+        "party": "Partija Tvarka ir teisingumas",
+        "score": 0.85,
+        "twitter": "RolandasPaksas",
+        "url": "http://www.europarl.europa.eu/meps/en/96694/ROLANDAS_PAKSAS_home.html",
+        "website": "http://www.tvarka.lt"
+    },
+    {
+        "Member": [
+            "IMCO",
+            "FEMM"
+        ],
+        "country": "United Kingdom",
+        "country_short": "gb",
+        "email": "margot.parker@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849182",
+        "fax_stg": "+33388179182",
+        "group": "Europe of Freedom and Direct Democracy Group",
+        "group_short": "efd",
+        "id": "124945",
+        "image": "http://www.europarl.europa.eu/mepphoto/124945.jpg",
+        "name": "Margot PARKER",
+        "party": "United Kingdom Independence Party",
+        "score": 0.75,
+        "twitter": "MargotLJParker",
+        "url": "http://www.europarl.europa.eu/meps/en/124945/MARGOT_PARKER_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-AL"
+        ],
+        "Substitute": [
+            "ENVI",
+            "DKOR"
+        ],
+        "country": "Italy",
+        "country_short": "it",
+        "email": "aldo.patriciello@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/AldoPatriciello",
+        "fax_bxl": "+3222849418",
+        "fax_stg": "+33388179418",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "36392",
+        "image": "http://www.europarl.europa.eu/mepphoto/36392.jpg",
+        "name": "Aldo PATRICIELLO",
+        "party": "Forza Italia",
+        "score": 0.9,
+        "twitter": "PatricielloAldo",
+        "url": "http://www.europarl.europa.eu/meps/en/36392/ALDO_PATRICIELLO_home.html",
+        "website": "http://www.forzaitalia.it"
+    },
+    {
+        "Member": [
+            "IMCO",
+            "D-CN"
+        ],
+        "Substitute": [
+            "ECON",
+            "TAXE",
+            "D-US"
+        ],
+        "country": "Bulgaria",
+        "country_short": "bg",
+        "email": "eva.paunova@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/EvaPaunovaEPP",
+        "fax_bxl": "+3222849771",
+        "fax_stg": "+33388179771",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "98341",
+        "image": "http://www.europarl.europa.eu/mepphoto/98341.jpg",
+        "name": "Eva PAUNOVA",
+        "party": "Citizens for European Development of Bulgaria",
+        "score": 0.8,
+        "twitter": "evapaunova",
+        "url": "http://www.europarl.europa.eu/meps/en/98341/EVA_PAUNOVA_home.html",
+        "website": "http://evapaunova.eu/"
+    },
+    {
+        "Member": [
             "ENVI",
             "D-RU",
             "D-AF"
@@ -2146,6 +3741,34 @@
     },
     {
         "Member": [
+            "IMCO",
+            "AFCO",
+            "DACP"
+        ],
+        "Substitute": [
+            "ECON",
+            "TAXE",
+            "D-US"
+        ],
+        "country": "France",
+        "country_short": "fr",
+        "email": "florian.philippot@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849758",
+        "fax_stg": "+33388179758",
+        "group": "Non-attached Members",
+        "group_short": "ni",
+        "id": "110977",
+        "image": "http://www.europarl.europa.eu/mepphoto/110977.jpg",
+        "name": "Florian PHILIPPOT",
+        "party": "Front national",
+        "score": 0.7,
+        "twitter": "f_philippot",
+        "url": "http://www.europarl.europa.eu/meps/en/110977/FLORIAN_PHILIPPOT_home.html",
+        "website": null
+    },
+    {
+        "Member": [
             "TRAN",
             "DCAS"
         ],
@@ -2170,6 +3793,86 @@
         "twitter": null,
         "url": "http://www.europarl.europa.eu/meps/en/28224/MARKUS_PIEPER_home.html",
         "website": "http://www.markus-pieper.eu/"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-CN",
+            "DEPA"
+        ],
+        "Substitute": [
+            "AFET",
+            "CONT",
+            "D-UA"
+        ],
+        "country": "Czech Republic",
+        "country_short": "cz",
+        "email": "miroslav.poche@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849328",
+        "fax_stg": "+33388179328",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "124699",
+        "image": "http://www.europarl.europa.eu/mepphoto/124699.jpg",
+        "name": "Miroslav POCHE",
+        "party": "\u010cesk\u00e1 strana soci\u00e1ln\u011b demokratick\u00e1",
+        "score": 0.8,
+        "twitter": "MiroslavPoche",
+        "url": "http://www.europarl.europa.eu/meps/en/124699/MIROSLAV_POCHE_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "IMCO",
+            "D-IR"
+        ],
+        "Substitute": [
+            "AFCO",
+            "D-RS"
+        ],
+        "country": "Czech Republic",
+        "country_short": "cz",
+        "email": "jiri.pospisil@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/judr.jiri.pospisil",
+        "fax_bxl": "+3222849586",
+        "fax_stg": "+33388179586",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "125706",
+        "image": "http://www.europarl.europa.eu/mepphoto/125706.jpg",
+        "name": "Ji\u0159\u00ed POSP\u00cd\u0160IL",
+        "party": "TOP 09 a Starostov\u00e9",
+        "score": 0.8,
+        "twitter": "Pospisil_Jiri",
+        "url": "http://www.europarl.europa.eu/meps/en/125706/JIRI_POSPISIL_home.html",
+        "website": "http://www.top09.cz/volby/archiv/2014-evropsky-parlament/kandidati/2-judr-jiri-pospisil-15123.html"
+    },
+    {
+        "Member": [
+            "ENVI",
+            "IMCO",
+            "DARP"
+        ],
+        "Substitute": [
+            "AFCO"
+        ],
+        "country": "Germany",
+        "country_short": "de",
+        "email": "marcus.pretzell@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849772",
+        "fax_stg": "+33388179772",
+        "group": "European Conservatives and Reformists Group",
+        "group_short": "ecr",
+        "id": "124830",
+        "image": "http://www.europarl.europa.eu/mepphoto/124830.jpg",
+        "name": "Marcus PRETZELL",
+        "party": "Alternative f\u00fcr Deutschland",
+        "score": 0.5,
+        "twitter": "MarcusPretzell",
+        "url": "http://www.europarl.europa.eu/meps/en/124830/MARCUS_PRETZELL_home.html",
+        "website": null
     },
     {
         "Member": [
@@ -2226,6 +3929,60 @@
         "twitter": "Senficon",
         "url": "http://www.europarl.europa.eu/meps/en/124816/JULIA_REDA_home.html",
         "website": null
+    },
+    {
+        "Member": [
+            "ITRE",
+            "DMAS"
+        ],
+        "Substitute": [
+            "ECON",
+            "CULT",
+            "DARP",
+            "D-IQ"
+        ],
+        "country": "Austria",
+        "country_short": "at",
+        "email": "michel.reimon@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849681",
+        "fax_stg": "+33388179681",
+        "group": "Group of the Greens/European Free Alliance",
+        "group_short": "greensefa",
+        "id": "124935",
+        "image": "http://www.europarl.europa.eu/mepphoto/124935.jpg",
+        "name": "Michel REIMON",
+        "party": "Die Gr\u00fcnen - Die Gr\u00fcne Alternative",
+        "score": 0.65,
+        "twitter": "michelreimon",
+        "url": "http://www.europarl.europa.eu/meps/en/124935/MICHEL_REIMON_home.html",
+        "website": "http://www.reimon.net/"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "DKOR"
+        ],
+        "Substitute": [
+            "TRAN",
+            "D-US"
+        ],
+        "country": "Germany",
+        "country_short": "de",
+        "email": "herbert.reul@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/pages/Herbert-Reul/139308402755001?rf=328994327227163",
+        "fax_bxl": "+3222849244",
+        "fax_stg": "+33388179244",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "28225",
+        "image": "http://www.europarl.europa.eu/mepphoto/28225.jpg",
+        "name": "Herbert REUL",
+        "party": "Christlich Demokratische Union Deutschlands",
+        "score": 0.9,
+        "twitter": "hreul",
+        "url": "http://www.europarl.europa.eu/meps/en/28225/HERBERT_REUL_home.html",
+        "website": "http://www.herbert-reul.de/"
     },
     {
         "Member": [
@@ -2390,6 +4147,61 @@
         "website": "http://www.rosati.pl/"
     },
     {
+        "Member": [
+            "IMCO",
+            "D-JP"
+        ],
+        "Substitute": [
+            "JURI",
+            "DKOR"
+        ],
+        "country": "France",
+        "country_short": "fr",
+        "email": "virginie.roziere@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849408",
+        "fax_stg": "+33388179408",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "103845",
+        "image": "http://www.europarl.europa.eu/mepphoto/103845.jpg",
+        "name": "Virginie ROZI\u00c8RE",
+        "party": "Parti radical de gauche",
+        "score": 0.7,
+        "twitter": "VRoziere",
+        "url": "http://www.europarl.europa.eu/meps/en/103845/VIRGINIE_ROZIERE_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "BUDG",
+            "ITRE"
+        ],
+        "Substitute": [
+            "DEVE",
+            "DEEA"
+        ],
+        "Vice-Chair": [
+            "DKOR"
+        ],
+        "country": "Austria",
+        "country_short": "at",
+        "email": "paul.ruebig@europarl.europa.eu",
+        "facebook": "http://www.facebook.com/pages/Paul-R%C3%BCbig/53553538156",
+        "fax_bxl": "+3222849749",
+        "fax_stg": "+33388179749",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "2278",
+        "image": "http://www.europarl.europa.eu/mepphoto/2278.jpg",
+        "name": "Paul R\u00dcBIG",
+        "party": "\u00d6sterreichische Volkspartei",
+        "score": 0.9,
+        "twitter": "paulruebig",
+        "url": "http://www.europarl.europa.eu/meps/en/2278/PAUL_RUBIG_home.html",
+        "website": "http://www.paulruebig.eu/"
+    },
+    {
         "Chair": [
             "DCAM"
         ],
@@ -2476,6 +4288,171 @@
     },
     {
         "Member": [
+            "ITRE"
+        ],
+        "Substitute": [
+            "CULT",
+            "D-UA",
+            "D-BY",
+            "DEPA"
+        ],
+        "country": "Lithuania",
+        "country_short": "lt",
+        "email": "algirdas.saudargas@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/pages/Algirdas-Saudargas/203872939794909",
+        "fax_bxl": "+3222849272",
+        "fax_stg": "+33388179272",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "96696",
+        "image": "http://www.europarl.europa.eu/mepphoto/96696.jpg",
+        "name": "Algirdas SAUDARGAS",
+        "party": "T\u0117vyn\u0117s s\u0105junga-Lietuvos krik\u0161\u010dionys demokratai",
+        "score": 0.9,
+        "twitter": "Saudargas",
+        "url": "http://www.europarl.europa.eu/meps/en/96696/ALGIRDAS_SAUDARGAS_home.html",
+        "website": "http://www.algirdassaudargas.lt/lt"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "SEDE",
+            "D-CN"
+        ],
+        "Substitute": [
+            "AFET",
+            "DACP"
+        ],
+        "country": "France",
+        "country_short": "fr",
+        "email": "jean-luc.schaffhauser@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849726",
+        "fax_stg": "+33388179726",
+        "group": "Non-attached Members",
+        "group_short": "ni",
+        "id": "124755",
+        "image": "http://www.europarl.europa.eu/mepphoto/124755.jpg",
+        "name": "Jean-Luc SCHAFFHAUSER",
+        "party": "Rassemblement bleu Marine",
+        "score": 0.8,
+        "twitter": "JLSchaffhauser",
+        "url": "http://www.europarl.europa.eu/meps/en/124755/JEAN-LUC_SCHAFFHAUSER_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "IMCO",
+            "D-JP"
+        ],
+        "Substitute": [
+            "ENVI",
+            "D-CA"
+        ],
+        "country": "Denmark",
+        "country_short": "dk",
+        "email": "christel.schaldemose@europarl.europa.eu",
+        "facebook": "http://www.facebook.com/#!/profile.php?id=704498919",
+        "fax_bxl": "+3222849491",
+        "fax_stg": "+33388179491",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "37312",
+        "image": "http://www.europarl.europa.eu/mepphoto/37312.jpg",
+        "name": "Christel SCHALDEMOSE",
+        "party": "Socialdemokratiet",
+        "score": 0.7,
+        "twitter": "SchaldemoseMEP",
+        "url": "http://www.europarl.europa.eu/meps/en/37312/CHRISTEL_SCHALDEMOSE_home.html",
+        "website": "http://www.christels.dk"
+    },
+    {
+        "Member": [
+            "IMCO",
+            "D-CL",
+            "DLAT"
+        ],
+        "Substitute": [
+            "ECON",
+            "TAXE",
+            "DEEA"
+        ],
+        "country": "Germany",
+        "country_short": "de",
+        "email": "andreas.schwab@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/dr.andreas.schwab.mdep",
+        "fax_bxl": "+3222849938",
+        "fax_stg": "+33388179938",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "28223",
+        "image": "http://www.europarl.europa.eu/mepphoto/28223.jpg",
+        "name": "Andreas SCHWAB",
+        "party": "Christlich Demokratische Union Deutschlands",
+        "score": 0.8,
+        "twitter": "Andreas_Schwab",
+        "url": "http://www.europarl.europa.eu/meps/en/28223/ANDREAS_SCHWAB_home.html",
+        "website": "http://www.andreas-schwab.de/"
+    },
+    {
+        "Member": [
+            "IMCO"
+        ],
+        "Substitute": [
+            "TRAN",
+            "DASE"
+        ],
+        "Vice-Chair": [
+            "D-IL"
+        ],
+        "country": "Czech Republic",
+        "country_short": "cz",
+        "email": "olga.sehnalova@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849417",
+        "fax_stg": "+33388179417",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "96718",
+        "image": "http://www.europarl.europa.eu/mepphoto/96718.jpg",
+        "name": "Olga SEHNALOV\u00c1",
+        "party": "\u010cesk\u00e1 strana soci\u00e1ln\u011b demokratick\u00e1",
+        "score": 0.7,
+        "twitter": "OlgaSehnalova",
+        "url": "http://www.europarl.europa.eu/meps/en/96718/OLGA_SEHNALOVA_home.html",
+        "website": "http://www.sehnalova.cz"
+    },
+    {
+        "Member": [
+            "IMCO"
+        ],
+        "Substitute": [
+            "AFET",
+            "D-AL"
+        ],
+        "Vice-Chair": [
+            "CONT",
+            "D-RS"
+        ],
+        "country": "Slovenia",
+        "country_short": "si",
+        "email": "igor.soltes@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849818",
+        "fax_stg": "+33388179818",
+        "group": "Group of the Greens/European Free Alliance",
+        "group_short": "greensefa",
+        "id": "125003",
+        "image": "http://www.europarl.europa.eu/mepphoto/125003.jpg",
+        "name": "Igor \u0160OLTES",
+        "party": "Verjamem! Lista dr. Igorja \u0160oltesa",
+        "score": 0.55,
+        "twitter": "isoltesep",
+        "url": "http://www.europarl.europa.eu/meps/en/125003/IGOR_SOLTES_home.html",
+        "website": "http://www.igorsoltes.eu"
+    },
+    {
+        "Member": [
             "ECON",
             "D-IL",
             "DMED"
@@ -2526,6 +4503,62 @@
         "twitter": "MariaSpyraki",
         "url": "http://www.europarl.europa.eu/meps/en/125064/MARIA_SPYRAKI_home.html",
         "website": "http://www.mariaspyraki.gr/"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "DEPA"
+        ],
+        "Substitute": [
+            "BUDG",
+            "DSCA"
+        ],
+        "Vice-Chair": [
+            "D-MK"
+        ],
+        "country": "Bulgaria",
+        "country_short": "bg",
+        "email": "sergei.stanishev@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849654",
+        "fax_stg": "+33388179654",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "124852",
+        "image": "http://www.europarl.europa.eu/mepphoto/124852.jpg",
+        "name": "Sergei STANISHEV",
+        "party": "Bulgarian Socialist Party",
+        "score": 0.8,
+        "twitter": "SergeiStanishev",
+        "url": "http://www.europarl.europa.eu/meps/en/124852/SERGEI_STANISHEV_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "IMCO",
+            "DSAS"
+        ],
+        "Substitute": [
+            "BUDG",
+            "D-UA",
+            "DEPA"
+        ],
+        "country": "Slovakia",
+        "country_short": "sk",
+        "email": "ivan.stefanec@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/ivanstefanec.eu",
+        "fax_bxl": "+3222849676",
+        "fax_stg": "+33388179676",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "124929",
+        "image": "http://www.europarl.europa.eu/mepphoto/124929.jpg",
+        "name": "Ivan \u0160TEFANEC",
+        "party": "Independent",
+        "score": 0.8,
+        "twitter": "IvanStefanec ",
+        "url": "http://www.europarl.europa.eu/meps/en/124929/IVAN_STEFANEC_home.html",
+        "website": "http://www.ivanstefanec.sk/"
     },
     {
         "Member": [
@@ -2583,6 +4616,58 @@
     },
     {
         "Member": [
+            "IMCO",
+            "DANZ"
+        ],
+        "Substitute": [
+            "CONT"
+        ],
+        "country": "Slovakia",
+        "country_short": "sk",
+        "email": "richard.sulik@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849381",
+        "fax_stg": "+33388179381",
+        "group": "European Conservatives and Reformists Group",
+        "group_short": "ecr",
+        "id": "124928",
+        "image": "http://www.europarl.europa.eu/mepphoto/124928.jpg",
+        "name": "Richard SUL\u00cdK",
+        "party": "Sloboda a Solidarita",
+        "score": 0.5,
+        "twitter": "SulikRichard",
+        "url": "http://www.europarl.europa.eu/meps/en/124928/RICHARD_SULIK_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "ITRE",
+            "DPLC"
+        ],
+        "Substitute": [
+            "EMPL",
+            "DACP",
+            "DMED"
+        ],
+        "country": "Cyprus",
+        "country_short": "cy",
+        "email": "neoklis.sylikiotis@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849754",
+        "fax_stg": "+33388179754",
+        "group": "Confederal Group of the European United Left - Nordic Green Left",
+        "group_short": "guengl",
+        "id": "124689",
+        "image": "http://www.europarl.europa.eu/mepphoto/124689.jpg",
+        "name": "Neoklis SYLIKIOTIS",
+        "party": "Progressive Party of Working People - Left - New Forces",
+        "score": 0.65,
+        "twitter": "sylikiotis",
+        "url": "http://www.europarl.europa.eu/meps/en/124689/NEOKLIS_SYLIKIOTIS_home.html",
+        "website": null
+    },
+    {
+        "Member": [
             "INTA",
             "DCAR"
         ],
@@ -2609,6 +4694,62 @@
         "twitter": "szejnfeld",
         "url": "http://www.europarl.europa.eu/meps/en/124890/ADAM_SZEJNFELD_home.html",
         "website": "http://www.szejnfeld.pl/"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-BR",
+            "DMER",
+            "DLAT"
+        ],
+        "Substitute": [
+            "ECON",
+            "D-CL"
+        ],
+        "Vice-President": [],
+        "country": "Italy",
+        "country_short": "it",
+        "email": "antonio.tajani@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/AntonioTajaniOfficial",
+        "fax_bxl": "+3222849750",
+        "fax_stg": "+33388179750",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "2187",
+        "image": "http://www.europarl.europa.eu/mepphoto/2187.jpg",
+        "name": "Antonio TAJANI",
+        "party": "Forza Italia",
+        "score": 0.9,
+        "twitter": "Antonio_Tajani",
+        "url": "http://www.europarl.europa.eu/meps/en/2187/ANTONIO_TAJANI_home.html",
+        "website": "http://www.antoniotajani.it/"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-RU"
+        ],
+        "Substitute": [
+            "AGRI",
+            "D-UA",
+            "DEPA"
+        ],
+        "country": "Italy",
+        "country_short": "it",
+        "email": "dario.tamburrano@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849524",
+        "fax_stg": "+33388179524",
+        "group": "Europe of Freedom and Direct Democracy Group",
+        "group_short": "efd",
+        "id": "124813",
+        "image": "http://www.europarl.europa.eu/mepphoto/124813.jpg",
+        "name": "Dario TAMBURRANO",
+        "party": "Movimento 5 Stelle",
+        "score": 0.9,
+        "twitter": "tamburrano",
+        "url": "http://www.europarl.europa.eu/meps/en/124813/DARIO_TAMBURRANO_home.html",
+        "website": null
     },
     {
         "Member": [
@@ -2785,6 +4926,33 @@
     },
     {
         "Member": [
+            "IMCO",
+            "D-IL",
+            "DMED"
+        ],
+        "Substitute": [
+            "LIBE",
+            "DPLC"
+        ],
+        "country": "Poland",
+        "country_short": "pl",
+        "email": "roza.thun@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/rozathun",
+        "fax_bxl": "+3222849301",
+        "fax_stg": "+33388179301",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "96776",
+        "image": "http://www.europarl.europa.eu/mepphoto/96776.jpg",
+        "name": "R\u00f3\u017ca Gr\u00e4fin von THUN UND HOHENSTEIN",
+        "party": "Platforma Obywatelska",
+        "score": 0.8,
+        "twitter": "rozathun",
+        "url": "http://www.europarl.europa.eu/meps/en/96776/ROZA+GRAFIN+VON_THUN+UND+HOHENSTEIN_home.html",
+        "website": "http://www.rozathun.pl"
+    },
+    {
+        "Member": [
             "D-BY",
             "DEPA"
         ],
@@ -2841,6 +5009,32 @@
     },
     {
         "Member": [
+            "ITRE",
+            "D-JP"
+        ],
+        "Substitute": [
+            "TRAN",
+            "DEEA"
+        ],
+        "country": "Czech Republic",
+        "country_short": "cz",
+        "email": "evzen.tosenovsky@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849717",
+        "fax_stg": "+33388179717",
+        "group": "European Conservatives and Reformists Group",
+        "group_short": "ecr",
+        "id": "96713",
+        "image": "http://www.europarl.europa.eu/mepphoto/96713.jpg",
+        "name": "Ev\u017een TO\u0160ENOVSK\u00dd",
+        "party": "Ob\u010dansk\u00e1 demokratick\u00e1 strana",
+        "score": 0.6,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/96713/EVZEN_TOSENOVSKY_home.html",
+        "website": "http://www.tosenovsky.cz"
+    },
+    {
+        "Member": [
             "EMPL"
         ],
         "Substitute": [
@@ -2862,6 +5056,113 @@
         "twitter": null,
         "url": "http://www.europarl.europa.eu/meps/en/124829/ULRIKE_TREBESIUS_home.html",
         "website": null
+    },
+    {
+        "Member": [
+            "IMCO",
+            "D-CL"
+        ],
+        "Substitute": [
+            "DEVE",
+            "DAND",
+            "DLAT"
+        ],
+        "country": "France",
+        "country_short": "fr",
+        "email": "mylene.troszczynski@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849589",
+        "fax_stg": "+33388179589",
+        "group": "Non-attached Members",
+        "group_short": "ni",
+        "id": "124758",
+        "image": "http://www.europarl.europa.eu/mepphoto/124758.jpg",
+        "name": "Myl\u00e8ne TROSZCZYNSKI",
+        "party": "Front national",
+        "score": 0.7,
+        "twitter": "MyleneTroszczyn",
+        "url": "http://www.europarl.europa.eu/meps/en/124758/MYLENE_TROSZCZYNSKI_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-IN"
+        ],
+        "Substitute": [
+            "ENVI",
+            "D-US"
+        ],
+        "country": "Luxembourg",
+        "country_short": "lu",
+        "email": "claude.turmes@europarl.europa.eu",
+        "facebook": "http://www.facebook.com/claude.turmes",
+        "fax_bxl": "+3222849246",
+        "fax_stg": "+33388179246",
+        "group": "Group of the Greens/European Free Alliance",
+        "group_short": "greensefa",
+        "id": "4432",
+        "image": "http://www.europarl.europa.eu/mepphoto/4432.jpg",
+        "name": "Claude TURMES",
+        "party": "D\u00e9i Gr\u00e9ng - Les Verts",
+        "score": 0.65,
+        "twitter": "Claude_Turmes",
+        "url": "http://www.europarl.europa.eu/meps/en/4432/CLAUDE_TURMES_home.html",
+        "website": "http://www.claudeturmes.lu"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "DMAG",
+            "DMED"
+        ],
+        "Substitute": [
+            "BUDG",
+            "ECON",
+            "DPLC"
+        ],
+        "country": "Spain",
+        "country_short": "es",
+        "email": null,
+        "facebook": null,
+        "fax_bxl": null,
+        "fax_stg": null,
+        "group": "Confederal Group of the European United Left - Nordic Green Left",
+        "group_short": "guengl",
+        "id": "131507",
+        "image": "http://www.europarl.europa.eu/mepphoto/131507.jpg",
+        "name": "Miguel URB\u00c1N CRESPO",
+        "party": "PODEMOS",
+        "score": 0.65,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/131507/MIGUEL_URBAN+CRESPO_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-RU"
+        ],
+        "Substitute": [
+            "AGRI",
+            "D-AL"
+        ],
+        "country": "Bulgaria",
+        "country_short": "bg",
+        "email": "vladimir.urutchev@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/vladimir.urutchev",
+        "fax_bxl": "+3222849145",
+        "fax_stg": "+33388179145",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "38601",
+        "image": "http://www.europarl.europa.eu/mepphoto/38601.jpg",
+        "name": "Vladimir URUTCHEV",
+        "party": "Citizens for European Development of Bulgaria",
+        "score": 0.9,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/38601/VLADIMIR_URUTCHEV_home.html",
+        "website": "http://www.urutchev.eu/bg/home"
     },
     {
         "Member": [
@@ -2892,6 +5193,33 @@
     },
     {
         "Member": [
+            "ITRE",
+            "D-US"
+        ],
+        "Substitute": [
+            "INTA",
+            "DEEA"
+        ],
+        "Vice-President": [],
+        "country": "Romania",
+        "country_short": "ro",
+        "email": "adinaioana.valean@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/AdinaValeanMEP",
+        "fax_bxl": "+3222849861",
+        "fax_stg": "+33388179861",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "37324",
+        "image": "http://www.europarl.europa.eu/mepphoto/37324.jpg",
+        "name": "Adina-Ioana V\u0102LEAN",
+        "party": "Partidul Na\u0163ional Liberal",
+        "score": 0.9,
+        "twitter": "AdinaValean",
+        "url": "http://www.europarl.europa.eu/meps/en/37324/ADINA-IOANA_VALEAN_home.html",
+        "website": "http://www.valean.eu/"
+    },
+    {
+        "Member": [
             "IMCO",
             "D-US"
         ],
@@ -2911,9 +5239,35 @@
         "image": "http://www.europarl.europa.eu/mepphoto/117491.jpg",
         "name": "Anneleen VAN BOSSUYT",
         "party": "Nieuw-Vlaamse Alliantie",
-        "score": 0.30000000000000004,
+        "score": 0.5,
         "twitter": null,
         "url": "http://www.europarl.europa.eu/meps/en/117491/ANNELEEN_VAN+BOSSUYT_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-CA"
+        ],
+        "Substitute": [
+            "DEVE",
+            "DARP"
+        ],
+        "country": "Belgium",
+        "country_short": "be",
+        "email": "kathleen.vanbrempt@europarl.europa.eu",
+        "facebook": "http://www.facebook.com/pages/Kathleen-Van-Brempt/149490498430244",
+        "fax_bxl": "+3222849447",
+        "fax_stg": "+33388179447",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "5729",
+        "image": "http://www.europarl.europa.eu/mepphoto/5729.jpg",
+        "name": "Kathleen VAN BREMPT",
+        "party": "Socialistische Partij.Anders",
+        "score": 0.8,
+        "twitter": "kvanbrempt",
+        "url": "http://www.europarl.europa.eu/meps/en/5729/KATHLEEN_VAN+BREMPT_home.html",
         "website": null
     },
     {
@@ -2944,6 +5298,32 @@
         "twitter": "sabineverheyen",
         "url": "http://www.europarl.europa.eu/meps/en/96756/SABINE_VERHEYEN_home.html",
         "website": "http://www.sabine-verheyen.de/"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-ZA"
+        ],
+        "Substitute": [
+            "TRAN",
+            "DARP"
+        ],
+        "country": "Finland",
+        "country_short": "fi",
+        "email": "henna.virkkunen@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/virkkunenhenna",
+        "fax_bxl": "+3222849226",
+        "fax_stg": "+33388179226",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "124726",
+        "image": "http://www.europarl.europa.eu/mepphoto/124726.jpg",
+        "name": "Henna VIRKKUNEN",
+        "party": "Kansallinen Kokoomus",
+        "score": 0.9,
+        "twitter": "HennaVirkkunen",
+        "url": "http://www.europarl.europa.eu/meps/en/124726/HENNA_VIRKKUNEN_home.html",
+        "website": "http://www.hennavirkkunen.fi/"
     },
     {
         "Member": [
@@ -2999,6 +5379,32 @@
     },
     {
         "Member": [
+            "ITRE",
+            "DACP"
+        ],
+        "Substitute": [
+            "INTA",
+            "D-CA"
+        ],
+        "country": "Germany",
+        "country_short": "de",
+        "email": "martina.werner@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849782",
+        "fax_stg": "+33388179782",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "124826",
+        "image": "http://www.europarl.europa.eu/mepphoto/124826.jpg",
+        "name": "Martina WERNER",
+        "party": "Sozialdemokratische Partei Deutschlands",
+        "score": 0.8,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/124826/MARTINA_WERNER_home.html",
+        "website": null
+    },
+    {
+        "Member": [
             "REGI",
             "DEEA"
         ],
@@ -3021,6 +5427,63 @@
         "twitter": "WestphalKerstin",
         "url": "http://www.europarl.europa.eu/meps/en/96839/KERSTIN_WESTPHAL_home.html",
         "website": "http://www.kerstin-westphal.de"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-ME"
+        ],
+        "Substitute": [
+            "CULT",
+            "DCAS"
+        ],
+        "country": "Germany",
+        "country_short": "de",
+        "email": "hermann.winkler@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/pages/Hermann-Winkler/211310258904158?fref=ts",
+        "fax_bxl": "+3222849306",
+        "fax_stg": "+33388179306",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "96764",
+        "image": "http://www.europarl.europa.eu/mepphoto/96764.jpg",
+        "name": "Hermann WINKLER",
+        "party": "Christlich Demokratische Union Deutschlands",
+        "score": 0.9,
+        "twitter": null,
+        "url": "http://www.europarl.europa.eu/meps/en/96764/HERMANN_WINKLER_home.html",
+        "website": "http://www.hermann-winkler.de/"
+    },
+    {
+        "Member": [
+            "DEVE",
+            "ITRE",
+            "FEMM",
+            "DACP"
+        ],
+        "Substitute": [
+            "DMAG",
+            "DMED"
+        ],
+        "Vice-Chair": [
+            "DCAR"
+        ],
+        "country": "Slovakia",
+        "country_short": "sk",
+        "email": "anna.zaborska@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/www.zaborska.sk",
+        "fax_bxl": "+3222849923",
+        "fax_stg": "+33388179923",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "23894",
+        "image": "http://www.europarl.europa.eu/mepphoto/23894.jpg",
+        "name": "Anna Z\u00c1BORSK\u00c1",
+        "party": "Kres\u0165anskodemokratick\u00e9 hnutie",
+        "score": 0.9,
+        "twitter": "AnnaZaborska",
+        "url": "http://www.europarl.europa.eu/meps/en/23894/ANNA_ZABORSKA_home.html",
+        "website": "http://zaborska.sk/"
     },
     {
         "Member": [
@@ -3047,6 +5510,62 @@
         "twitter": null,
         "url": "http://www.europarl.europa.eu/meps/en/125067/THEODOROS_ZAGORAKIS_home.html",
         "website": "http://www.thodoris-zagorakis.com/"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "D-IN"
+        ],
+        "Substitute": [
+            "BUDG",
+            "D-IR"
+        ],
+        "country": "Italy",
+        "country_short": "it",
+        "email": "flavio.zanonato@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849363",
+        "fax_stg": "+33388179363",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "124800",
+        "image": "http://www.europarl.europa.eu/mepphoto/124800.jpg",
+        "name": "Flavio ZANONATO",
+        "party": "Partito Democratico",
+        "score": 0.8,
+        "twitter": "flaviozanonato",
+        "url": "http://www.europarl.europa.eu/meps/en/124800/FLAVIO_ZANONATO_home.html",
+        "website": "http://www.zanonato.it/"
+    },
+    {
+        "Member": [
+            "ITRE",
+            "DACP",
+            "DLAT"
+        ],
+        "Substitute": [
+            "ENVI",
+            "DMER"
+        ],
+        "Vice-Chair": [
+            "D-BR"
+        ],
+        "country": "Portugal",
+        "country_short": "pt",
+        "email": "carlos.zorrinho@europarl.europa.eu",
+        "facebook": null,
+        "fax_bxl": "+3222849260",
+        "fax_stg": "+33388179260",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "124739",
+        "image": "http://www.europarl.europa.eu/mepphoto/124739.jpg",
+        "name": "Carlos ZORRINHO",
+        "party": "Partido Socialista",
+        "score": 0.8,
+        "twitter": "czorrinho",
+        "url": "http://www.europarl.europa.eu/meps/en/124739/CARLOS_ZORRINHO_home.html",
+        "website": null
     },
     {
         "Member": [
@@ -3101,7 +5620,7 @@
         "image": "http://www.europarl.europa.eu/mepphoto/125237.jpg",
         "name": "Marco ZULLO",
         "party": "Movimento 5 Stelle",
-        "score": 0.55,
+        "score": 0.75,
         "twitter": "MarcoZullo",
         "url": "http://www.europarl.europa.eu/meps/en/125237/MARCO_ZULLO_home.html",
         "website": null
