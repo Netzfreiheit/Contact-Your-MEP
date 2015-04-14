@@ -39,34 +39,28 @@
 <textarea id="tweet" name="body" class=tweettext>
 Dear @{{twitter}} please stand by the decision of the European Parliament from April 2014 for a strong #netneutrality. #SaveTheInternet
 </textarea>
-<section><a onclick="makeform()" class="button" id="tweetlink" href="#">Tweet!</a></section>
+<section><a class="button" id="tweetlink" href="https://twitter.com/intent/tweet?text=Dear%20%40Telicka%20please%20stand%20by%20the%20decision%20of%20the%20European%20Parliament%20from%20April%202014%20for%20a%20strong%20%23netneutrality.%20%23SaveTheInternet">Tweet!</a></section>
 </div>
 <div class="spacer" style="clear: both;"></div>
 
 </div>
 <script>
   var txt_changed = false;
-  document.getElementById('tweet').onkeyup = function () {
-    txt_changed = true;
-  }
-
-  function makeform() {
-    if (txt_changed || confirm('Personalized messages are much more effective to convince politicans. \n\nPlease take the time to write a text :)\n\nSend it anyway?')) {
-      var tweet="https://twitter.com/intent/tweet?text="
-      var body=encodeURIcomponent(document.getElementById("tweet").value);
-      tweet=tweet+body
-      a=window.open(tweet)
-    }
-  }
-
+  
   function log_activity (action, value) {
     jQuery.ajax('https://piwik.netzfreiheit.org/piwik.php?idsite=11&rec=1&url=https%3A%2F%2Fsavetheinternet.eu&idgoal=5&e_c=contact&e_n=tweet&e_v=' + (value ? 1 : 0));
   }
 
   $(function () {
+    document.getElementById('tweet').onkeyup = function () {
+      txt_changed = true;
+    }
+    $('#tweet').on('change', function () {
+      $('#tweetlink').attr('href', "https://twitter.com/intent/tweet?text=" + encodeURIComponent(document.getElementById("tweet").value));
+    });
     $('#tweetlink').on('click', function () {
       log_activity('tweet', txt_changed);
-    })
+    });
   });
 </script>
 
