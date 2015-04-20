@@ -21,7 +21,7 @@ db = databaseconnect.connect(settings.DATABASE_URL)
 
 tc = TemplateCache()
 
-def weighted_choice(ff=lambda x: x, type):
+def weighted_choice(ff=lambda x: x, type="fax"):
     """ Pick a MEP based on the score weight """
     lm = filter(ff,meps)
     ts = sum((i['score'] for i in lm))
@@ -29,7 +29,7 @@ def weighted_choice(ff=lambda x: x, type):
     n = 0
     for c in lm:
         n = n + c['score']
-        if n>r and (type!='fax' or (!c.get('fax_optout', False) and c.get('fax_bxl',None))):
+        if n>r and (type!='fax' or (not c.get('fax_optout', False) and c.get('fax_bxl',None))):
             return c
     return False
 
