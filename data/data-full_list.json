@@ -14122,6 +14122,7 @@
         "facebook": null,
         "fax_bxl": "+3222849683",
         "fax_stg": "+33388179683",
+        "fax_optout": true,
         "group": "Group of the Alliance of Liberals and Democrats for Europe",
         "group_short": "aldeadle",
         "id": "124872",

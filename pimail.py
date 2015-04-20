@@ -21,7 +21,7 @@ db = databaseconnect.connect(settings.DATABASE_URL)
 
 tc = TemplateCache()
 
-def weighted_choice(ff=lambda x: x):
+def weighted_choice(ff=lambda x: x, type):
     """ Pick a MEP based on the score weight """
     lm = filter(ff,meps)
     ts = sum((i['score'] for i in lm))
@@ -29,7 +29,7 @@ def weighted_choice(ff=lambda x: x):
     n = 0
     for c in lm:
         n = n + c['score']
-        if n>r and c.get('fax_bxl',None):
+        if n>r and (type!='fax' or (!c.get('fax_optout', False) and c.get('fax_bxl',None))):
             return c
     return False
 
@@ -97,7 +97,7 @@ class Fax:
         """ display the fax widget """
         web.header("Content-Type", "text/html;charset=utf-8")
         template = tc.get("fax.tmpl")
-        m = weighted_choice(get_filter(web.input()))
+        m = weighted_choice(get_filter(web.input()),'fax')
         if not m:
             return create_error(web.input())
         return template.render(m)
@@ -126,7 +126,7 @@ class Tweet:
         ff = get_filter(web.input())
         web.header("Content-Type","text/html;charset=utf-8")
         template = tc.get("tweet.tmpl")
-        m = weighted_choice(lambda x: x.get('twitter',None) and ff(x))
+        m = weighted_choice(lambda x: x.get('twitter',None) and ff(x), 'tweet')
         if not m:
             return create_error(web.input(),"using Twitter")
         return template.render(m)
@@ -158,7 +158,7 @@ class mail:
         """ Handle GET Requests """
         web.header("Content-Type", "text/html;charset=utf-8")
         template = tc.get("mail.tmpl")
-        m = weighted_choice(get_filter(web.input()))
+        m = weighted_choice(get_filter(web.input()), 'mail')
         if not m:
             return create_error(web.input())
         return template.render(m)
