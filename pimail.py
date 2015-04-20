@@ -84,7 +84,7 @@ def create_error(wi,ms=""):
         else:
             id = None
         if id:
-            return "This MEP is not %s"%(ms if ms else "in our database")
+            return "This MEP is not %s"%(ms if ms else " available with this contact method")
         elif country and group:
             return "No MEP of group %s in country %s %s"%(group,country,ms)
         else:
