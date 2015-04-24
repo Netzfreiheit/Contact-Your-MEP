@@ -12,6 +12,7 @@ import settings
 import datetime
 import databaseconnect
 import logger
+import json
 
 " Load Data "
 with open("./data/data.json") as f:
@@ -120,6 +121,47 @@ class Fax:
         web.header("Content-Type", "text/html;charset=utf-8")
         return template.render(m)
 
+class Fax_personal:
+    """ Handle the Fax Widget """
+    def GET(self):
+        """ display the fax widget """
+        web.header("Content-Type", "text/html;charset=utf-8")
+        template = tc.get("fax-personal.tmpl")
+        m = weighted_choice(get_filter(web.input()),'fax')
+        if not m:
+            return create_error(web.input())
+        return template.render(m)
+    def POST(self):
+        "send out the fax"
+        args=decode_args(web.data())
+        m = get_mep_by_id(args['id'])
+        if settings.TEST:
+            fax = '100'
+        else:
+            fax = m[settings.FAX_FIELD].replace(" ","").replace("+","00")
+        db.query(u"""INSERT INTO faxes (message, faxnr, create_date, campaign_id) 
+            VALUES ($m,$f,$d,$s)""",
+                vars = {
+                "m" : textwrap.fill(args['full_message'],replace_whitespace=False).replace('<','&lt;').replace('>','&gt;'),
+                "f" : fax,
+                "d" : datetime.datetime.now(),
+                's' : settings.campaign_id})
+        template = tc.get("fax-sent.tmpl")
+        web.header("Content-Type", "text/html;charset=utf-8")
+        return template.render(m)
+
+class choose_mep:
+    """ Choose mep via AJAX request """
+    def GET(self):
+        web.header("Content-Type","application/javascript;charset=utf-8")
+        web.header("Access-Control-Allow-Origin", "*")
+        wi = web.input()
+        m = weighted_choice(get_filter(web.input()),'fax')
+        if not m:
+            return """{status: 'error',message: '%s'}"""%(create_error(web.input()))
+        return json.dumps(m)
+        #return """{status: 'success',id: '%s',name: '%s'}"""%(m['id'],m['name'])
+
 class Tweet:
     def GET(self):
         """display the tweet widget"""
@@ -165,7 +207,9 @@ class mail:
 
 urls = ('/' + settings.campaign_path + '/mail/', 'mail',
         '/' + settings.campaign_path + '/fax/', 'Fax',
+        '/' + settings.campaign_path + '/fax_personal/', 'Fax_personal',
         '/' + settings.campaign_path + '/subscribe/', Subscribe,
+        '/' + settings.campaign_path + '/choose_mep/', choose_mep,
         '/' + settings.campaign_path + '/tweet/','Tweet',)
 
 web.config.debug = settings.DEVELOPMENT

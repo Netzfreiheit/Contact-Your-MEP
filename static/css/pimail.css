@@ -38,8 +38,16 @@ h1 {
 }
 
 #mep_infos {
-	float:left;
+	float:center;
 	max-width:180px;
+}
+
+#mep_infos_top {
+  max-width:460px;
+}
+
+#name, #hometown, #whycare, #full_message, #sendfax, #group_selector,#mep_selector,#refresh_mep {
+  display: none;
 }
 
 #actionbox {
@@ -56,6 +64,8 @@ h1 {
   border: 0;
 }
 
+.smalltext,
+.mediumtext,
 .emailtext,
 .tweettext {
   font-family: Arial, Helvetica, sans-serif;
@@ -65,8 +75,16 @@ h1 {
   box-shadow: 0 5px rgba(0,0,0,.07) inset;
 }
 
+.smalltext,
+.mediumtext {
+  display: block;
+  width: 75%;
+  margin: .6em 0 .6em 0;
+}
 
-
+.mediumtext {
+  height: 85px;
+}
 
 .emailtext {
 	height: 250px;
@@ -90,4 +108,16 @@ a.button, input.button {
   border-top: 3px solid #2B2B2B;
   border-bottom: 3px #000 solid;
   text-transform: uppercase;
+}
+
+
+#country_selector, #mep_selector {
+  width: 22.5%;
+}
+
+.mepFilter > select, .mepFilter > input, .newsletter-box select, .newsletter-box input {
+  font-size: 1em;
+  padding: .3%;
+  max-width: 100%;
+  margin: .5%;
 }
