@@ -4776,6 +4776,7 @@
         "facebook": null,
         "fax_bxl": "+3222849752",
         "fax_stg": "+33388179752",
+        "fax_optout": true,
         "group": "Group of the Greens/European Free Alliance",
         "group_short": "greensefa",
         "id": "124937",
@@ -10386,7 +10387,7 @@
         "name": "J\u00f6rg LEICHTFRIED",
         "party": "Sozialdemokratische Partei \u00d6sterreichs",
         "score": 0.3,
-        "twitter": "Joerg_Le",
+        "twitter": "jleichtfried",
         "url": "http://www.europarl.europa.eu/meps/en/28251/JORG_LEICHTFRIED_home.html",
         "website": "http://www.joerg-leichtfried.at"
     },
@@ -18927,7 +18928,7 @@
         "name": "Monika VANA",
         "party": "Die Gr\u00fcnen - Die Gr\u00fcne Alternative",
         "score": 0.15,
-        "twitter": null,
+        "twitter": "MonikaVana",
         "url": "http://www.europarl.europa.eu/meps/en/124934/MONIKA_VANA_home.html",
         "website": null
     },

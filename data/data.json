@@ -1158,6 +1158,7 @@
         "facebook": null,
         "fax_bxl": "+3222849752",
         "fax_stg": "+33388179752",
+        "fax_optout": true,
         "group": "Group of the Greens/European Free Alliance",
         "group_short": "greensefa",
         "id": "124937",
