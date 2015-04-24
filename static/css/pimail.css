@@ -46,7 +46,7 @@ h1 {
   max-width:460px;
 }
 
-#name, #hometown, #whycare, #full_message, #sendfax, #group_selector,#mep_selector,#refresh_mep {
+#name, #hometown, #whycare, #full_message, #sendfax.personal, #group_selector,#mep_selector,#refresh_mep {
   display: none;
 }
 
