@@ -94,9 +94,9 @@
   }
 
   function request_mep () {
-    //$.ajax('https://faxjh.savetheinternet.eu/sti/choose_mep/', {
     if ($('#country_selector').val()) {
-      $.ajax('/sti/choose_mep/', {
+      //$.ajax('/sti/choose_mep/', {
+      $.ajax('https://faxjh.savetheinternet.eu/sti/choose_mep/', {
         data: {'country': $('#country_selector').val(), 'group': $('#group_selector').val(), 'id': $('#mep_selector').val()}
         , success: receive_mep
         , dataType: 'json'
