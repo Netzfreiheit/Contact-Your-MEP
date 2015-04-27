@@ -22,20 +22,18 @@ tc = TemplateCache()
 def weighted_choice(ff=lambda x: x, type="fax"):
     """ Pick a MEP based on the score weight """
     lm = filter(ff, meps)
-    ts = sum((i['score'] for i in lm))
-    r = random.uniform(0,ts)
+    ts = sum(i['score'] for i in lm)
+    r = random.uniform(0, ts)
     n = 0
     for c in lm:
         n = n + c['score']
-        if n>r and (type!='fax' or (not c.get('fax_optout') and c.get('fax_bxl'))):
+        if n > r and (type != 'fax' or (not c.get('fax_optout') and c.get('fax_bxl'))):
             return c
     return False
 
-def unquote(a):
-    return (a[0], unicode(urllib.unquote_plus(a[1]).decode("utf-8")))
-
 def decode_args(a):
-    return dict((unquote(i.split("=")) for i in a.split("&")))
+    return {k: urllib.unquote_plus(v).decode("utf-8")
+            for k, _, v in (i.partition("=") for i in a.split("&"))}
 
 def get_mep_by_id(id):
     return next((m for m in meps if m['id'] == id), None)
@@ -55,7 +53,7 @@ def get_filter(wi):
         return lambda x: x.get('group_short') == group
     return lambda x: x
 
-def create_error(wi,ms=""):
+def create_error(wi, ms=""):
     if hasattr(wi,'country'):
         country = wi.country
     else:
