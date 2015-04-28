@@ -19,8 +19,7 @@
 <div id=global>
 
 	<h1>Write MEPs! Demand the enforcement of a true and unconditional Net neutrality!</h1>
-	<div id="sent-message" class="hidden">Your email is in your mail client -
-	if this doesn't work: the email address is <a href="mailto:{{email}}">{{email}}</a></div>
+	<div id="sent-message">The Fax widget is currently disabled. We are working on improving the software and making it easier for you to personalize your message.</div>
 
 <div id=mep_infos>
 
@@ -39,7 +38,7 @@
 <div id=actionbox>
 <form method="POST" id="faxform">
 <input type="hidden" name="id" value="{{id}}" />
-<textarea id="body" name="body" class=emailtext>
+<textarea id="body" name="body" class=emailtext disabled>
 Dear MEP {{name}},
 
 I'm asking you to save net neutrality, again. 
@@ -59,7 +58,8 @@ Sincerely,
 A concerned citizen
 
   </textarea>
-<section><a onclick="makeform()" class="button" id="sendfax" href="#">Fax Now!</a></section>
+<section><a class="button" id="sendfax" href="#" disabled>Fax Now!</a></section>
+<!--<section><a onclick="makeform()" class="button" id="sendfax" href="#">Fax Now!</a></section>-->
 </form>
 </div>
 
