@@ -1,5 +1,17 @@
+@font-face {
+    font-family: 'baskerville_old_faceregular';
+    src: url('http://endcriminallibel.eu/fonts/ufonts.com_baskerville-old-face-webfont.eot');
+    src: url('http://endcriminallibel.eu/fonts/ufonts.com_baskerville-old-face-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://endcriminallibel.eu/fonts/ufonts.com_baskerville-old-face-webfont.woff2') format('woff2'),
+         url('http://endcriminallibel.eu/fonts/ufonts.com_baskerville-old-face-webfont.woff') format('woff'),
+         url('http://endcriminallibel.eu/fonts/ufonts.com_baskerville-old-face-webfont.ttf') format('truetype'),
+         url('http://endcriminallibel.eu/fonts/ufonts.com_baskerville-old-face-webfont.svg#baskerville_old_faceregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'baskerville_old_faceregular',Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	margin:0;
 	color: #333;
@@ -61,7 +73,7 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.4;
-  border-bottom: 5px solid #E3A539;
+  border-bottom: 5px solid #002195;
   box-shadow: 0 5px rgba(0,0,0,.07) inset;
 }
 
