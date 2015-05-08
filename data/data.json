@@ -4455,6 +4455,202 @@
     },
     {
         "Member": [
+            "REGI",
+            "D-RS"
+        ],
+        "Substitute": [
+            "AGRI",
+            "D-TR"
+        ],
+        "country": "Slovenia",
+        "country_short": "si",
+        "email": "franc.bogovic@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/FrancBogovic.SLS",
+        "fax_bxl": "+3222849583",
+        "fax_stg": "+33388179583",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "125004",
+        "image": "http://www.europarl.europa.eu/mepphoto/125004.jpg",
+        "name": "Franc BOGOVI\u010c",
+        "party": "Slovenska ljudska stranka",
+        "score": 0.4,
+        "twitter": "Franc_Bogovic",
+        "url": "http://www.europarl.europa.eu/meps/en/125004/FRANC_BOGOVIC_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "LIBE",
+            "DSEE",
+            "DEPA"
+        ],
+        "Substitute": [
+            "AFET",
+            "TAXE",
+            "D-MD",
+            "DPAP"
+        ],
+        "country": "Slovenia",
+        "country_short": "si",
+        "email": "tanja.fajon@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/tanja.fajon",
+        "fax_bxl": "+3222849493",
+        "fax_stg": "+33388179493",
+        "group": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament",
+        "group_short": "sd",
+        "id": "96911",
+        "image": "http://www.europarl.europa.eu/mepphoto/96911.jpg",
+        "name": "Tanja FAJON",
+        "party": "Socialni demokrati",
+        "score": 0.3,
+        "twitter": "tfajon",
+        "url": "http://www.europarl.europa.eu/meps/en/96911/TANJA_FAJON_home.html",
+        "website": "http://www.tanja-fajon.eu"
+    },
+    {
+        "Chair": [
+            "D-MK"
+        ],
+        "Member": [
+            "AFET"
+        ],
+        "Substitute": [
+            "ENVI",
+            "D-IN"
+        ],
+        "country": "Slovenia",
+        "country_short": "si",
+        "email": "alojz.peterle@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/lojze.peterle",
+        "fax_bxl": "+3222849638",
+        "fax_stg": "+33388179638",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "23693",
+        "image": "http://www.europarl.europa.eu/mepphoto/23693.jpg",
+        "name": "Alojz PETERLE",
+        "party": "Nova Slovenija \u2013 Kr\u0161\u010danski demokrati",
+        "score": 0.4,
+        "twitter": "lojzepeterle",
+        "url": "http://www.europarl.europa.eu/meps/en/23693/ALOJZ_PETERLE_home.html",
+        "website": "http://www.peterle.eu/"
+    },
+    {
+        "Member": [
+            "D-AL"
+        ],
+        "Substitute": [
+            "CONT",
+            "TRAN",
+            "DMER",
+            "DLAT"
+        ],
+        "Vice-Chair": [
+            "BUDG"
+        ],
+        "country": "Slovenia",
+        "country_short": "si",
+        "email": "patricija.sulin@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/pages/Patricija-%C5%A0ulin/269023206471943?ref=br_tf",
+        "fax_bxl": "+3222849470",
+        "fax_stg": "+33388179470",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "125103",
+        "image": "http://www.europarl.europa.eu/mepphoto/125103.jpg",
+        "name": "Patricija \u0160ULIN",
+        "party": "Slovenska demokratska stranka",
+        "score": 0.4,
+        "twitter": "PatricijaSulin",
+        "url": "http://www.europarl.europa.eu/meps/en/125103/PATRICIJA_SULIN_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "EMPL"
+        ],
+        "Substitute": [
+            "ECON",
+            "TAXE",
+            "DSEE"
+        ],
+        "Vice-Chair": [
+            "D-JP"
+        ],
+        "country": "Slovenia",
+        "country_short": "si",
+        "email": "romana.tomc@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/romana.tomc",
+        "fax_bxl": "+3222849665",
+        "fax_stg": "+33388179665",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "125104",
+        "image": "http://www.europarl.europa.eu/mepphoto/125104.jpg",
+        "name": "Romana TOMC",
+        "party": "Slovenska demokratska stranka",
+        "score": 0.4,
+        "twitter": "RomanaTomc",
+        "url": "http://www.europarl.europa.eu/meps/en/125104/ROMANA_TOMC_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "AFET",
+            "D-RS"
+        ],
+        "Substitute": [
+            "EMPL",
+            "DPLC",
+            "DMAS",
+            "DMED"
+        ],
+        "country": "Slovenia",
+        "country_short": "si",
+        "email": "ivo.vajgl@europarl.europa.eu",
+        "facebook": "http://www.facebook.com/ivo.vajgl",
+        "fax_bxl": "+3222849620",
+        "fax_stg": "+33388179620",
+        "group": "Group of the Alliance of Liberals and Democrats for Europe",
+        "group_short": "aldeadle",
+        "id": "97019",
+        "image": "http://www.europarl.europa.eu/mepphoto/97019.jpg",
+        "name": "Ivo VAJGL",
+        "party": "DeSUS - Demokrati\u010dna Stranka Upokojencev Slovenije",
+        "score": 0.3,
+        "twitter": "ivajgl",
+        "url": "http://www.europarl.europa.eu/meps/en/97019/IVO_VAJGL_home.html",
+        "website": null
+    },
+    {
+        "Member": [
+            "CULT",
+            "D-US"
+        ],
+        "Substitute": [
+            "REGI",
+            "D-ME"
+        ],
+        "country": "Slovenia",
+        "country_short": "si",
+        "email": "milan.zver@europarl.europa.eu",
+        "facebook": "https://www.facebook.com/milan.zver",
+        "fax_bxl": "+3222849315",
+        "fax_stg": "+33388179315",
+        "group": "Group of the European People's Party (Christian Democrats)",
+        "group_short": "epp",
+        "id": "96933",
+        "image": "http://www.europarl.europa.eu/mepphoto/96933.jpg",
+        "name": "Milan ZVER",
+        "party": "Slovenska demokratska stranka",
+        "score": 0.4,
+        "twitter": "MilanZver",
+        "url": "http://www.europarl.europa.eu/meps/en/96933/MILAN_ZVER_home.html",
+        "website": "http://www.milanzver.eu/"
+    },
+    {
+        "Member": [
             "ECON",
             "D-IL",
             "DMED"
