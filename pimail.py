@@ -130,6 +130,10 @@ class Fax_personal:
         m = weighted_choice(get_filter(web.input()),'fax')
         if not m:
             return create_error(web.input())
+        if hasattr(wi,'language'):
+            m['language'] = wi.language
+        else:
+            m['language'] = 'en';
         return template.render(m)
     def POST(self):
         "send out the fax"

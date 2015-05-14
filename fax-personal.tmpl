@@ -39,18 +39,31 @@
 
 </div>
 
-<link href="/static/templates/intro_full.mustache" rel="template" id="tmpl_intro_full"/>
-<link href="/static/templates/intro_name.mustache" rel="template" id="tmpl_intro_name"/>
-<link href="/static/templates/intro_hometown.mustache" rel="template" id="tmpl_intro_hometown"/>
-<link href="/static/templates/message.mustache" rel="template" id="tmpl_message"/>
-<link href="/static/templates/mep_info.mustache" rel="template" id="tmpl_mep_infos"/>
-<link href="/static/templates/mep_selection.mustache" rel="template" id="tmpl_mep_selection"/>
-<link href="/static/templates/message_inputs.mustache" rel="template" id="tmpl_message_inputs"/>
+<link href="/static/templates/en/intro_full.mustache" rel="template" id="tmpl_en_intro_full"/>
+<link href="/static/templates/en/intro_name.mustache" rel="template" id="tmpl_en_intro_name"/>
+<link href="/static/templates/en/intro_name_age.mustache" rel="template" id="tmpl_en_intro_name_age"/>
+<link href="/static/templates/en/intro_hometown.mustache" rel="template" id="tmpl_en_intro_hometown"/>
+<link href="/static/templates/en/intro_hometown.mustache_age" rel="template" id="tmpl_en_intro_hometown_age"/>
+<link href="/static/templates/en/message.mustache" rel="template" id="tmpl_en_message"/>
+<link href="/static/templates/en/mep_info.mustache" rel="template" id="tmpl_en_mep_infos"/>
+<link href="/static/templates/en/mep_selection.mustache" rel="template" id="tmpl_en_mep_selection"/>
+<link href="/static/templates/en/message_inputs.mustache" rel="template" id="tmpl_en_message_inputs"/>
+<link href="/static/templates/de/intro_full.mustache" rel="template" id="tmpl_de_intro_full"/>
+<link href="/static/templates/de/intro_name.mustache" rel="template" id="tmpl_de_intro_name"/>
+<link href="/static/templates/de/intro_name_age.mustache" rel="template" id="tmpl_de_intro_name_age"/>
+<link href="/static/templates/de/intro_hometown.mustache" rel="template" id="tmpl_de_intro_hometown"/>
+<link href="/static/templates/de/intro_hometown_age.mustache" rel="template" id="tmpl_de_intro_hometown_age"/>
+<link href="/static/templates/de/message.mustache" rel="template" id="tmpl_de_message"/>
+<link href="/static/templates/de/mep_info.mustache" rel="template" id="tmpl_de_mep_infos"/>
+<link href="/static/templates/de/mep_selection.mustache" rel="template" id="tmpl_de_mep_selection"/>
+<link href="/static/templates/de/message_inputs.mustache" rel="template" id="tmpl_de_message_inputs"/>
 
 <script>
 
   var mep, editor; 
 	var txt_changed = false;
+  var language =  '{{language}}' || 'en';
+  var language_country = {}
 
   function makeform() {
     var msg;
@@ -74,6 +87,7 @@
 
   function reference_mep_selection (result) {
     $('div.mepFilter').html(result);
+    //$('#country_selector').on('change', update_language);
     $('#country_selector,#group_selector').on('change', request_mep);
     $('#country_selector,#group_selector').on('change', refine_autocomplete);
     $('#mep_selector').autocomplete({
@@ -89,8 +103,12 @@
 
   function reference_message_inputs (result) {
     $('#faxform').html(result);
-    $('#name,#hometown,#whycare').on('change', formulate_message);
-    $('#name,#hometown,#whycare').on('change', showEditor);
+    $('#name,#hometown,#whycare,#age').on('change', formulate_message);
+    $('#name,#hometown,#whycare,#age').on('change', showEditor);
+  }
+
+  function update_language () {
+    language = language_country[$('#country_selector').val()] || 'en';
   }
 
   function request_mep () {
@@ -110,7 +128,7 @@
     mep = null;
     $('#mep_infos_top').html();
     $('#id').val('');
-    $('#name,#hometown,#whycare').hide();
+    $('#name,#hometown,#whycare,#age').hide();
     removeEditor();
   }
 
@@ -120,7 +138,7 @@
       $('#tmpl_mep_infos').Chevron('render', data, '#mep_infos_top');   
       $('#id').val(data['id']);
       $('#group_selector,#mep_selector,#refresh_mep').show();
-      $('#name,#hometown,#whycare').show();
+      $('#name,#hometown,#whycare,#age').show();
     } else {
       clear_mep();
     }
@@ -162,12 +180,19 @@
 
   function formulate_message(){
     var name = trim($('#name').val())
+      , age = trim($('#age').val())
       , hometown = trim($('#hometown').val());
-    if(name && hometown) {
+    if(name && hometown && age) {
       $("#tmpl_intro_full").Chevron("render", {hometown: hometown, name: name}, formulate_body);
+    }
+    else if (name && age) {
+      $("#tmpl_intro_name_age").Chevron("render", {name: name}, formulate_body);
     }
     else if (name) {
       $("#tmpl_intro_name").Chevron("render", {name: name}, formulate_body);
+    }
+    else if (hometown && age) {
+      $("#tmpl_intro_hometown_age").Chevron("render", {hometown: hometown}, formulate_body);
     }
     else if (hometown) {
       $("#tmpl_intro_hometown").Chevron("render", {hometown: hometown}, formulate_body);
@@ -180,6 +205,7 @@
   function formulate_body (intro) {
     var args = {Introduction: intro
         , whycare: $('#whycare').val() || ''
+        , age: $('#age').val() || ''
         , Greeting: getMEPName()
         , goodbye: $('#name').val() || 'A concerned citizen'};
     $("#tmpl_message").Chevron("render", args, render_body);
