@@ -117,8 +117,9 @@
   function update_language () {
     setLng($('#language_selector').val());
     $(get_tmpl("message_inputs")).Chevron("render", {}, function (result) {
+      removeEditor();
       reference_message_inputs(result);
-      $('#name,#hometown,#whycare1,#whycare2,#age').show();
+      enable_message_input();
     });
   }
 
@@ -149,7 +150,7 @@
       $(get_tmpl('mep_infos')).Chevron('render', data, '#mep_infos_top');   
       $('#id').val(data['id']);
       $('#group_selector,#mep_selector,#refresh_mep,#language_selector').show();
-      $('#name,#hometown,#whycare1,#whycare2,#age').show();
+      enable_message_input();
     } else {
       clear_mep();
     }
@@ -162,6 +163,21 @@
       txt_changed = true;
       });
       $('#sendfax').show();
+    }
+  }
+
+  function enable_message_input () {
+    $('#name,#hometown,#whycare1,#whycare2,#age').show();
+    if (typeof window !== 'undefined' && window.localStorage) {
+      $('#age').val(window.localStorage.getItem('age'));
+      $('#name').val(window.localStorage.getItem('name'));
+      $('#hometown').val(window.localStorage.getItem('hometown'));
+      if (!$('#whycare1').val()) {
+        $('#whycare1').val(window.localStorage.getItem('whycare1-'+language));
+      }
+      if (!$('#whycare2').val()) {
+        $('#whycare2').val(window.localStorage.getItem('whycare2-'+language));
+      }
     }
   }
 
@@ -215,7 +231,7 @@
       args.has_age = true;
     }
     if (args.name || args.age || args.hometown) {
-      check_and_persist(args);
+      check_and_persist(args, true);
       $(get_tmpl("intro")).Chevron("render", args, formulate_body);
     } else {
       formulate_body('');
@@ -249,10 +265,12 @@
     return (str || '').replace(/^\s+/,'').replace(/\s+$/,'')
   }
 
-  function check_and_persist(o) {
+  function check_and_persist(o, simple) {
+    var s;
     if (typeof window !== 'undefined' && window.localStorage) {
       for (var e in o) {
-        window.localStorage.setItem(e, o[e]);
+        s = simple ? e : e + '-' + language;
+        window.localStorage.setItem(s, o[e]);
       }
     }
   }
