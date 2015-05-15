@@ -131,9 +131,9 @@ class Fax_personal:
         if not m:
             return create_error(web.input())
         if hasattr(wi,'language'):
-            m['language'] = wi.language
+            m.language = wi.language
         else:
-            m['language'] = 'en';
+            m.language = 'en';
         return template.render(m)
     def POST(self):
         "send out the fax"
