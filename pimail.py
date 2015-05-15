@@ -127,13 +127,14 @@ class Fax_personal:
         """ display the fax widget """
         web.header("Content-Type", "text/html;charset=utf-8")
         template = tc.get("fax-personal.tmpl")
-        m = weighted_choice(get_filter(web.input()),'fax')
+        wi = web.input()
+        m = weighted_choice(get_filter(wi),'fax')
         if not m:
-            return create_error(web.input())
+            return create_error(wi)
         if hasattr(wi,'language'):
-            m.language = wi.language
+            m['language'] = wi.language
         else:
-            m.language = 'en';
+            m['language'] = 'en';
         return template.render(m)
     def POST(self):
         "send out the fax"
@@ -143,6 +144,7 @@ class Fax_personal:
             fax = '100'
         else:
             fax = m[settings.FAX_FIELD].replace(" ","").replace("+","00")
+        # implement blackholing here if args['blackhole'] != 'true':
         db.query(u"""INSERT INTO faxes (message, faxnr, create_date, campaign_id) 
             VALUES ($m,$f,$d,$s)""",
                 vars = {
