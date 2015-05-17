@@ -7,13 +7,6 @@ var txt_changed = false;
 var language = 'en';
 
 $(function () {
-  $('#sendfax').on('click', function () {
-    // piwik tracking
-    jQuery.ajax({
-        'url': 'https://piwik.netzfreiheit.org/piwik.php?idsite=11&rec=1&url=https%3A%2F%2Fsavetheinternet.eu&idgoal=4&e_c=contact&e_n=fax&e_v=' + (txt_changed ? 1 : 0)
-        , 'complete': sendfax
-      });
-  });
 
   // insert html inputs via templates
   $(get_tmpl("message_inputs")).Chevron("render", {}, reference_message_inputs); 
@@ -83,6 +76,13 @@ function reference_message_inputs (result) {
   $('#faxform').html(result);
   $('#name,#hometown,#whycare1,#whycare2,#age').on('change', formulate_message);
   $('#name,#hometown,#whycare1,#whycare2,#age').on('change', showEditor);
+  $('#sendfax').on('click', function () {
+    // piwik tracking then send
+    jQuery.ajax({
+        'url': 'https://piwik.netzfreiheit.org/piwik.php?idsite=11&rec=1&url=https%3A%2F%2Fsavetheinternet.eu&idgoal=4&e_c=contact&e_n=fax&e_v=' + (txt_changed ? 1 : 0)
+        , 'complete': sendfax
+      });
+  });
 }
 
 /*** 

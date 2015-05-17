@@ -139,19 +139,20 @@ class Fax_personal:
     def POST(self):
         "send out the fax"
         args=decode_args(web.data())
-        m = get_mep_by_id(args['id'])
-        if settings.TEST:
-            fax = '100'
-        else:
-            fax = m[settings.FAX_FIELD].replace(" ","").replace("+","00")
-        # implement blackholing here if args['blackhole'] != 'true':
-        db.query(u"""INSERT INTO faxes (message, faxnr, create_date, campaign_id) 
-            VALUES ($m,$f,$d,$s)""",
-                vars = {
-                "m" : textwrap.fill(args['full_message'],replace_whitespace=False).replace('<','&lt;').replace('>','&gt;'),
-                "f" : fax,
-                "d" : datetime.datetime.now(),
-                's' : settings.campaign_id})
+        if hasattr(args,'id') or args['id']:
+            m = get_mep_by_id(args['id'])
+            if settings.TEST:
+                fax = '100'
+            else:
+                fax = m[settings.FAX_FIELD].replace(" ","").replace("+","00")
+            if args['blackhole'] != 'true':
+                db.query(u"""INSERT INTO faxes (message, faxnr, create_date, campaign_id) 
+                    VALUES ($m,$f,$d,$s)""",
+                        vars = {
+                        "m" : textwrap.fill(args['full_message'],replace_whitespace=False).replace('<','&lt;').replace('>','&gt;'),
+                        "f" : fax,
+                        "d" : datetime.datetime.now(),
+                        's' : settings.campaign_id})
         template = tc.get("fax-sent.tmpl")
         web.header("Content-Type", "text/html;charset=utf-8")
         return template.render(m)
