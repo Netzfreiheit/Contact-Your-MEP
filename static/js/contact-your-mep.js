@@ -16,8 +16,9 @@ $(function () {
   });
 
   // insert html inputs via templates
-  $(get_tmpl("mep_selection")).Chevron("render", {}, reference_mep_selection);
   $(get_tmpl("message_inputs")).Chevron("render", {}, reference_message_inputs); 
+  $(get_tmpl("mep_selection")).Chevron("render", {}, reference_mep_selection);
+  
 });
 
 // send fax
@@ -43,10 +44,9 @@ function update_language () {
   $(get_tmpl("message_inputs")).Chevron("render", {}, function (result) {
     removeEditor();
     reference_message_inputs(result);
-    enable_message_input();
+    load_user_input();
   });
 }
-
 
 /***
 * loading and displaying html elements and bind actions to them
@@ -115,7 +115,7 @@ function receive_mep (data, status, jqXHR) {
     $(get_tmpl('mep_infos')).Chevron('render', data, '#mep_infos_top');   
     $('#id').val(data['id']);
     $('#group_selector,#mep_selector,#refresh_mep,#language_selector').show();
-    enable_message_input();
+    load_user_input();
   } else {
     clear_mep();
   }
@@ -157,6 +157,10 @@ function load_user_input () {
     }
     if (!$('#whycare2').val()) {
       $('#whycare2').val(window.localStorage.getItem('whycare2-'+language));
+    }
+    if ($('#whycare1').val() || $('#whycare2').val()) {
+      showEditor();
+      formulate_message();
     }
   }
 }
