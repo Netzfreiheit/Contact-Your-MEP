@@ -17,7 +17,7 @@ $(function () {
 // send fax
 function sendfax() {
   var msg;
-  $('full_message').val(msg = (nicEditors.findEditor('full_message').getContent()||''));
+  $('#full_message').val(msg = (nicEditors.findEditor('full_message').getContent()||''));
   if (msg != '' && msg.length > 140 && msg.length < 70000) {
     document.getElementById("faxform").submit();
   }
