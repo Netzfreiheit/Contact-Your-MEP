@@ -131,3 +131,9 @@ a.button, input.button {
   max-width: 100%;
   margin: .5%;
 }
+
+.cke_contents,
+.nicEdit-main {
+  border:solid 1px #696969;
+  background-color:white;
+}
