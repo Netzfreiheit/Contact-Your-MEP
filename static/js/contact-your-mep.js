@@ -37,6 +37,7 @@ function update_language () {
   $(get_tmpl("message_inputs")).Chevron("render", {}, function (result) {
     removeEditor();
     reference_message_inputs(result);
+    $('#id').val((mep||{}).id || '124935'); // sorry michel ;)
     load_user_input();
   });
 }
