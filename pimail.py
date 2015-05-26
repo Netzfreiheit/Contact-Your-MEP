@@ -148,7 +148,7 @@ class Fax_personal:
             db.query(u"""INSERT INTO faxes (message, faxnr, create_date, campaign_id) 
                 VALUES ($m,$f,$d,$s)""",
                     vars = {
-                    "m" : textwrap.fill(args['full_message'],replace_whitespace=False).replace('<','&lt;').replace('>','&gt;'),
+                    "m" : textwrap.fill(args['full_message'],replace_whitespace=False),
                     "f" : fax,
                     "d" : datetime.datetime.now(),
                     's' : settings.campaign_id})
