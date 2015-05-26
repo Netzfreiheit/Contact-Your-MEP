@@ -18,6 +18,7 @@ $(function () {
 function sendfax() {
   var msg;
   $('#full_message').val(msg = (nicEditors.findEditor('full_message').getContent()||''));
+  $('#id').val($('#id').val() || (mep||{}).id || '124935'); // sorry michel ;)
   if (msg != '' && msg.length > 140 && msg.length < 70000) {
     document.getElementById("faxform").submit();
   }
@@ -37,8 +38,8 @@ function update_language () {
   $(get_tmpl("message_inputs")).Chevron("render", {}, function (result) {
     removeEditor();
     reference_message_inputs(result);
-    $('#id').val((mep||{}).id || '124935'); // sorry michel ;)
     load_user_input();
+    $('#id').val((mep||{}).id || '124935'); // sorry michel ;)
   });
 }
 
