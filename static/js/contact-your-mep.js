@@ -5,6 +5,7 @@
 var mep, editor; 
 var txt_changed = false;
 var language = 'en';
+var small_group = true;  // set this to true if initial country selection is rendered useless by the small amount of meps (shadow+rapporteur)
 
 $(function () {
 
@@ -61,6 +62,9 @@ function reference_mep_selection (result) {
     request_mep();
   });
   $('#language_selector').val(language);
+  if (small_group) {
+    request_mep();
+  }
 }
 
 function refine_autocomplete () {
@@ -91,7 +95,7 @@ function reference_message_inputs (result) {
 * AJAX request MEPs 
 ***/
 function request_mep () {
-  if ($('#country_selector').val()) {
+  if ($('#country_selector').val() || small_group) {
     //$.ajax('/sti/choose_mep/', {
     $.ajax('https://faxjh.savetheinternet.eu/sti/choose_mep/', {
       data: {'country': $('#country_selector').val(), 'group': $('#group_selector').val(), 'id': $('#mep_selector').val()}
