@@ -29,7 +29,8 @@ function sendfax() {
 * switch language 
 **/
 function setLng(l) {
-  if (l == 'en' || l == 'de') {
+  // add new languages here but make sure we have the templates files and they are embedded in fax-personal.tmpl
+  if (['en', 'de', 'ru', 'fr'].indexOf(l) !== -1) {
     language = l;
   }
 }
