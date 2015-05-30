@@ -64,6 +64,7 @@ function reference_mep_selection (result) {
   });
   $('#language_selector').val(language);
   if (small_group) {
+    $('#country_selector,#group_selector').hide();
     request_mep();
   }
 }
