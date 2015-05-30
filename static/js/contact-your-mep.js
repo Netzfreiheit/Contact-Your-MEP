@@ -64,8 +64,8 @@ function reference_mep_selection (result) {
   });
   $('#language_selector').val(language);
   if (small_group) {
-    $('#country_selector,#group_selector').hide();
     request_mep();
+    $('#country_selector,#group_selector').hide();
   }
 }
 
@@ -122,7 +122,11 @@ function receive_mep (data, status, jqXHR) {
     mep = data;
     $(get_tmpl('mep_infos')).Chevron('render', data, '#mep_infos_top');   
     $('#id').val(data['id']);
-    $('#group_selector,#mep_selector,#refresh_mep,#language_selector').show();
+    if (small_group) {
+      $('#mep_selector,#refresh_mep,#language_selector').show();
+    } else {
+      $('#group_selector,#mep_selector,#refresh_mep,#language_selector').show();
+    }
     load_user_input();
   } else {
     clear_mep();
