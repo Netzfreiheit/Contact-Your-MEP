@@ -30,7 +30,7 @@ function sendfax() {
 **/
 function setLng(l) {
   // add new languages here but make sure we have the templates files and they are embedded in fax-personal.tmpl
-  if (['en', 'de', 'ro', 'fr', 'pl'].indexOf(l) !== -1) {
+  if (['en', 'de', 'ro', 'fr', 'pl', 'nl'].indexOf(l) !== -1) {
     language = l;
   }
 }
