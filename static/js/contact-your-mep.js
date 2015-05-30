@@ -59,9 +59,7 @@ function reference_mep_selection (result) {
   }).focus(function(){
     $('#mep_selector').autocomplete('search', $(this).val() || ' ');
   });
-  $('#refresh_mep').on('click', function () {
-    request_mep();
-  });
+  $('#refresh_mep').on('click', request_mep);
   $('#language_selector').val(language);
   if (small_group) {
     request_mep();
@@ -96,11 +94,12 @@ function reference_message_inputs (result) {
 /*** 
 * AJAX request MEPs 
 ***/
-function request_mep () {
+function request_mep (event, ui) {
+  var id = ((ui || {}).item || {}).id || $('#mep_selector').val();
   if ($('#country_selector').val() || small_group) {
     //$.ajax('/sti/choose_mep/', {
     $.ajax('https://faxjh.savetheinternet.eu/sti/choose_mep/', {
-      data: {'country': $('#country_selector').val(), 'group': $('#group_selector').val(), 'id': $('#mep_selector').val()}
+      data: {'country': $('#country_selector').val(), 'group': $('#group_selector').val(), 'id': id}
       , success: receive_mep
       , dataType: 'json'
     });  
