@@ -5,7 +5,7 @@
 var mep, editor; 
 var txt_changed = false;
 var language = 'en';
-var small_group = true;  // set this to true if initial country selection is rendered useless by the small amount of meps (shadow+rapporteur)
+var small_group = false;  // set this to true if initial country selection is rendered useless by the small amount of meps (shadow+rapporteur)
 var disabled = false;
 
 $(function () {
