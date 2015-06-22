@@ -12,14 +12,13 @@ var execmd = require('child_process').exec;
 for (var i = 0; i < data.length; i++) {
 	try {
 		
-		if ((data[i]['Member']||[]).indexOf('ITRE') != -1 || 
-			(data[i]['Member']||[]).indexOf('IMCO') != -1 || 
+		if (
+			(data[i]['group_short']||[]).indexOf('sd') != -1 ||
+			(data[i]['Member']||[]).indexOf('ITRE') != -1 || 
 			(data[i]['Chair']||[]).indexOf('ITRE') != -1 || 
 			(data[i]['Vice-Chair']||[]).indexOf('ITRE') != -1 || 
-			(data[i]['Chair']||[]).indexOf('IMCO') != -1 || 
-			(data[i]['Vice-Chair']||[]).indexOf('IMCO') != -1 || 
-			(data[i]['Substitute']||[]).indexOf('ITRE') != -1 || 
-			(data[i]['Substitute']||[]).indexOf('IMCO') != -1) {
+			(data[i]['Substitute']||[]).indexOf('ITRE') != -1
+			) {
 			data_new.push(data[i]);
 		}
 

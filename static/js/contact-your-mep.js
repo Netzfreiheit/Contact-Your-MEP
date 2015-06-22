@@ -6,12 +6,18 @@ var mep, editor;
 var txt_changed = false;
 var language = 'en';
 var small_group = true;  // set this to true if initial country selection is rendered useless by the small amount of meps (shadow+rapporteur)
+var disabled = false;
 
 $(function () {
 
   // insert html inputs via templates
   $(get_tmpl("message_inputs")).Chevron("render", {}, reference_message_inputs); 
   $(get_tmpl("mep_selection")).Chevron("render", {}, reference_mep_selection);
+
+  if (disabled) {
+    $('#sendfax').hide();
+    $('#sent-message').show();
+  }
   
 });
 
