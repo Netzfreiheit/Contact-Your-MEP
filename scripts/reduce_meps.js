@@ -11,7 +11,7 @@ var execmd = require('child_process').exec;
 
 for (var i = 0; i < data.length; i++) {
 	try {
-		
+		/*
 		if (
 			(data[i]['group_short']||[]).indexOf('sd') != -1 ||
 			(data[i]['Member']||[]).indexOf('ITRE') != -1 || 
@@ -19,8 +19,10 @@ for (var i = 0; i < data.length; i++) {
 			(data[i]['Vice-Chair']||[]).indexOf('ITRE') != -1 || 
 			(data[i]['Substitute']||[]).indexOf('ITRE') != -1
 			) {
-			data_new.push(data[i]);
+			
 		}
+		*/
+		data_new.push(data[i]);
 
 	} catch (e) {
 		console.error('couldn\'t update score of MEP # ' + i + ' because of ', e);
@@ -36,7 +38,8 @@ fs.writeFile("./data/data.json", JSON.stringify(data_new), function(err) {
 		} else {
 			execmd("cat ./data/data.json | python -m json.tool > ./data/data.json.new && mv ./data/data.json.new ./data/data.json", function (error, stdout, stderr) {
 				if (!error) {
-					console.log("Limit MEPs to ITRE and IMCO. The file was saved!");
+					//console.log("Limit MEPs to ITRE and IMCO. The file was saved!");
+					console.log("All the MEPs are belong to us!");
 				}
 			});
 		}
