@@ -18,8 +18,22 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Hello, world!</h1>
-
+    <div class="container-fluid">
+        <h1>Contact-Your-MEP Backend</h1>
+        <p class="lead">Use this document a a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <table class="table">
+          <thead>
+            <th> Text </th>
+            <th> Sent </th>
+          </thead>
+          {% for d in data %}
+            <tr>
+              <td> {{ d.text }} </td>
+              <td> {{ d.sent }} </td>
+            </tr>
+          {% endfor %}
+        </table>
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
