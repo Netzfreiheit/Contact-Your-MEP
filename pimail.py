@@ -13,23 +13,77 @@ import datetime
 import databaseconnect
 import logger
 import json
+import GeoIP
 
 " Load Data "
 with open("./data/data.json") as f:
     meps = json.load(f)
 
+    # calculate score sums per country
+    mepCountryScores = {}
+    mepTotalScore = 0
+    mepCountryBias = 0.8 # we want 80% of hits to be from the user's own country
+    for m in meps:
+        country = m['country_short']
+        if not country in mepCountryScores: mepCountryScores[country] = 0
+	mepCountryScores[country] += m['score']
+        mepTotalScore += m['score']
+
 db = databaseconnect.connect(settings.DATABASE_URL)
 
 tc = TemplateCache()
 
+def lookupIp(ip=None):
+    substitutions = {
+        "gb": "uk"
+    }
+    rc = None
+
+    # Get the web.py request IP if available (and no IP was provided explicitly)
+    if ip == None and hasattr(web, 'ctx') and hasattr(web.ctx, 'ip'):
+        ip = web.ctx.ip
+
+    if ip != None:
+        gi = GeoIP.new(GeoIP.GEOIP_MEMORY_CACHE)
+        rc = gi.country_code_by_addr(ip)
+        if rc != None: rc = rc.lower()
+
+    if rc in substitutions:
+        rc = substitutions[rc]
+
+    return rc
+
+def boostedScore(mep, country, factor=100):
+    """ Multiply and return a candidate's score by a factor if its country matches the requested one """
+    rc = mep['score']
+
+    if mep['country_short'] == country:
+        rc *= factor
+
+    return rc
+
+def getCountryFactor(country):
+    """ Calculate the boost factor for a specific country (so that its MEPs will be picked (mepCountryBias*100)% of the time) """
+    rc = 100 # default value in case the user's country wasn't found
+
+    if country in mepCountryScores:
+        countryScore = mepCountryScores[country]
+        otherScore = mepTotalScore - countryScore
+        rc = otherScore*mepCountryBias/(countryScore*(1-mepCountryBias))
+
+    return rc
+
 def weighted_choice(ff=lambda x: x, type="fax"):
     """ Pick a MEP based on the score weight """
+    userCountry = lookupIp()
+    factor = getCountryFactor(userCountry)
+
     lm = filter(ff,meps)
-    ts = sum((i['score'] for i in lm))
+    ts = sum((boostedScore(i, userCountry, factor) for i in lm))
     r = random.uniform(0,ts)
     n = 0
     for c in lm:
-        n = n + c['score']
+        n = n + boostedScore(c, userCountry, factor)
         if n>r and (type!='fax' or (not c.get('fax_optout', False) and c.get('fax_bxl',None))):
             return c
     return False
