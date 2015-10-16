@@ -7,12 +7,17 @@ Find a random MEP and write a mail or a fax in your browser.
 
 pimail depends on:
 
+* Python 2
 * web.py
 * Jinja2
+* flup
+* GeoIP
 
 install with ```pip install -r requirements.txt```
 
 Edit the mail.tmpl and files in static/ to your liking
+
+Edit settings.py (look at settings.py.tmpl for an example file)
 
 Fill data.json with an array of data about the MEPs (or MPs or whatever)
 
