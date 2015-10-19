@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="/static/css/flags.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/pimail.css">
+  <link rel="stylesheet" href="/static/js/jquery-ui-1.11.3.custom/jquery-ui.theme.min.css">
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <script type="text/javascript" src="/static/js/jquery-latest.js"></script>
+  <script type="text/javascript" src="/static/js/nicEdit.js"></script>
+  <script type="text/javascript" src="/static/js/mustache.min.js"></script>
+  <script type="text/javascript" src="/static/js/chevron.min.js"></script>
+  <script type="text/javascript" src="/static/js/jquery-ui-1.11.3.custom/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/static/js/autocomplete_meps.js"></script>
+  <script type="text/javascript" src="/static/js/contact-your-mep.js"></script>
+
+</head>
+<title>Fax your MEP</title>
+</head>
+<body>
+<div id=global>
+
+  <div id="sent-message" class="hidden">Fax Tool disabled between negotiations.</div>
+
+  <div id=actionbox>
+
+    <div class="mepFilter"></div>
+
+    <div id=mep_infos_top></div>
+
+    <form method="POST" id="faxform">
+    </form>
+  </div>
+
+</div>
+
+<!-- insert new language templates here --> 
+<link href="/static/templates/en/Introduction.mustache" rel="template" id="tmpl_en_intro"/>
+<link href="/static/templates/en/message.mustache" rel="template" id="tmpl_en_message"/>
+<link href="/static/templates/en/mep_info.mustache" rel="template" id="tmpl_en_mep_infos"/>
+<link href="/static/templates/en/mep_selection.mustache" rel="template" id="tmpl_en_mep_selection"/>
+<link href="/static/templates/en/message_inputs.mustache" rel="template" id="tmpl_en_message_inputs"/>
+
+<link href="/static/templates/de/Introduction.mustache" rel="template" id="tmpl_de_intro"/>
+<link href="/static/templates/de/message.mustache" rel="template" id="tmpl_de_message"/>
+<link href="/static/templates/de/mep_info.mustache" rel="template" id="tmpl_de_mep_infos"/>
+<link href="/static/templates/de/mep_selection.mustache" rel="template" id="tmpl_de_mep_selection"/>
+<link href="/static/templates/de/message_inputs.mustache" rel="template" id="tmpl_de_message_inputs"/>
+
+<link href="/static/templates/fr/Introduction.mustache" rel="template" id="tmpl_fr_intro"/>
+<link href="/static/templates/fr/message.mustache" rel="template" id="tmpl_fr_message"/>
+<link href="/static/templates/fr/mep_info.mustache" rel="template" id="tmpl_fr_mep_infos"/>
+<link href="/static/templates/fr/mep_selection.mustache" rel="template" id="tmpl_fr_mep_selection"/>
+<link href="/static/templates/fr/message_inputs.mustache" rel="template" id="tmpl_fr_message_inputs"/>
+
+<link href="/static/templates/ro/Introduction.mustache" rel="template" id="tmpl_ro_intro"/>
+<link href="/static/templates/ro/message.mustache" rel="template" id="tmpl_ro_message"/>
+<link href="/static/templates/ro/mep_info.mustache" rel="template" id="tmpl_ro_mep_infos"/>
+<link href="/static/templates/ro/mep_selection.mustache" rel="template" id="tmpl_ro_mep_selection"/>
+<link href="/static/templates/ro/message_inputs.mustache" rel="template" id="tmpl_ro_message_inputs"/>
+
+<link href="/static/templates/pl/Introduction.mustache" rel="template" id="tmpl_pl_intro"/>
+<link href="/static/templates/pl/message.mustache" rel="template" id="tmpl_pl_message"/>
+<link href="/static/templates/pl/mep_info.mustache" rel="template" id="tmpl_pl_mep_infos"/>
+<link href="/static/templates/pl/mep_selection.mustache" rel="template" id="tmpl_pl_mep_selection"/>
+<link href="/static/templates/pl/message_inputs.mustache" rel="template" id="tmpl_pl_message_inputs"/>
+
+<link href="/static/templates/nl/Introduction.mustache" rel="template" id="tmpl_nl_intro"/>
+<link href="/static/templates/nl/message.mustache" rel="template" id="tmpl_nl_message"/>
+<link href="/static/templates/nl/mep_info.mustache" rel="template" id="tmpl_nl_mep_infos"/>
+<link href="/static/templates/nl/mep_selection.mustache" rel="template" id="tmpl_nl_mep_selection"/>
+<link href="/static/templates/nl/message_inputs.mustache" rel="template" id="tmpl_nl_message_inputs"/>
+
+<script>
+  setLng('{{language}}');
+</script>
+
+</body>
+</html>

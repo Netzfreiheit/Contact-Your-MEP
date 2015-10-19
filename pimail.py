@@ -254,6 +254,17 @@ class Subscribe:
                    }"""%(mail,country)
 
 
+class mail_personal:
+    """ Handle Requests for Mail """
+    def GET(self):
+        """ Handle GET Requests """
+        web.header("Content-Type", "text/html;charset=utf-8")
+        template = tc.get("mail-personal.tmpl")
+        m = weighted_choice(get_filter(web.input()), 'mail')
+        if not m:
+            return create_error(web.input())
+        return template.render(m)
+
 class mail:
     """ Handle Requests for Mail """
     def GET(self):
@@ -266,6 +277,7 @@ class mail:
         return template.render(m)
 
 urls = ('/' + settings.campaign_path + '/mail/', 'mail',
+        '/' + settings.campaign_path + '/mail_personal/', 'mail_personal',
         '/' + settings.campaign_path + '/fax/', 'Fax',
         '/' + settings.campaign_path + '/fax_personal/', 'Fax_personal',
         '/' + settings.campaign_path + '/subscribe/', Subscribe,
