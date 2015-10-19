@@ -5,6 +5,8 @@
 var mep, editor; 
 var txt_changed = false;
 var language = 'en';
+var mail = '';
+var type = 'fax';
 var small_group = true;  // set this to true if initial country selection is rendered useless by the small amount of meps (shadow+rapporteur)
 var disabled = false;
 
@@ -15,7 +17,7 @@ $(function () {
   $(get_tmpl("mep_selection")).Chevron("render", {}, reference_mep_selection);
 
   if (disabled) {
-    $('#sendfax').hide();
+    $('#sendfax, #sendmail').hide();
     $('#sent-message').show();
   }
   
@@ -31,6 +33,19 @@ function sendfax() {
   }
 }
 
+function sendmail() {
+  var email, 
+    body = encodeURIComponent((nicEditors.findEditor('full_message').getContent()||''))
+  email = "mailto:" + mail + "?body="+body
+  a=window.open(email)
+  //a.close()
+  document.getElementById("sent-message").className="";
+}
+
+function refresh_self() {
+  document.location.href = document.location.href;
+}
+
 /**
 * switch language 
 **/
@@ -39,6 +54,20 @@ function setLng(l) {
   if (['en', 'de', 'ro', 'fr', 'pl', 'nl'].indexOf(l) !== -1) {
     language = l;
   }
+}
+
+/**
+ * set e-mail adress of current MEP
+ */
+function setMail(m) {
+  mail = m;
+}
+
+/** 
+ * set type of communication (e.g. fax or mail)
+ */
+function setType(t) {
+  type = t;
 }
 
 function update_language () {
@@ -89,11 +118,19 @@ function reference_message_inputs (result) {
   $('#name,#hometown,#whycare1,#whycare2,#age').on('change', formulate_message);
   $('#name,#hometown,#whycare1,#whycare2,#age').on('change', showEditor);
   $('#sendfax').on('click', function () {
-    // piwik tracking then send
-    jQuery.ajax({
-        'url': 'https://piwik.netzfreiheit.org/piwik.php?idsite=11&rec=1&url=https%3A%2F%2Fsavetheinternet.eu&idgoal=4&e_c=contact&e_n=fax&e_v=' + (txt_changed ? 1 : 0)
-        , 'complete': sendfax
-      });
+    if (type === 'fax') {
+      // piwik tracking then send
+      jQuery.ajax({
+          'url': 'https://piwik.netzfreiheit.org/piwik.php?idsite=11&rec=1&url=https%3A%2F%2Fsavetheinternet.eu&idgoal=4&e_c=contact&e_n=fax&e_v=' + (txt_changed ? 1 : 0)
+          , 'complete': sendfax
+        });  
+    }
+    else {
+      jQuery.ajax({
+          'url': 'https://piwik.netzfreiheit.org/piwik.php?idsite=11&rec=1&url=https%3A%2F%2Fsavetheinternet.eu&idgoal=1&e_c=contact&e_n=mail&e_v=' + (txt_changed ? 1 : 0));
+          , 'complete': sendmail
+        });
+    }    
   });
 }
 
@@ -125,6 +162,7 @@ function clear_mep () {
 function receive_mep (data, status, jqXHR) {
   if (data && data.id) {
     mep = data;
+    setMail(data.mail);
     $(get_tmpl('mep_infos')).Chevron('render', data, '#mep_infos_top');   
     $('#id').val(data['id']);
     if (small_group) {
@@ -147,7 +185,7 @@ function showEditor () {
     editor = new nicEditor({buttonList : ['bold','italic','underline','left','center','right','justify','ol','ul','subscript','superscript','strikethrough','removeformat','indent','outdent'], iconsPath: '/static/images/nicEditorIcons.gif'}).panelInstance('full_message').addEvent('blur', function () {
     txt_changed = true;
     });
-    $('#sendfax').show();
+    $('#sendfax,#sendmail').show();
   }
 }
 
@@ -157,7 +195,7 @@ function removeEditor () {
     editor = null;
   }
   $('#full_message').hide();
-  $('#sendfax').hide();
+  $('#sendfax,#sendmail').hide();
 }
 
 /***
