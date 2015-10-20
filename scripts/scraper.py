@@ -55,6 +55,15 @@ def expand_mep_info(m):
     m['email']=None
 
   try:
+    m['tel_bxl']=re.sub(r"[\s\n\r]", "", r.xpath('//span[@class="phone"]')[0].text.replace("(0)", ""))
+  except IndexError:
+    m['tel_bxl']=None
+  try:
+    m['tel_stg']=re.sub(r"[\s\n\r]", "", r.xpath('//span[@class="phone"]')[1].text.replace("(0)", ""))
+  except IndexError:
+    m['tel_stg']=None
+
+  try:
     m['fax_bxl']=re.sub(r"[\s\n\r]", "", r.xpath('//span[@class="fax"]')[0].text.replace("(0)", ""))
   except IndexError:
     m['fax_bxl']=None
@@ -89,13 +98,14 @@ def expand_mep_info(m):
 
   if boiler:
     m = merge_boiler(m)
-
+  
   return m
 
 def merge_boiler(m):
   b = get_mep_by_id(m['id'])
-  for x in b:
-    m[x] = b[x]
+  if b is not None: 
+    for x in b:
+      m[x] = b[x]
   return m
 
 def get_mep_by_id(id):
