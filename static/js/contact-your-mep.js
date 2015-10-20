@@ -127,7 +127,7 @@ function reference_message_inputs (result) {
     }
     else {
       jQuery.ajax({
-          'url': 'https://piwik.netzfreiheit.org/piwik.php?idsite=11&rec=1&url=https%3A%2F%2Fsavetheinternet.eu&idgoal=1&e_c=contact&e_n=mail&e_v=' + (txt_changed ? 1 : 0));
+          'url': 'https://piwik.netzfreiheit.org/piwik.php?idsite=11&rec=1&url=https%3A%2F%2Fsavetheinternet.eu&idgoal=1&e_c=contact&e_n=mail&e_v=' + (txt_changed ? 1 : 0)
           , 'complete': sendmail
         });
     }    

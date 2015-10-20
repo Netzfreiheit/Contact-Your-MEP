@@ -21,14 +21,14 @@
   <script type="text/javascript" src="/static/js/contact-your-mep.js"></script>
 
 </head>
-<title>Fax your MEP</title>
+<title>Mail your MEP</title>
 </head>
 <body>
 <div id=global>
 
   <div id="sent-message" class="hidden">Your email is in your mail client -<br/>
   if this doesn't work: the email address is <a href="mailto:{{email}}">{{email}}</a><br/>
-  <button onClick="refresh_self()" value="Send this E-Mail to another MEP" class="button personal"><br/>
+  <button onClick="refresh_self()" class="button personal">Send this E-Mail to another MEP</button><br/>
   {% if facebook %}
   <p>You can also send your message to the MEP on his/her <a href="{{facebook}}" target="_blank">Facebook Page</a>.</p>
   {% endif %}
