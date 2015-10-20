@@ -37,7 +37,12 @@ for (var i = 0; i < data.length; i++) {
 			data[i].score = 0;
 		}
 		else if (data[i].group_short.indexOf('sd') !== -1) {
-			data[i].score = 0.9;
+			if (['at','de'].contains(data[i].country_short)) {
+				data[i].score = 0.1;
+			}
+			else {
+				data[i].score = 0.9;	
+			}
 		}
 		else if (data[i].group_short.indexOf('guengl') !== -1) {
 			data[i].score = 0.1;
