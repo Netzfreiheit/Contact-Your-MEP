@@ -46,7 +46,7 @@ Dear @{{twitter}} please vote for the amendments delivering real #NetNeutrality 
 </div>
 <script>
   var txt_changed = false;
-  var tweet = "https://twitter.com/intent/tweet?text=Dear%20%40Telicka%20please%20stand%20by%20the%20decision%20of%20the%20European%20Parliament%20from%20April%202014%20for%20a%20strong%20%23netneutrality.%20%23SaveTheInternet";
+  var tweet = "https://twitter.com/intent/tweet?text=" + encodeURIComponent("Dear @{{twitter}} please vote for the amendments delivering real #NetNeutrality on October 27th! #SaveTheInternet https://savetheinternet.eu");
   
   function log_activity (action, value) {
     jQuery.ajax('https://piwik.netzfreiheit.org/piwik.php?idsite=11&rec=1&url=https%3A%2F%2Fsavetheinternet.eu&idgoal=5&e_c=contact&e_n=tweet&e_v=' + (value ? 1 : 0));
