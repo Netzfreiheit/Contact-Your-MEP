@@ -14,35 +14,49 @@
 			substitutes 0.4
 */
 
+Array.prototype.contains = function (el) {
+	for (var i = 0; i < this.length; i++) {
+		if (this[i] == el) {
+			return true;
+		}
+	}
+	return false;
+}
+
 var data = require('../data/data.json');
 var execmd = require('child_process').exec;
 
 for (var i = 0; i < data.length; i++) {
 	try {
 		if (data[i].group_short.indexOf('epp') !== -1) {
-			data[i].score = 0.4;
+			data[i].score = 0.1;
 		} else if (data[i].group_short.indexOf('aldeadle') !== -1) {
-			data[i].score = 0.3;
+			data[i].score = 0.5;
 		}
 		else if (data[i].group_short.indexOf('greensefa') !== -1) {
-			data[i].score = 0.15;
+			data[i].score = 0;
 		}
 		else if (data[i].group_short.indexOf('sd') !== -1) {
-			data[i].score = 0.3;
+			data[i].score = 0.9;
 		}
 		else if (data[i].group_short.indexOf('guengl') !== -1) {
-			data[i].score = 0.15;
+			data[i].score = 0.1;
 		}
 		else if (data[i].group_short.indexOf('efd') !== -1) {
-			data[i].score = 0.35;
+			data[i].score = 0.7;
+		}
+		else if (data[i].group_short.indexOf('ecr') !== -1) {
+			data[i].score = 0;
 		}
 		else if (data[i].group_short.indexOf('ni') !== -1) {
 			data[i].score = 0.3;
 		}
 		else {
-			data[i].score = 0.1;
+			data[i].score = 0.5;
 		}
 
+
+		/*
 		if ((data[i]['Member']||[]).indexOf('ITRE') != -1 || (data[i]['Chair']||[]).indexOf('ITRE') != -1 || (data[i]['Vice-Chair']||[]).indexOf('ITRE') != -1) {
 			data[i].score += 0.5;
 		} else if ((data[i]['Member']||[]).indexOf('IMCO') != -1) {
@@ -52,7 +66,9 @@ for (var i = 0; i < data.length; i++) {
 		} else if ((data[i]['Substitute']||[]).indexOf('IMCO') != -1) {
 			data[i].score += 0.15;
 		}
+		*/
 
+		/*
 		// shadows
 		if (data[i].id == "28340") {
 			data[i].score=0.9;
@@ -65,6 +81,7 @@ for (var i = 0; i < data.length; i++) {
 		} else if (data[i].id == "124813") {
 			data[i].score=0.9;
 		}
+		*/
 	} catch (e) {
 		console.error('couldn\'t update score of MEP # ' + i + ' because of ', e);
 	}
