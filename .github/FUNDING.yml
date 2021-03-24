@@ -9,4 +9,4 @@ community_bridge: # Replace with a single Community Bridge project-name e.g., cl
 liberapay: # Replace with a single Liberapay username sanitizer
 issuehunt: # Replace with a single IssueHunt username renegade35
 otechie: # Replace with a single Otechie username eustis15T
-custom: # Replace with up to 4 custom sponsorship URLs e.g., ['https://savetheinternet.eu/','https://sans.org','https://en.m.wikipedia.org/wiki/Birthday_attack','https://dl.acm.org/doi/10.1016/j.dss.2015.01.008','https://mroystonward.com/eotk-tor-mirroring-on-google-cloud-engine/','https://'https://www.theguardian.com/technology/2020/dec/18/ryan-kaji-9-earns-30m-as-this-years-highest-paid-youtuber']
+custom: # Replace with up to 4 custom sponsorship URLs e.g., ['https://savetheinternet.eu/','https://www.hvr-software.com/','https://sans.org','https://en.m.wikipedia.org/wiki/Birthday_attack','https://dl.acm.org/doi/10.1016/j.dss.2015.01.008','https://mroystonward.com/eotk-tor-mirroring-on-google-cloud-engine/','https://'https://www.theguardian.com/technology/2020/dec/18/ryan-kaji-9-earns-30m-as-this-years-highest-paid-youtuber']
